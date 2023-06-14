@@ -1,0 +1,1173 @@
+@charset "UTF-8";
+
+.o_form_view .o_group.o_inner_group.acrux_label_space > tbody > tr > td.o_td_label {
+    min-width: 365px!important;
+}
+
+.o_list_view .o_color_picker_cell {
+    width: 1px;
+}
+
+.o_acrux_chat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar.o_sidebar_left {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.o_acrux_chat .o_sidebar_right {
+    float: right;
+    overflow: hidden !important;
+}
+
+.o_acrux_chat .o_sidebar_right .o_product_list_head { 
+    height: 30%;
+    overflow: hidden;
+    max-height: 30%;
+    min-height: 36px;
+}
+
+.o_acrux_chat .o_sidebar_right .o_conv_title {
+    overflow: hidden;
+}
+
+.o_acrux_chat .o_sidebar_right .o_product_list_head > .o_acrux_chat_sidebar_title {
+    border-bottom: 1px solid #cccccc;
+}
+
+.o_acrux_chat .o_sidebar_right .o_form_view .o_form_sheet_bg > .o_form_sheet {
+    margin-top: 0px !important;
+    padding-right: 0px!important;
+    margin-left: 0px;
+    min-width: unset;
+    max-width: calc(100% - 16px);
+}
+
+.o_acrux_chat .o_sidebar_right .o_form_view .o_form_sheet_bg > .o_form_sheet .ribbon-top-right {
+    margin-top: 0px;
+}
+.o_acrux_chat .o_sidebar_right .o_form_view .o_form_statusbar {
+    padding-left: 5px;
+    margin-right: 12px;
+    zoom: 0.9;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar {
+    height: 100%;
+    overflow: auto;
+    display: inline-block;
+    padding: 0;
+}
+
+.o_acrux_chat .o_acrux_chat_content {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    position: relative;
+    background-color: #e5ddd5;
+    padding: 0;
+}
+
+.o_acrux_chat .o_acrux_chat_notification {
+    height: 34px;
+    background-color: #DFA941;
+    color: white;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+.o_acrux_chat .o_acrux_chat_notification .o_acrux_chat_request_permission {
+    flex: 1 1 auto;
+    padding-left: 0.7em;
+}
+
+.o_acrux_chat .o_acrux_chat_notification > span {
+    font-size: 14px;
+    line-height: 34px;
+}
+
+.o_acrux_chat .o_acrux_chat_notification > span.fa-close {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.o_acrux_chat .o_acrux_chat_notification > span {
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.o_acrux_chat .o_acrux_chat_notification > span > a {
+    color: rgb(238, 234, 228);
+    text-decoration: underline;
+    text-decoration-color: initial;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_zone_chats {
+    flex: 1;
+    height: 100%;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group.o_zone_current_chats {
+    height: calc(50% - 42px);
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group.o_zone_new_chats {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_sidebar_title {
+    display: flex;
+    padding: 6px 16px 0 16px;
+    justify-content: space-between;
+    min-height: 42px;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_sidebar_title,
+.o_acrux_chat .o_acrux_chat_content > .o_chat_title {
+    justify-content: space-between;
+    padding: 0 6px 0 6px;
+    align-items: center;
+    background-color: lavender;
+    border-top: 1px solid #ccc;
+    color: #676767;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar.o_sidebar_right .o_acrux_group .o_acrux_chat_sidebar_title {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar.o_sidebar_left .o_acrux_group .o_acrux_chat_sidebar_title {
+    flex-wrap: nowrap;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar.o_sidebar_left .o_acrux_group .o_acrux_chat_sidebar_title > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_sidebar_title > * {
+    position: relative;
+}
+
+.o_acrux_chat_sidebar_title .btn-group-toggle .btn{
+    padding: 1px 5px;
+}
+
+.o_acrux_chat_sidebar_title .btn-group-toggle .btn:not(.active){
+    opacity: 0.6;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar > hr {
+    border-top-color: rgb(97, 95, 93);
+    border-right-color: rgb(97, 95, 93);
+    border-bottom-color: rgb(97, 95, 93);
+    border-left-color: rgb(97, 95, 93);
+}
+
+.o_acrux_chat .o_chat_toolbox {
+    padding: 3px 3px 1px 3px;
+    min-height: 44px;
+    order: 3;
+    position: relative;
+    width: 100%;
+    background: #f9f9f9;
+    border-left: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    flex: 0 0 auto;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_main {
+    grid-area: core-main;
+    min-width: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    background-color: #f2f2f2;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_button_box {
+    display: flex;
+    justify-content: flex-end;
+/*    width: 100%;*/
+}
+
+.o_acrux_chat .o_chat_toolbox .o_acrux_emoji_popover {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_acrux_emoji_popover .popover-body {
+    height: 100%;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_acrux_emoji_popover .o_acrux_emoji_container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_acrux_emoji_popover .o_acrux_emoji_container .o_acrux_emoji {
+    cursor: pointer;
+    font-size: 1.7em;
+    margin: 2px;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_toolbox_file_uploader {
+    grid-area: core-footer;
+    overflow-x: hidden;
+    max-height: 100px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-start;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_container {
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_container .o_chat_toolbox_comp {
+    padding: 6px 10px 0 10px;
+    border-radius: 2px 0 0 2px;
+    border-right-width: 0;
+    position: relative;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_container .o_chat_toolbox_comp .o_chat_toolbox_input {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_send {
+    border: 0;
+    color: #0e4cff;
+    font-size: 28px;
+    line-height: 1;
+    padding: 0px 2px 0px 6px;
+    opacity: 0.7;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_send:hover {
+    opacity: 1;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_option_button {
+    border: 0;
+    color: gray;
+    font-size: 24px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    padding: 0px 2px 0px 2px;
+    outline: 1px;
+    opacity: 0.7;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_option_button:hover {
+    opacity: 1;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_write,
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_done {
+    border-radius: 3px 0px 0px 3px;
+    padding: 8px 12px;
+    border-right-width: 0;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_write{
+    border: 1px solid #5cb85c;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_done{
+    border: 1px solid #d9534f;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_container .o_chat_toolbox_comp .o_chat_toolbox_input .o_chat_toolbox_text_field {
+    flex: 1 1 50%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    resize: none;
+    min-height: 28px;
+    max-height: 250px;
+}
+
+.o_acrux_chat .o_chat_toolbox .o_chat_toolbox_container .o_chat_toolbox_comp .o_chat_toolbox_input .o_chat_tools {
+    border: none;
+    border-left: 1px solid #e5e5e5;
+    padding-left: 5px;
+    transform: translateY(-5px);
+    flex: 0 1 auto;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_title {
+    font-size: 14px;
+    display: flex;
+    min-height: 42px;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #ccc;
+    background: lavender;
+    padding: 6px 4px;
+    text-align: center;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_title .navbar-toggle,
+.o_acrux_chat .o_acrux_chat_content .o_chat_title .navbar-toggle span,
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_sidebar_title .navbar-toggle,
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_sidebar_title .navbar-toggle span {
+    border: 1px solid black;
+    
+}
+
+.o_chat_toolbox .o_chat_toolbox_comp .btn-icon {
+    opacity: 0.8;
+    border: none;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_thread {
+    flex-direction: column;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    background-image: url(/whatsapp_connector/static/src/img/fondo2.png);
+    background-size: cover;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_acrux_date,
+.o_acrux_chat .o_acrux_chat_content .o_acrux_msg_info {
+    padding: 3px 9px;
+    display: block;
+    clear: both;
+    text-align: center;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_acrux_date > div,
+.o_acrux_chat .o_acrux_chat_content .o_acrux_msg_info > div {
+    font-size: 0.9em;
+    border-radius: 7.5px;
+    padding: 3px 12px 4px;
+    text-align: center;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+    width: fit-content;
+    display: inline-block;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_acrux_date > div {
+    background-color: #E1F2FB;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_acrux_msg_info > div {
+    background-color: rgba(254, 243, 197, 0.5);
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_message,
+.o_action .o_chat_message {
+    background-color: white;
+    padding: 5px 9px;
+    box-sizing: border-box;
+    border-radius: 7.5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+    max-width: 70%;
+    width: fit-content;
+    font-size: 13px;
+    margin: 3px 10px;
+    line-height: 19px;
+    color: #333333;
+    display: block;
+    clear: both;
+    position: relative;
+}
+
+.o_action > .o_chat_message {
+	max-width: 300px;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_message.o_message_error {
+    border: 2px solid red;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_message.o_message_error .o_message_error_text {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.o_action .o_chat_message .o_chat_space {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+}
+
+.o_action .o_chat_message  .o_chat_msg_hour {
+    float: right;
+    margin: -15px 0 -5px 4px;
+    position: relative;
+    font-size: 11px;
+    height: 15px;
+    line-height: 15px;
+    white-space: nowrap;
+    color: #8E8E8E;
+    vertical-align: top;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_msg_content {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    max-height: 100%;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_msg_content span {
+    white-space: break-spaces;
+    word-wrap:break-word;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_msg_content .o_acrux_location_img {
+    height: 150px;
+    width: 250px;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_msg_content .o_acrux_location_img > a > img {
+    height: 100%;
+    width: 100%;
+}
+
+/* fixme: al arrastra un mensaje no se aplican bien las reglas */
+.o_acrux_chat .o_acrux_chat_content .o_chat_message_out {
+    background-color: #dcf8c6;
+    float: right;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_message_in {
+    float: left;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /*flex-basis: 0;*/
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items .o_acrux_chat_item:hover {
+    background-color: #e7ffd4;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items .o_acrux_chat_item.active {
+    background-color: #dcf8c6;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items .o_acrux_chat_item {
+    display: flex;
+    width: 100%;
+    padding: 2px 2px 2px 2px;
+    cursor: pointer;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 52px;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items .o_acrux_chat_item .acrux_image_perfil {
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items .o_acrux_chat_item .acrux_image_perfil > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items .o_acrux_chat_item .acrux_chat_conversation_info {
+    padding-left: 9px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items .o_acrux_chat_item .o_conversation_name {
+    flex: 1;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    margin-right: 5px;
+    color: #0c0c0c;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items .o_acrux_agent {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items.o_current_chats {
+    height: 100%;
+}
+
+#acrux_chat_main_view.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_items.o_current_chats .o_acrux_agent {
+    display: none;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .product_search,
+.o_acrux_chat .o_acrux_chat_sidebar .conv_search {
+    height: 25px;
+    color: black;
+    margin-right: 5px;
+    max-width: 25em;
+    width: 11em;
+    display: inline-block;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_parent_product_search,
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_chat_conv_search {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_parent_product_search .form-group,
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_chat_conv_search .form-group {
+    align-items: center;
+    display: inline-flex;
+    margin-bottom: 0;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_parent_product_search .form-group > label,
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_chat_conv_search .form-group > label {
+    margin-bottom: 0;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_chat_conv_search > .form-group:not(:first-child) {
+    padding-left: 1em;
+}
+
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_product_items,
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_conv_items {
+    display: flex;
+    height: calc(100% - 3em);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px 0 0 5px;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-flow: row wrap;
+}
+.o_acrux_chat .o_acrux_chat_sidebar .o_acrux_group .o_acrux_chat_product_items {
+    overflow: auto;
+}
+
+.o_acrux_chat .o_product_record,
+.o_acrux_chat .o_conv_record,
+.o_action .o_product_record {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    border-color: #d9d7d7;
+    border: 1px solid #e5e5e5;
+    background-color: white;
+    flex: 0 1 auto;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    padding: 4px;
+    color: black;
+    flex-direction: row;
+    height: fit-content;
+    touch-action: auto;
+}
+
+.o_acrux_chat .o_product_record .o_product_data,
+.o_action .o_product_record .o_product_data {
+    display: flex;
+    z-index: 1;
+}
+
+.o_acrux_chat .o_conv_record {
+    box-shadow: 0 0 7px -1px rgba(0,0,0,0.1);
+}
+
+.o_acrux_chat .o_conv_record:active {
+    box-shadow: 0 0 7px -1px rgba(0,0,0,0.7);
+}
+
+.o_acrux_chat .o_conv_record:hover {
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.o_acrux_chat .o_product_record .o_product_image,
+.o_action .o_product_record .o_product_image,
+.o_acrux_chat .o_conv_record .o_conv_image {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.o_acrux_chat .o_product_record .o_product_image img,
+.o_action .o_product_record .o_product_image img,
+.o_acrux_chat .o_conv_record .o_conv_image img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.o_acrux_chat .o_conv_record .o_conv_image img {
+    border-radius: 50%;
+}
+
+.o_acrux_chat .o_product_record .oe_product_details,
+.o_action .o_product_record .oe_product_details,
+.o_acrux_chat .o_conv_record .o_conv_details {
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.o_acrux_chat .o_product_record .oe_product_details .o_product_name,
+.o_action .o_product_record .oe_product_details .o_product_name,
+.o_acrux_chat .o_conv_record .o_conv_details .o_conv_name {
+    color: inherit;
+    font-size: 11px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.o_acrux_chat .o_product_record .oe_product_details .o_product_name span,
+.o_action .o_product_record .oe_product_details .o_product_name span,
+.o_acrux_chat .o_conv_record .o_conv_details .o_conv_name span {
+    display: block;
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.o_acrux_chat .o_product_record .oe_product_details ul,
+.o_action .o_product_record .oe_product_details ul,
+.o_acrux_chat .o_conv_record .o_conv_details ul {
+    margin-bottom: 2.5px;
+    padding-left: 0;
+    list-style: none;
+    font-size: 11px;
+}
+
+/* esta regla es para corregir una arriba que molesta */
+.o_acrux_chat .o_product_record .oe_product_details ul > li > span,
+.o_action .o_product_record .oe_product_details ul > li > span,
+.o_acrux_chat .o_conv_record .o_conv_details ul > li > span {
+    white-space: nowrap !important;
+}
+
+.o_action .o_product_record .oe_product_details {
+    text-align: left;
+}
+
+.o_action .o_product_record .product_options_btn {
+    display: none;
+}
+
+.o_action .o_acrux_chat_product_items .o_product_record .product_options_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.o_action .o_acrux_chat_product_items .o_product_record .product_options_btn button {
+    padding: 0;
+    font-size: 1.2em;
+    margin-right: 3px;
+}
+
+.drop-active {
+    border: 5px solid #ebf201;
+    background: #f1f2bb;
+    font-weight: normal;
+    color: #2b2b2b;
+}
+
+.drop-hover {
+    border: 5px solid #00dc70;
+    background: #94ecc1;
+    font-weight: normal;
+    color: #2b2b2b;
+}
+
+/* ajustas vistas base de odoo */
+.o_acrux_chat .o_acrux_group > .o_notebook {
+    height: 100%;
+}
+.o_acrux_chat .o_acrux_group > .o_notebook > .main-tabs {
+    height: 3em;
+}
+
+.o_acrux_chat .o_acrux_group > .o_notebook > .tab-content {
+    height: calc(100% - 3em);
+    border-bottom: 0px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.o_acrux_chat #acrux_tabs > .o_notebook > .tab-content > .tab-pane .o_form_view .o_notebook .tab-content > .tab-pane {
+    /*fix oe*/
+    padding: 16px 0px;
+}
+
+.o_acrux_chat #acrux_tabs > .o_notebook > .tab-content > .tab-pane .o_form_view .o_field_x2many.o_field_x2many_list {
+    margin-left: -10px!important;
+    margin-right: -10px!important;
+    width: calc(100% + 5px);
+}
+.o_form_view .o_notebook > .tab-content > .tab-pane > :first-child.o_field_x2many.o_field_x2many_list,
+.o_form_view .o_notebook > .tab-content > .tab-pane > :first-child.o_field_widget.o_invisible_modifier + .o_field_x2many.o_field_x2many_list {
+    margin-top: -16px;
+}
+
+/*edit buttons*/
+.o_acrux_chat #acrux_tabs > .o_notebook > .tab-content > .tab-pane > .o_group > div:first-child > div:first-child .o_form_buttons_view,
+.o_acrux_chat #acrux_tabs > .o_notebook > .tab-content > .tab-pane > .o_group > div:first-child > div:first-child .o_form_buttons_edit {
+    zoom: 0.9;
+}
+
+.o_acrux_chat .o_acrux_group > .o_notebook > .tab-content > .tab-pane > .o_group,
+.o_acrux_chat .o_acrux_group > .o_notebook > .tab-content > .tab-pane > .o_group > div {
+    padding: 0px!important;
+    background-color: white;
+}
+.o_acrux_chat #acrux_tabs > .o_notebook > .tab-content > .tab-pane .o_view_controller {
+    /*fix oe*/
+    overflow: unset!important;
+}
+
+.o_acrux_chat .o_acrux_group button.o_button_product_search {
+    padding: 0.25rem 0.7rem;
+    font-size: 0.94791667rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 1700px) {
+    .o_acrux_chat .o_acrux_group > .o_notebook > .tab-content > .tab-pane .o_group {
+        width: 100%;
+    }
+}
+.o_acrux_chat .o_acrux_group > .o_notebook > .tab-content > #tab_content_default_answer,
+.o_acrux_chat .o_acrux_group > .o_notebook > .tab-content > #tab_content_init_chat {
+    height: 100%;
+}
+
+.o_acrux_chat .o_acrux_group > .o_notebook > .tab-content > #tab_content_default_answer .o_group,
+.o_acrux_chat .o_acrux_group > .o_notebook > .tab-content > #tab_content_init_chat .o_group,
+.o_acrux_chat .o_acrux_group > .o_notebook > .tab-content > #tab_content_partner .o_group {
+    padding: 3px;
+    height: 100%;
+}
+
+.o_chat_message .o_message_title {
+    font-weight: bold;
+    font-size: 1.06em;
+    margin-bottom: 0.5em;
+    border-bottom: 1.9px solid black;
+}
+
+.o_chat_toolbox .o_message_title {
+    display: none;
+}
+
+/* ajusta los titulos para que no pasen a nueva linea cuando hay imagen */
+.o_acrux_chat .o_form_view .oe_title {
+    width: 70%!important;
+}
+.o_acrux_chat .o_form_view .oe_title > h1,
+.o_acrux_chat .o_form_view .oe_title > h2 {
+    width: auto;
+    display: flex;
+    min-height: 28px;
+    margin-top: 16px;
+}
+
+.o_acrux_chat .o_number_new_msg {
+    background: #00A09D;
+    color: white;
+    vertical-align: super;
+    font-size: 0.8em;
+}
+
+.o_acrux_chat .o_chat_message .o_attachment,
+.o_action .o_chat_message .o_attachment {
+    min-width: 55px;
+}
+
+.o_acrux_chat .o_chat_toolbox_container .o_attachment {
+    min-width: 150px;
+}
+
+.o_acrux_chat .o_chat_toolbox_container .o_attachments {
+    display: inline-grid;
+}
+
+.o_acrux_chat .o_acrux_chat_message_metadata,
+.o_action .o_acrux_chat_message_metadata {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    font-size: 13.6px;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #e9ede9;
+}
+
+.o_acrux_chat .o_acrux_chat_message_metadata .acrux_metadata_media,
+.o_action .o_acrux_chat_message_metadata .acrux_metadata_media {
+    position: relative;
+}
+
+.o_acrux_chat .o_acrux_chat_message_metadata .acrux_metadata_media,
+.o_action .o_acrux_chat_message_metadata .acrux_metadata_media,
+.o_acrux_chat .o_acrux_chat_message_metadata .acrux_metadata_media img,
+.o_action .o_acrux_chat_message_metadata .acrux_metadata_media img {
+    flex: 0 0 auto;
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    min-height: 90px;
+    object-fit: cover;
+}
+
+.o_acrux_chat .o_acrux_chat_message_metadata .acrux_metadata_content,
+.o_action .o_acrux_chat_message_metadata .acrux_metadata_content {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 90px;
+    overflow: hidden;
+    line-height: 19px;
+    padding-left: 4px;
+}
+
+.o_acrux_chat .o_acrux_chat_message_metadata .acrux_metadata_title,
+.o_action .o_acrux_chat_message_metadata .acrux_metadata_title {
+    flex: 0 1 auto;
+    overflow: hidden;
+    line-height: 20px;
+    text-overflow: ellipsis;
+}
+
+.o_acrux_chat .o_acrux_chat_message_metadata .acrux_metadata_body,
+.o_action .o_acrux_chat_message_metadata .acrux_metadata_body {
+    overflow: hidden;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    flex: 0 999 auto;
+}
+
+.o_acrux_chat .o_acrux_chat_message_metadata .acrux_metadata_url,
+.o_action .o_acrux_chat_message_metadata .acrux_metadata_url {
+    padding-top: 1px;
+    flex: none;
+    overflow: hidden;
+    font-size: 12px;
+    text-overflow: ellipsis;
+}
+
+.o_acrux_chat .o_acrux_chat_message_metadata .acrux_metadata_media .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.o_acrux_chat .o_acrux_chat_message_metadata .acrux_metadata_media .play-button:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 30px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.o_acrux_chat .default_table_answers {
+    display: flex;
+    flex-direction: column;
+}
+
+.o_acrux_chat .default_table_answers .row-default {
+    display: flex;
+}
+
+.o_acrux_chat .default_table_answers .cell-default {
+    flex: 4;
+}
+
+.o_acrux_chat .default_table_answers .row-default .cell-default {
+    box-sizing: border-box;
+    padding: 0.5em;
+    align-items: stretch;
+    display: flex;
+}
+
+.o_acrux_chat .default_table_answers .row-default .cell-default span {
+    margin-right: 0.5em;    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.o_acrux_chat .o_AttachmentList_partialList.o_AttachmentList_partialListNonImages {
+	max-width: 300px;
+}
+
+.o_acrux_wa_qr {
+    background-color: #00bfa5;
+    padding: 36px;
+    width: 100%;
+}
+.o_acrux_wa_qr img {
+    background-color: white;
+    padding: 24px;
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.32);
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.o_acrux_chat .o_AttachmentImage,
+.o_acrux_chat .o_AttachmentCard .o_AttachmentCard_image {
+    cursor: pointer;
+}
+
+.o_acrux_chat .o_acrux_chat_popover .popover-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.o_action_manager .acrux_facebook,
+.o_action_manager .acrux_messenger,
+.o_action_manager .acrux_instagram,
+.o_action_manager .acrux_whatsapp {
+    background-image: url(/whatsapp_connector/static/src/img/social_icons_v1.png);
+    background-repeat: no-repeat;
+    background-size: 84px 28px;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    transform: scale(0.7);
+}
+
+.o_action_manager .acrux_facebook {
+    background-position: -28px 0;
+}
+
+.o_action_manager .acrux_messenger {
+    background-position: -28px 0;
+}
+
+.o_action_manager .acrux_instagram {
+    background-position:  0 0;
+}
+
+.o_action_manager .acrux_whatsapp {
+    background-position: -56px 0;
+}
+
+.o_acrux_chat .o_acrux_chat_content .o_chat_message .o_acrux_story_image {
+    background-size: contain!important;
+}
+
+.o_acrux_chat .o_conv_title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.o_action_manager .o_conv_title .acrux_facebook,
+.o_action_manager .o_conv_title .acrux_messenger,
+.o_action_manager .o_conv_title .acrux_instagram,
+.o_action_manager .o_conv_title .acrux_whatsapp {
+    position: relative;
+    display: inline-block;
+    zoom: 0.5;
+}
+
+.o_action_manager .o_conv_record .acrux_facebook,
+.o_action_manager .o_conv_record .acrux_messenger,
+.o_action_manager .o_conv_record .acrux_instagram,
+.o_action_manager .o_conv_record .acrux_whatsapp {
+    bottom: 4px;
+    right: 4px;
+}
+
+.o_acrux_chat .navbar-light .navbar-toggler {
+    color: #00a09d;
+    border: 0;
+    font-size: 1.4em;
+}
+.o_acrux_chat .navbar-light .navbar-toggler-left {
+    margin-left: -5px;
+}
+.o_acrux_chat .navbar-light .navbar-toggler-right {
+    margin-right: -5px;
+}
+
+.o_content .o_acrux_chat .o_form_view .o_form_sheet {
+    border: 0;
+    box-shadow: unset;
+}
+
+.o_acrux_chat .o_sidebar_right .o_form_view .o_form_sheet_bg {
+    background-color: white;
+    background-image: none;
+    margin-right: -16px!important;
+    padding-right: 0px!important;
+}
+
+@media screen and (max-width: 960px) {
+    .o_action .o_acrux_chat_product_items .o_product_record .product_options_btn button {
+        padding: 0;
+        font-size: 1.5em;
+        margin: -4px 5px;
+    }
+    .o_acrux_chat .o_acrux_chat_content .o_conv_title {
+        max-width: 86%;
+    }
+}
+
+.o_acrux_chat .o_form_view .o_notebook .o_notebook_headers {
+    zoom: 0.9;
+}
+
+.o_acrux_chat .o_form_view .o_notebook .oe_subtotal_footer {
+    padding-right: 8px
+}
+
+.o_acrux_chat .o_sidebar_right .o_form_view .o_form_sheet_bg .o_kanban_view.o_kanban_ungrouped .o_kanban_record {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+}
+
+@media screen and (min-width: 768px) {
+    .o_acrux_chat_content .o_conv_title .d-lg-none {
+        display: none !important;
+    }
+    /*FIX enterprise*/
+    .o_acrux_chat .o_form_view .o_notebook .o_notebook_headers .nav.nav-tabs {
+         -webkit-flex-flow: row wrap;
+         flex-flow: row wrap;
+    }
+    .o_acrux_chat .o_sidebar_right .o_form_view .o_form_sheet_bg .o_kanban_view.o_kanban_ungrouped {
+        width: 98%;
+    }
+    .o_acrux_chat .o_sidebar_right .o_form_view .oe_button_box > .btn.oe_stat_button {
+        width: auto !important;
+        max-width: calc(100% / 7);
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .o_acrux_chat .o_notebook .o_notebook_headers .nav.nav-tabs li a span#hide-mobile {
+        display: none !important;
+    }
+    .o_acrux_chat .o_notebook .o_notebook_headers .nav.nav-tabs li a i.fa {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .o_acrux_chat .o_sidebar_right .o_form_view .oe_button_box {
+        zoom: 0.9;
+        margin: 0px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .o_acrux_chat .o_acrux_chat_content .o_conv_title {
+        max-width: 70%;
+    }
+    .o_acrux_chat .o_product_record,
+    .o_acrux_chat .o_conv_record {
+        width: 100%;
+        margin-bottom: 0;
+        margin-left: 0;
+        border-left: 0;
+        border-top: 0;
+    }
+    .o_acrux_chat .o_product_record .oe_product_details .o_product_name span,
+    .o_acrux_chat .o_conv_record .o_conv_details .o_conv_name span {
+        width: 290px;
+    }
+    .o_acrux_chat .o_acrux_chat_sidebar .product_search,
+    .o_acrux_chat .o_acrux_chat_sidebar .conv_search {
+        width: 9em;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .o_acrux_chat .o_product_record .oe_product_details .o_product_name span,
+    .o_acrux_chat .o_conv_record .o_conv_details .o_conv_name span {
+        width: 230px;
+    }
+}
+
+/*solo o15 o14*/
+@media ( min-width : 992px) {
+    .o_web_client.o_chatter_position_sided .o_DialogManager_dialog .o_AttachmentViewer[acrux-tag="hack"]
+        {
+        width: 100%;
+    }
+}
+
+.o_acrux_chat .o_sidebar_right .o_form_view .btn.fa > span {
+    padding-left: 5px;
+}

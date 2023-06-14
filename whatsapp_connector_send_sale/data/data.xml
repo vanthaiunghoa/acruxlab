@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="chatroom_email_template_sale" model="mail.template">
+        <field name="name">ChatRoom: Sale PDF</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="body_html"><![CDATA[<p>Your <t t-out="'quotation' if object.state in ('draft', 'sent') else 'order'"/> *<t t-out="object.name"/>* amounting in <t t-out="format_amount(object.amount_total, object.pricelist_id.currency_id)"/> is ready for review.</p>]]></field>
+        <field name="report_template" ref="sale.action_report_saleorder"/>
+        <field name="report_name">{{(object.name or '').replace('/','_')}}</field>
+        <field name="lang">{{object.company_id.partner_id.lang}}</field>
+        <field name="auto_delete" eval="True"/>
+    </record>
+
+    <record id="chatroom_email_template_sale_link" model="mail.template">
+        <field name="name">ChatRoom: Sale Link</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="body_html"><![CDATA[<p>Your <t t-out="'quotation' if object.state in ('draft', 'sent') else 'order'"/> *<t t-out="object.name"/>*:<br><t t-out="object.get_base_url() + object.get_portal_url()"/></p>]]></field>
+        <field name="lang">{{object.company_id.partner_id.lang}}</field>
+        <field name="auto_delete" eval="True"/>
+    </record>
+
+    <record id="chatroom_email_template_sale_payment_link" model="mail.template">
+        <field name="name">ChatRoom: Payment Link</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="body_html"><![CDATA[<p>Your <t t-out="'quotation' if object.state in ('draft', 'sent') else 'order'"/> payment link *<t t-out="object.name"/>*:<br><t t-out="object.get_payment_link()"/></p>]]></field>
+        <field name="lang">{{object.company_id.partner_id.lang}}</field>
+        <field name="auto_delete" eval="True"/>
+    </record>
+
+</data>
+</odoo>

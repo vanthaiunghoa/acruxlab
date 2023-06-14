@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <!-- acrux.chat.pop.message | form -->
+    <record id="view_pop_message_form" model="ir.ui.view">
+        <field name="name">pop.message.form</field>
+        <field name="model">acrux.chat.pop.message</field>
+        <field name="arch" type="xml">
+            <form string="Message">
+                <field name="name" readonly="1" nolabel="1" style="font-weight:bold;"/>
+                <field name="info" widget="html" readonly="1" nolabel="1" attrs="{'invisible':[('info','=',None)]}"/>
+                <footer>
+                   <button string="Close" class="oe_highlight" special="cancel"/>
+                </footer>
+           </form>
+        </field>
+    </record>
+
+</data>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="acrux_send_multi_wizard_form" model="ir.ui.view">
+            <field name="name">acrux.chat.send.multi.wizard.form</field>
+            <field name="model">acrux.chat.send.multi.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Send Messages">
+                    <div class="text-center" style="background-color: aliceblue; padding: 12px 8px 8px; font-size: 14px;">
+                        <b><field name="count_ids"/></b> records selected
+                    </div>
+                    <div>
+                        <group>
+                            <field name="model" invisible="1"/>
+                            <field name="name"/>
+                            <field name="connector_id"/>
+                            <field name="put_in_queue"/>
+                            <field name="check_unique_contact"/>
+                            <field name="ws_template_id" options="{'no_create': True}"/>
+                        </group>
+                        <group colspan="2" col="1">
+                            <label for="body_whatsapp"/>
+                            <field name="body_whatsapp" force_save="1" nolabel="1"
+                                   attrs="{'invisible': [('ws_template_id', '!=', False)]}"/>
+                            <field name="body_whatsapp_html" force_save="1" nolabel="1"
+                                   attrs="{'invisible': [('ws_template_id', '=', False)]}" readonly="1"
+                                   widget="html" options="{'style-inline': true, 'codeview': true}"/>
+                        </group>
+                    </div>
+                    <footer>
+                        <button string="Send" name="send_action" type="object"
+                                class="send_and_print btn-primary o_mail_send"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

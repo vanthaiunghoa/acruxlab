@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="chatroom_team" model="crm.team">
+        <field name="name">ChatRoom</field>
+    </record>
+
+    <record id="acrux_image_resize" forcecreate="True" model="ir.config_parameter">
+        <field name="key">acrux_image_resize</field>
+        <field name="value">500</field>
+    </record>
+
+    <record id="acrux_max_weight_kb" forcecreate="True" model="ir.config_parameter">
+        <field name="key">acrux_max_weight_kb</field>
+        <field name="value">2000</field>
+    </record>
+
+    <!-- default.answer -->
+    <record id="data_default_answer_hello" model="acrux.chat.default.answer">
+        <field name="name">Hello...</field>
+        <field name="ttype">text</field>
+        <field name="text">Hello, how can I help you?</field>
+    </record>
+
+    <record id="data_default_answer_location" model="acrux.chat.default.answer">
+        <field name="name">Location of my company</field>
+        <field name="ttype">location</field>
+        <field name="text">My Company
+My address
+41.9029468, 12.4544835</field>
+    </record>
+
+    <record id="data_default_answer_regards" model="acrux.chat.default.answer">
+        <field name="name">Regards</field>
+        <field name="ttype">code</field>
+        <field name="text"># Python code
+# Use: datetime - conversation_id - pytz - user - now
+# return: result
+text = 'Good morning' if now.hour &lt;= 12 else 'Good afternoon'
+name = conversation_id.name if conversation_id else ''
+result = '%s %s\nMy name is %s, How can I help you?' % (text, name, user.name)
+        </field>
+    </record>
+
+    <function name="init_free_test_record" model="acrux.chat.connector"/>
+
+    <function name="fix_message_read_date" model="acrux.chat.conversation"/>
+
+</data>
+<data>
+    <function name="unlink" model="ir.translation">
+        <function name="search" model="ir.translation">
+            <value eval="[('src', '=', 'Phone (Whatsapp)'), ('value', '=', 'Teléfono (o Whatsapp)'), ('type', '=', 'model')]"/>
+        </function>
+    </function>
+    <function name="unlink" model="ir.translation">
+        <function name="search" model="ir.translation">
+            <value eval="[('src', 'ilike', 'established when hiring a plan at www.acruxlab.com'), ('type', '=', 'model')]"/>
+        </function>
+    </function>
+    <function name="unlink" model="ir.ui.menu">
+        <function name="search" model="ir.ui.menu">
+            <value eval="[('name', '=', 'ChatRoom'), ('web_icon', '=', 'whatsapp_connector,static/description/settings.png')]"/>
+        </function>
+    </function>
+    <function name="unlink" model="ir.translation">
+        <function name="search" model="ir.translation">
+            <value eval="[('src', 'ilike', 'ChatRoom'), ('name', 'ilike', 'ir.module.module,'), ('type', '=', 'model')]"/>
+        </function>
+    </function>
+</data>
+</odoo>

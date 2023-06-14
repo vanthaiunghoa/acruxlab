@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="whatsapp_connector_res_users_form_view" model="ir.ui.view">
+        <field name="name">res.users.acrux.chat.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="toggle_acrux_chat_active" type="object" class="oe_stat_button" icon="fa-whatsapp">
+                    <field name="is_chatroom_group" invisible="1"/>
+                    <field name="acrux_chat_active" invisible="1"/>
+                    <span class="o_stat_text o_not_hover text-danger"
+                          attrs="{'invisible': [('acrux_chat_active', '=', True)]}">Inactive in Chat</span>
+                    <span class="o_stat_text o_not_hover text-success"
+                          attrs="{'invisible': [('acrux_chat_active', '=', False)]}">Active in Chat</span>
+                </button>
+            </xpath>
+            <xpath expr="//group[@name='preferences']" position="after">
+                <group string="ChatRoom" name="chatroom">
+                    <field name="chatroom_signing_active" widget="boolean_toggle" />
+                    <field name="chatroom_signing" attrs="{'invisible': [('chatroom_signing_active', '=', False)]}" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

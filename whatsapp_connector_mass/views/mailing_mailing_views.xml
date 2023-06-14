@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="mailing_mailing_view_search_ws" model="ir.ui.view" >
+        <field name="name">mailing.mailing.search</field>
+        <field name="model">mailing.mailing</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+           <search string="Mailings">
+                <field name="name" string="Mailing" filter_domain="['|', ('name', 'ilike', self), ('subject', 'ilike', self)]"/>
+                <field name="campaign_id" string="Campaign" groups="mass_mailing.group_mass_mailing_campaign"/>
+                <filter string="My Batch" name="assigned_to_me"
+                        domain="[('user_id', '=', uid)]"
+                        help="Batch messaging that are assigned to me"/>
+                <separator/>
+                <filter name="filter_sent_date" date="sent_date"/>
+                <separator/>
+                <filter name="inactive" string="Archived" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Status" name="group_state" context="{'group_by': 'state'}"/>
+                    <separator/>
+                    <filter string="Sent Period" name="sent_date" domain="[]" context="{'group_by': 'sent_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="mailing_mailing_view_form_ws" model="ir.ui.view">
+        <field name="name">mailing.mailing.view.form.inherit.ws</field>
+        <field name="model">mailing.mailing</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <form string="Mailing">
+                <header style="min-height:31px;">
+                    <button name="action_put_in_queue" type="object"
+                        class="oe_highlight" string="Put in Queue"
+                        attrs="{'invisible': ['|', ('mailing_type', '!=', 'whatsapp'),
+                                                   ('state', 'in', ('in_queue', 'done'))]}"
+                        confirm="This will schedule an Whatsapp marketing to all recipients. Do you still want to proceed ?" />
+                    <button name="action_schedule" type="object"
+                        attrs="{'invisible': [('state', 'in', ('in_queue', 'sending', 'done'))]}"
+                        class="btn-secondary" string="Schedule"/>
+                    <button name="action_test" type="object" class="btn-secondary" string="Test"/>
+                    <button name="action_cancel" type="object"
+                        attrs="{'invisible': [('state', '!=', 'in_queue')]}" class="btn-secondary" string="Cancel"/>
+                    <button name="action_retry_failed" type="object"
+                        attrs="{'invisible': [('failed', '=', 0)]}"
+                        class="oe_highlight" string="Retry"/>
+                    <field name="state" readonly="1" widget="statusbar"/>
+                </header>
+                <div class="alert alert-info text-center" role="alert"
+                    attrs="{'invisible': ['&amp;','&amp;','&amp;',
+                        ('state', '!=', 'in_queue'), ('sent', '=', 0), 
+                        ('scheduled', '=', 0), ('failed', '=', 0)]}">
+                    <div attrs="{'invisible': [('scheduled', '=', 0)]}">
+                        <button class="btn-link py-0"
+                                name="action_view_traces_scheduled"
+                                type="object">
+                            <strong>
+                                <field name="scheduled" class="oe_inline mr-2"/>
+                                <span name="scheduled_text">Messages are in queue and will be sent soon.</span>
+                            </strong>
+                        </button>
+                    </div>
+                    <div attrs="{'invisible': ['&amp;',
+                        ('sent', '=', 0), ('state', 'in', ('draft', 'test', 'in_queue'))]}">
+                        <button class="btn-link py-0"
+                                name="action_view_traces_sent"
+                                type="object">
+                            <strong>
+                                <field name="sent" class="oe_inline mr-2"/>
+                                <span name="sent">Messages have been sent.</span>
+                            </strong>
+                        </button>
+                    </div>
+                    <div attrs="{'invisible': ['|', ('state', '!=', 'done'), ('failed', '=', 0)]}">
+                        <button class="btn-link py-0"
+                                name="action_view_traces_failed"
+                                type="object">
+                            <strong>
+                                <field name="failed" class="oe_inline mr-2"/>
+                                <span name="failed_text">Messages could not be sent.</span>
+                            </strong>
+                        </button>
+                    </div>
+                    <div attrs="{'invisible': [('state', '!=', 'in_queue')]}">
+                        <strong>
+                            <span name="schedule_date_text">This marketing is scheduled for </span>
+                            <field name="schedule_date" class="oe_inline"/>.
+                        </strong>
+                    </div>
+                </div>
+                <div class="alert alert-danger text-center" role="alert"
+                    attrs="{'invisible': [('error_message', '=', False)]}">
+                    <strong>
+                        <field name="error_message" class="oe_inline mr-2" readonly="1"
+                            style="width: auto !important;"/>
+                        <button class="btn-link py-0"
+                            name="play_stopped_mainling"
+                            type="object">
+                            <span name="failed_text">Continue?</span>
+                        </button>
+                    </strong>
+                </div>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_contact_ws"
+                            id="button_view_contact_ws"
+                            type="object"
+                            icon="fa-whatsapp"
+                            attrs="{'invisible': [('state', 'in', ('draft'))]}"
+                            class="oe_stat_button">
+                            <field name="total_ws_contact" string="Contacts" widget="statinfo"/>
+                        </button>
+                        <button name="action_view_to_send_ws"
+                            id="button_view_send"
+                            type="object"
+                            icon="fa-whatsapp"
+                            attrs="{'invisible': [('state', 'in', ('draft'))]}"
+                            class="oe_stat_button">
+                            <field name="total_ws_sent" string="Sent messages" widget="statinfo"/>
+                        </button>
+                        <button name="action_view_traces_all"
+                            id="button_view_send_traces"
+                            type="object"
+                            icon="fa-bars"
+                            attrs="{'invisible': [('state', 'in', ('draft'))]}"
+                            class="oe_stat_button">
+                            <field name="total" string="All Stages" widget="statinfo" />
+                        </button>
+                        <button name="action_view_delivered"
+                            id="button_view_delivered"
+                            type="object"
+                            context="{'search_default_filter_delivered': True}"
+                            attrs="{'invisible': [('state', 'in', ('draft','test'))]}"
+                            class="oe_stat_button">
+                            <field name="received_ratio" string="Received" widget="percentpie"/>
+                        </button>
+                        <button name="action_view_bounced"
+                            type="object"
+                            context="{'search_default_filter_bounced': True}"
+                            attrs="{'invisible': [('state', 'in', ('draft','test'))]}"
+                            class="oe_stat_button">
+                            <field name="bounced_ratio" string="Bounced" widget="percentpie"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Disconnected" bg_color="bg-danger"
+                            attrs="{'invisible': ['|', '|', ('connector_status', '=', True),
+                                                            ('connector_id', '=', False),
+                                                            ('active', '=', False)]}" />
+                    <widget name="web_ribbon" title="Connected " bg_color="bg-success"
+                            attrs="{'invisible': ['|', '|', ('connector_status', '=', False),
+                                                            ('connector_id', '=', False),
+                                                            ('active', '=', False)]}" />
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}"/>
+                    <group>
+                        <group>
+                            <field name="active" invisible="1" />
+                            <field name="mailing_type" widget="radio" options="{'horizontal': true}" invisible="1"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}" force_save="1" />
+                            <field name="connector_id" widget="selection"
+                                attrs="{'required': [('mailing_type', '=', 'whatsapp')],
+                                        'readonly': [('state', 'in', ('sending', 'done'))],
+                                        'invisible': [('mailing_type', '!=', 'whatsapp')]}"/>
+                            <field name="connector_status" invisible="1" />
+                            <field name="ws_subject" string="Title"
+                                attrs="{'invisible': [('mailing_type', '!=', 'whatsapp')],
+                                        'readonly': [('state', 'in', ('sending', 'done'))],
+                                        'required': [('mailing_type', '=', 'whatsapp')]}" />
+                            <field name="check_unique_contact"
+                                attrs="{'invisible': [('mailing_type', '!=', 'whatsapp')],
+                                        'readonly': [('state', 'in', ('sending', 'done'))]}"
+                                widget="boolean_toggle" />
+                        </group>
+                        <group attrs="{'invisible': [('mailing_type', '!=', 'whatsapp')]}">
+                            <field name="connector_type" invisible="1"/>
+                            <label for="spam_level"/>
+                            <div class="o_row">
+                                <field name="spam_level"
+                                    attrs="{'readonly': [('state', 'in', ('sending', 'done'))]}"/>
+                                <b attrs="{'invisible': [('connector_type', '!=', 'gupshup')]}">x 4</b>
+                            </div>
+                            <field name="message_limit"
+                                attrs="{'invisible': [('mailing_type', '!=', 'whatsapp')],
+                                        'readonly': [('state', 'in', ('sending', 'done'))]}"/>
+                            <field name="enable_from_hour" widget="float_time"
+                                attrs="{'invisible': [('mailing_type', '!=', 'whatsapp')],
+                                        'readonly': [('state', 'in', ('done'))]}"/>
+                            <field name="enable_to_hour" widget="float_time"
+                                attrs="{'invisible': [('mailing_type', '!=', 'whatsapp')],
+                                        'readonly': [('state', 'in', ('done'))]}"/>
+                            <field name="stopped_date"
+                                attrs="{'invisible': [('mailing_type', '!=', 'whatsapp')]}"
+                                groups="base.group_no_one"/>
+                        </group>
+                    </group>
+                    <group>
+                        <label for="mailing_model_id" string="Recipients" />
+                        <div name="mailing_model_id_container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-3" >
+                                    <field name="mailing_model_id" widget="selection"
+                                        attrs="{'readonly': [('state', 'in', ('sending', 'done'))]}"/>
+                                </div>
+                                <div attrs="{'invisible': [('mailing_model_name', '!=', 'mailing.list')]}"
+                                    class="col-xs-12 col-md-9 pt-1">
+                                    <label for="contact_list_ids" string="Select mailing lists:" class="oe_edit_only"/>
+                                    <field name="contact_list_ids" widget="many2many_tags"
+                                        placeholder="Select mailing lists..." class="oe_inline"
+                                        attrs="{
+                                            'required':[('mailing_model_name','=','mailing.list')],
+                                            'readonly': [('state', 'in', ('sending', 'done'))]}"
+                                        context="{'whatsapp_mailing' : context.get('whatsapp_mailing')}"
+                                    />
+                                </div>
+                            </div>
+
+                            <field name="mailing_model_name" invisible="1"/>
+                            <field name="mailing_model_real" invisible="1"/>
+                            <div attrs="{'invisible': [('mailing_model_name', '=', 'mailing.list')]}">
+                                <field name="mailing_domain" widget="domain" options="{'model': 'mailing_model_real'}"
+                                attrs="{'readonly': [('state', 'in', ('sending', 'done'))]}"/>
+                            </div>
+                        </div>
+                    </group>
+                    <notebook>
+                        <page string="Message Content" name="ws_body"
+                            attrs="{'invisible': [('mailing_type', '!=', 'whatsapp')]}">
+                            <field name="body_whatsapp" widget="sms_widget"
+                                   class="whatsapp_message"
+                                   attrs="{'invisible': [('ws_template_id', '!=', False)],
+                                           'required': [('ws_template_id', '=', False)],
+                                           'readonly': ['|', ('state', 'in', ('sending', 'done')), ('ws_template_id', '!=', False)]}"
+                                   force_save="1"
+                                   options='{"enable_emojis": True}'/>
+                            <field name="body_whatsapp_html" force_save="1" readonly="1"
+                                   attrs="{'invisible': [('ws_template_id', '=', False)],
+                                           'required': [('ws_template_id', '!=', False)]}"
+                                   widget="html" options="{'style-inline': true, 'codeview': true}"/>
+                            <group class="mt16">
+                                <group>
+                                    <label for="attachment_ids"/>
+                                    <div name="ws_attachment_ids_details">
+                                        <field name="attachment_ids"  widget="many2many_binary"
+                                            string="Attach a file" class="oe_inline"/>
+                                    </div>
+                                </group>
+                                <group>
+                                    <field name="ws_template_id" options="{'no_create': True}"
+                                           attrs="{'readonly': [('state', 'in', ('sending', 'done'))]}"/>
+                                </group>
+                            </group>
+                            <div attrs="{'invisible': [('ws_template_id', '!=', False)]}">
+                                <p>Contact's name is available in <b>{name}</b></p>
+                                <p>Document's name is available in <b>{doc_name}</b> (Sale Order example: SO123)</p>
+                            </div>
+                        </page>
+                        <page string="Settings" name="settings">
+                            <group>
+                                <group>
+                                    <field name="id" invisible="1"/>
+                                    <field name="name" required="False" groups="base.group_no_one" string="Name"/>
+                                    <field name="user_id" domain="[('share', '=', False)]"/>
+                                    <field name="keep_archives" groups="base.group_no_one"
+                                        attrs="{'readonly': [('state', 'in', ('sending', 'done'))]}"/>
+                                </group>
+                                <group string="Marketing" groups="base.group_no_one,mass_mailing.group_mass_mailing_campaign">
+                                    <field name="campaign_id"
+                                        string="Mailing Campaign"
+                                        groups="mass_mailing.group_mass_mailing_campaign"
+                                        attrs="{'readonly': [('state', 'in', ('sending', 'done'))]}"/>
+                                    <field name="source_id"
+                                        string="Source"
+                                        readonly="1"
+                                        required="False"
+                                        groups="base.group_no_one"
+                                        attrs="{'readonly': [('state', 'in', ('sending', 'done'))]}"/>
+                                    <field name="medium_id"
+                                         string="Medium"
+                                         required="True"
+                                         groups="base.group_no_one"
+                                         attrs="{'readonly': [('state', 'in', ('sending', 'done'))]}"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="message_ids"/>
+                    <field name="activity_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="mailing_mailing_view_kanban_ws" model="ir.ui.view">
+        <field name="name">mailing.mailing.view.kanban.inherit.ws</field>
+        <field name="model">mailing.mailing</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" quick_create="false" sample="1" default_order="schedule_date asc, id asc">
+                <field name='state' readonly="1"/>
+                <field name='color'/>
+                <field name='user_id'/>
+                <field name='expected'/>
+                <field name='failed'/>
+                <field name='total'/>
+                <field name='total_ws'/>
+                <field name='total_ws_pend'/>
+                <field name='mailing_model_id'/>
+                <field name='mailing_model_name'/>
+                <field name='sent_date'/>
+                <field name='schedule_date'/>
+                <field name='stopped_date'/>
+                <field name='next_departure'/>
+                <field name='active'/>
+                <field name='error_message' />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="{{!selection_mode ? 'oe_kanban_color_' + kanban_getcolor(record.color.raw_value) : ''}}
+                            oe_kanban_card oe_kanban_global_click oe_kanban_mass_mailing">
+                            <div class="o_dropdown_kanban dropdown" t-if="!selection_mode">
+                                <a role="button" class="dropdown-toggle o-no-caret btn"
+                                    data-toggle="dropdown" href="#" data-display="static"
+                                        aria-label="Dropdown menu" title="Dropdown menu">
+                                    <span class="fa fa-ellipsis-v"/>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                    <t t-if="widget.deletable">
+                                        <a role="menuitem" type="delete" class="dropdown-item">Delete</a>
+                                    </t>
+                                    <a role="menuitem" class="dropdown-item o_kanban_mailing_active"
+                                        name="toggle_active" type="object">
+                                        <t t-if="record.active.raw_value">Archive</t>
+                                        <t t-if="!record.active.raw_value">Restore</t>
+                                    </a>
+                                </div>
+                            </div>
+                             <div class="oe_kanban_content">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <div class="row"  attrs="{'invisible': [('sent_date', '=', False)]}">
+                                            <h3 class="my-1 col-8 o_text_overflow">
+                                                <field name="subject"/>
+                                            </h3>
+                                            <div class="progress border col-3 px-0 mt-2"
+                                                style="background-color: inherit; height:12px;">
+                                                <div class="progress-bar" role="progressbar" 
+                                                    aria-valuemin="0"
+                                                    t-att-aria-valuenow="record.delivered.raw_value"
+                                                    t-att-aria-valuemax="record.expected.raw_value"
+                                                    t-attf-style="width: #{record.delivered.raw_value * 100 / record.expected.raw_value}%"/>
+                                            </div>
+                                        </div>
+                                        <h3 class="my-1 o_text_overflow"  attrs="{'invisible': [('sent_date', '!=', False)]}">
+                                            <field name="subject"/>
+                                        </h3>
+                                        <field name="mailing_type" invisible="1"/>
+                                        <div class="o_kanban_record_subtitle" attrs="{'invisible': [('sent_date', '=', False)]}">
+                                            <h5 style="display: inline;">
+                                                <field name="campaign_id" groups="mass_mailing.group_mass_mailing_campaign"/>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_body" t-if="!selection_mode"
+                                    attrs="{'invisible': [('state', '=', 'draft')]}">
+                                    <div>
+                                        <span invisible="1">
+                                            <b><field name="delivered"/> / <field name="expected"/></b>
+                                        </span>
+                                        <span attrs="{'invisible': [('state', '!=', 'done')]}">
+                                            <b><field name="total_ws_sent"/></b>
+                                            <pan>Delivered</pan>
+                                        </span>
+                                        <span attrs="{'invisible': [('state', '=', 'done')]}">
+                                            <b><field name='total_ws_pend'/> / <field name='total_ws'/></b>
+                                            <span>Pending</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div name="div_responsible_avatar" class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                    <span attrs="{'invisible': ['|', ('stopped_date', '=', False), ('sent_date', '!=', False)]}"
+                                        t-attf-title="Stopped #{record.stopped_date.value}" class="d-inline-flex">
+                                        <span class="fa fa-calendar-check-o mr-2 small my-auto text-danger" aria-label="Stopped"/>
+                                        <span class="align-self-baseline text-danger"><field name="stopped_date" widget="date"/></span>
+                                    </span>
+                                    <span attrs="{'invisible': [('sent_date', '=', False)]}"
+                                        t-attf-title="Sent on #{record.sent_date.value}" class="d-inline-flex">
+                                        <span class="fa fa-calendar-check-o mr-2 small my-auto" aria-label="Sent date"/>
+                                        <span class="align-self-baseline"><field name="sent_date" widget="date"/></span>
+                                    </span>
+                                    <span attrs="{'invisible': [('schedule_date', '=', False)]}"
+                                        t-attf-title="Scheduled on #{record.schedule_date.value}" class="d-inline-flex">
+                                        <span class="fa fa-hourglass-half mr-2 small my-auto" aria-label="Scheduled date"/>
+                                        <span class="align-self-baseline"><field name="schedule_date" widget="date"/></span>
+                                    </span>
+                                    <span class="oe_clear" attrs="{'invisible': ['|', '|',
+                                            ('sent_date', '!=', False),
+                                            ('schedule_date', '!=', False),
+                                            ('state', '=', 'in_queue')]}">
+                                        <b><field name='total' attrs="{'invisible': [('mailing_model_name','=','mailing.list')]}"/></b>
+                                        <field name='mailing_model_id'
+                                            attrs="{'invisible': [('mailing_model_name','=','mailing.list')]}"/>
+                                    </span>
+                                    <span attrs="{'invisible': ['|', '|',
+                                            ('schedule_date', '!=', False),
+                                            ('state', '!=', 'in_queue'),
+                                            ('next_departure', '=', False)]}"
+                                        t-attf-title="Scheduled on #{record.next_departure.value}" class="d-inline-flex">
+                                        <span class="fa fa-hourglass-o mr-2 small my-auto" aria-label="Scheduled date"/>
+                                        <span class="align-self-baseline">Next Batch</span>
+                                    </span>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <field name="user_id" widget="many2one_avatar_user"/>
+                                </div>
+                            </div>
+                            <div name="div_errro_message" class="o_kanban_record_bottom alert alert-danger mt8"
+                                attrs="{'invisible': [('error_message', '=', False)]}"
+                                role="alert">
+                                <field name="error_message" readonly="1" />
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="mailing_mailing_view_tree_ws" model="ir.ui.view">
+        <field name="name">mailing.mailing.view.tree.ws</field>
+        <field name="model">mailing.mailing</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <tree string="Whatsapp Marketing" sample="1">
+                <field name="subject" />
+                <field name="mailing_type" invisible="1"/>
+                <field name="mailing_model_id" string="Recipients"/>
+                <field name="user_id" widget="many2one_avatar_user"/>
+                <field name="schedule_date" string="Scheduled" widget="remaining_days"/>
+                <field name="sent_date" widget="date"/>
+                <field name="state" decoration-info="state == 'draft' or state == 'in_queue'"
+                    decoration-success="state == 'sending' or state == 'done'" widget="badge"/>
+                <field name="campaign_id" string="Campaign"
+                    groups="mass_mailing.group_mass_mailing_campaign"/>
+                <field name="sent"/>
+                <field name="bounced_ratio" string="Bounced (%)"/>
+                <field name="received_ratio" string="Delivered (%)"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mailing_mailing_view_graph_ws" model="ir.ui.view">
+        <field name="name">mailing.mailing.graph</field>
+        <field name="model">mailing.mailing</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <graph string="Mailing" type="bar" sample="1">
+                <field name="state" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="mailing_mailing_action_ws" model="ir.actions.act_window">
+        <field name="name">Whatsapp Batch messaging</field>
+        <field name="res_model">mailing.mailing</field>
+        <field name="view_mode">kanban,tree,form,graph</field>
+        <field name="search_view_id" ref="mailing_mailing_view_search_ws"/>
+        <field name="domain">[('mailing_type', '=', 'whatsapp')]</field>
+        <field name="context">{
+                'search_default_assigned_to_me': 1,
+                'default_user_id': uid,
+                'default_mailing_type': 'whatsapp',
+                'whatsapp_mailing': True
+        }</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Whatsapp Marketing
+          </p><p>
+            You can easily send Whatsapp message to any contact saved in other Odoo apps.
+          </p>
+        </field>
+    </record>
+
+    <record id="mailing_mailing_action_ws_view_kanban" model="ir.actions.act_window.view">
+        <field name="sequence">1</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="mailing_mailing_view_kanban_ws"/>
+        <field name="act_window_id" ref="mailing_mailing_action_ws"/>
+    </record>
+
+    <record id="mailing_mailing_action_ws_view_tree" model="ir.actions.act_window.view">
+        <field name="sequence">2</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="mailing_mailing_view_tree_ws"/>
+        <field name="act_window_id" ref="mailing_mailing_action_ws"/>
+    </record>
+
+    <record id="mailing_mailing_action_ws_view_form" model="ir.actions.act_window.view">
+        <field name="sequence">3</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="mailing_mailing_view_form_ws"/>
+        <field name="act_window_id" ref="mailing_mailing_action_ws"/>
+    </record>
+    
+    <record id="mailing_mailing_action_ws_view_graph" model="ir.actions.act_window.view">
+        <field name="sequence">4</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="mailing_mailing_view_graph_ws"/>
+        <field name="act_window_id" ref="mailing_mailing_action_ws"/>
+    </record>
+
+    <!-- Whatsapp Marketing / Whatsapp Marketing -->
+    <record id="whatsapp_mass_menu_ws" model="ir.ui.menu">
+        <field name="action" ref="mailing_mailing_action_ws"/>
+    </record>
+
+    <record id="mailing_mailing_action_ws_from_campaign" model="ir.actions.act_window">
+        <field name="name">Whatsapp Marketing</field>
+        <field name="res_model">mailing.mailing</field>
+        <field name="view_mode">form</field>
+        <field name="domain">[('mailing_type', '=', 'whatsapp')]</field>
+        <field name="view_id" ref="mailing_mailing_view_form_ws"/>
+        <field name="context">{
+                'search_default_assigned_to_me': 1,
+                'default_user_id': uid,
+                'default_mailing_type': 'whatsapp',
+                'whatsapp_mailing': True,
+                'search_default_campaign_id': [active_id],
+                'default_campaign_id': active_id
+        }</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Whatsapp Marketing
+          </p><p>
+            You can easily send Whatsapp message to any contact saved in other Odoo apps.
+          </p>
+        </field>
+    </record>
+    
+    <record id="mailing_mailing_action_view_ws_from_campaign" model="ir.actions.act_window">
+        <field name="name">Whatsapp Batch messaging</field>
+        <field name="res_model">mailing.mailing</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('mailing_type', '=', 'whatsapp')]</field>
+        <field name="view_id" ref="mailing_mailing_view_form_ws"/>
+        <field name="context">{
+                'search_default_assigned_to_me': 1,
+                'default_user_id': uid,
+                'default_mailing_type': 'whatsapp',
+                'whatsapp_mailing': True,
+                'search_default_campaign_id': [active_id],
+                'default_campaign_id': active_id
+        }</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Whatsapp Marketing
+          </p><p>
+            You can easily send Whatsapp message to any contact saved in other Odoo apps.
+          </p>
+        </field>
+    </record>
+    
+    <record id="mailing_mailing_action_view_ws_from_campaign_kanban" model="ir.actions.act_window.view">
+        <field name="sequence">1</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="mailing_mailing_view_kanban_ws"/>
+        <field name="act_window_id" ref="mailing_mailing_action_view_ws_from_campaign"/>
+    </record>
+
+    <record id="mailing_mailing_action_view_ws_from_campaign_tree" model="ir.actions.act_window.view">
+        <field name="sequence">2</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="mailing_mailing_view_tree_ws"/>
+        <field name="act_window_id" ref="mailing_mailing_action_view_ws_from_campaign"/>
+    </record>
+
+    <record id="mailing_mailing_action_view_ws_from_campaign_form" model="ir.actions.act_window.view">
+        <field name="sequence">3</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="mailing_mailing_view_form_ws"/>
+        <field name="act_window_id" ref="mailing_mailing_action_view_ws_from_campaign"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- CrmLead form -->
+    <record id="view_crm_lead_form" model="ir.ui.view">
+        <field name="name">crm.lead.acrux.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='phone']/.." position="after">
+                <field name="conversation_id" options="{'no_open': True}" force_save="1" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ChatRoom search -->
+    <record id="acrux_chat_crm_lead_search" model="ir.ui.view">
+        <field name="name">crm.lead.acrux.chat.search</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[1]" position="before">
+                <filter string="From ChatRoom" name="from_chatroom_filter"
+                    domain="[('conversation_id', '!=', False)]" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

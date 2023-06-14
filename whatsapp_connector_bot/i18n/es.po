@@ -1,0 +1,753 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* whatsapp_connector_bot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-23 13:45+0000\n"
+"PO-Revision-Date: 2021-12-23 13:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,help:whatsapp_connector_bot.field_acrux_chat_bot__apply_from
+#: model:ir.model.fields,help:whatsapp_connector_bot.field_acrux_chat_bot__apply_to
+msgid "00:00 to 23:59"
+msgstr "00:00 a 23:59"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "5,6"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>Advanced example (Python)</b>"
+msgstr "<b>Ejemplo avanzado (Python)</b>"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>Simple example (Python)</b>"
+msgstr "<b>Ejemplo simple (Python)</b>"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>create</b>: Create record in Odoo model"
+msgstr "<b>create</b>: Crear un registro en el modelo Odoo"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>create_partner</b>: Create partner automatically"
+msgstr "<b>create_partner</b>: Crear cliente automáticamente"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>link_partner</b>: Link partner to this chat"
+msgstr "<b>link_partner</b>: Asociar cliente a este chat"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid ""
+"<b>exit</b>: If the current thread has children, don't run and go to the top"
+" level."
+msgstr ""
+"<b>exit</b>: Si el hilo actual tiene hijos, no corre y va al nivel superior."
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>goto_and_send</b>: Go to Bot thread and run"
+msgstr "<b>goto_and_send</b>: Ir al hilo del bot y correr"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>goto_and_wait</b>: Go to Bot thread and wait"
+msgstr "<b>goto_and_wait</b>: Ir al hilo del bot y correr"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.view_whatsapp_connector_connector_form
+msgid ""
+"<b>max_mute_hours</b>: Set the maximum time in hours that a ChatBot can remain 'Mute'.<br/>\n"
+"                                    Example: If the maximum value of 'Mute' among all your Bot is 1 hour, then set this value to 1 hour"
+msgstr ""
+"<b>max_mute_hours</b>: Establece el tiempo máximo en horas que un ChatBot puede mantenerse en 'Silencio'.<br/>\n"
+"                                    Ejemplo: Si el máximo valor de 'Silencio' entre todos sus Bot es 1 hora, entonces establece este valor a 1 hora"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.view_whatsapp_connector_connector_form
+msgid ""
+"<b>max_thread_hours</b>: If you use child Bots (Nested threads), set the "
+"maximum time in hours to clean."
+msgstr ""
+"<b>max_thread_hours</b>: Si usa bots anidados, establezca el tiempo máximo "
+"en horas para limpiar"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>next</b>: Continue to the next thread in its level"
+msgstr "<b>next</b>: Continúa al prósimo hilo en su nivel"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>send_text</b>: Text of the message. You can send multiple."
+msgstr "<b>send_text</b>: Texto del mensaje. Puede enviar multiples."
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<b>write</b>: Write in Odoo Model"
+msgstr "<b>write</b>: Escribir en un modelo Odoo"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid ""
+"<code>UserError</code>: Warning Exception to use with <code>raise</code>"
+msgstr ""
+"<code>UserError</code>: Una Excepción de Advertencia puede usare con "
+"<code>raise</code>"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid ""
+"<code>datetime</code>, <code>dateutil</code>, <code>timezone</code>: useful "
+"Python libraries"
+msgstr ""
+"<code>datetime</code>, <code>dateutil</code>, <code>timezone</code>: "
+"Librerías Python útiles."
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<code>email_re</code>: Search email in string"
+msgstr "<code>email_re</code>: Buscar correo en un string"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<code>env</code>: Odoo Environment on which the action is triggered"
+msgstr "<code>env</code>: Ambiente Odoo en el cual la acción es lanzada"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<code>mess_id</code>: Message record on which the action is triggered"
+msgstr ""
+"<code>mess_id</code>: Registro del mensaje en el cual la acción es lanzada"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<code>now_local</code>: datetime in local time"
+msgstr "<code>now_local</code>: fecha en la hora local"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "<code>search_partner</code>: Search partner by cell phone number"
+msgstr "<code>search_partner</code>: Buscar cliente por número de celular"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid ""
+"<code>text</code>: Text of the Message on which the action is triggered"
+msgstr "<code>text</code>: Texto del mensaje en el cual la acción es lanzada"
+
+#. module: whatsapp_connector_bot
+#: code:addons/whatsapp_connector_bot/wizard/ProductImport.py:0
+#, python-format
+msgid "A Bot is required."
+msgstr "Se require un bot."
+
+#. module: whatsapp_connector_bot
+#: code:addons/whatsapp_connector_bot/wizard/ProductImport.py:0
+#, python-format
+msgid "A Template is required."
+msgstr "Se require una plantilla."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__code
+msgid "Action (Python Code)"
+msgstr "Acción (Código Python)"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "Advanced"
+msgstr "Avanzado"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "Advanced usage examples."
+msgstr "Ejemplos de uso avanzado."
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_search
+msgid "All"
+msgstr "Todos"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,help:whatsapp_connector_bot.field_acrux_chat_bot__text_match
+msgid ""
+"Applies only if the message equals this value. Very useful for analyzing "
+"menu options."
+msgstr ""
+"Aplica solo si el mensaje es igual a este valor. Muy útil para analizar "
+"opciónes de menú."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__apply_from
+msgid "Apply From"
+msgstr "Aplicar Desde"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__apply_to
+msgid "Apply To"
+msgstr "Aplicar Hasta"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "Apply if"
+msgstr "Aplicar Si"
+
+#. module: whatsapp_connector_bot
+#: code:addons/whatsapp_connector_bot/wizard/ProductImport.py:0
+#, python-format
+msgid "At least one product is required."
+msgstr "Al menos un producto es requerido."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__attachment_ids
+msgid "Attachments"
+msgstr "Adjuntos"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields.selection,name:whatsapp_connector_bot.selection__acrux_chat_conversation_activities__ttype__bot_mute
+msgid "BOT mute"
+msgstr "Silencio BOT"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields.selection,name:whatsapp_connector_bot.selection__acrux_chat_conversation_activities__ttype__bot_thread
+msgid "BOT thread"
+msgstr "Hilo BOT"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__bot_id
+msgid "Bot"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__bot_key
+msgid "Bot Key"
+msgstr "Clave BOT"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model,name:whatsapp_connector_bot.model_acrux_chat_conversation
+msgid "Chat Conversation"
+msgstr "Conversación Chat"
+
+#. module: whatsapp_connector_bot
+#: model:ir.actions.act_window,name:whatsapp_connector_bot.whatsapp_connector_bot_action
+#: model:ir.model,name:whatsapp_connector_bot.model_acrux_chat_bot
+#: model:ir.ui.menu,name:whatsapp_connector_bot.whatsapp_connector_bot_menu
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.view_whatsapp_connector_connector_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_search
+msgid "ChatBot"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model:ir.actions.act_window,name:whatsapp_connector_bot.whatsapp_connector_bot_log_action
+#: model:ir.model,name:whatsapp_connector_bot.model_acrux_chat_bot_log
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_connector__bot_log
+#: model:ir.ui.menu,name:whatsapp_connector_bot.whatsapp_connector_bot_log_menu
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_log_search
+msgid "ChatBot Log"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "ChatBot Logs"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "ChatBot's"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "ChatRoom ChatBot"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model:ir.actions.server,name:whatsapp_connector_bot.whatsapp_connector_maintenance_ir_actions_server
+#: model:ir.cron,cron_name:whatsapp_connector_bot.whatsapp_connector_maintenance
+#: model:ir.cron,name:whatsapp_connector_bot.whatsapp_connector_maintenance
+msgid "ChatRoom: Clean ChatBot"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__child_ids
+msgid "Child IDs"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_search
+msgid "Child of"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.view_pop_message_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,help:whatsapp_connector_bot.field_acrux_chat_bot__apply_weekday
+msgid ""
+"Comma separated number, where Monday is 1 and Sunday is 7. Leave empty for "
+"every day."
+msgstr ""
+"Numero separado por coma, donde Lunes es 1 y Domingo es 7. Deje vacío para "
+"todos los días."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__complete_name
+msgid "Complete Name"
+msgstr "Nombre Completo"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model,name:whatsapp_connector_bot.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__connector_id
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__connector_id
+msgid "Connector"
+msgstr "Conector"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model,name:whatsapp_connector_bot.model_acrux_chat_connector
+msgid "Connector Definition"
+msgstr "Definición de Conector"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__conversation_id
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model,name:whatsapp_connector_bot.model_acrux_chat_conversation_activities
+msgid "Conversation Activities"
+msgstr "Actividades de Conversación"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "Create"
+msgstr "Crear"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__product_menu
+msgid "Create Menu?"
+msgstr "Crear Menú?"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "Create children with products imported."
+msgstr "Crea hijos con los productos importados."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "Debugging and tracking to create your ChatBot."
+msgstr "Depuración y seguimiento para crear su ChatBot."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: whatsapp_connector_bot
+#: code:addons/whatsapp_connector_bot/models/Bot.py:0
+#, python-format
+msgid "Error: Apply From must be less than Apply To."
+msgstr "Error: Aplicar Desde tiene que ser menor que Aplicar Hasta."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_connector__thread_minutes
+msgid "Exit Childs (Minutes)"
+msgstr "Salir de los Hijos (Minutos)"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.view_whatsapp_connector_connector_form
+msgid "Go to Cron 'ChatRoom: Clean ChatBot' and configure:"
+msgstr "Ir al Cron 'ChatRoom: Clean ChatBot' y configurar:"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "Help"
+msgstr "Ayuda"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.view_whatsapp_connector_connector_form
+msgid "Help - Clean actions"
+msgstr "Ayuda - Acciones de Limpiar"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "Help with Python expressions"
+msgstr "Ayuda con las expresiones Python"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__body_whatsapp_html
+msgid "Html Message"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__id
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__id
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__product_image
+msgid "Image"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.view_pop_message_form
+msgid "Import"
+msgstr "Importar"
+
+#. module: whatsapp_connector_bot
+#: code:addons/whatsapp_connector_bot/models/Bot.py:0
+#: model:ir.model,name:whatsapp_connector_bot.model_acrux_chat_bot_product_import
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+#, python-format
+msgid "Import Products"
+msgstr "Importar Productos"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__apply_weekday
+msgid "In days"
+msgstr "En días"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__is_product
+msgid "Is Product?"
+msgstr "Es producto?"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_tree
+msgid "Key"
+msgstr "Clave"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "Keys to return:"
+msgstr "Claves para retornar:"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "Load demo ChatBot's"
+msgstr "Cargar demo ChatBots"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__bot_log
+msgid "Log"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__text_match
+msgid "Menu Option"
+msgstr "Opción Menú"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__body_whatsapp
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_log__text
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "Message"
+msgstr "Mensaje"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,help:whatsapp_connector_bot.field_acrux_chat_connector__thread_minutes
+msgid ""
+"Minutes to stay in childs without activity. After this time, it returns to "
+"root."
+msgstr ""
+"Minutos para quedarse en los hijos sin activadidad. Después de este tiepo, "
+"se devuelve a la raíz."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__bot_model_id
+msgid "Model"
+msgstr "Modelo"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_tree
+msgid "Mute"
+msgstr "Mudo"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__mute_minutes
+msgid "Mute (Minutes)"
+msgstr "Mudo (Minutos)"
+
+#. module: whatsapp_connector_bot
+#: code:addons/whatsapp_connector_bot/models/Bot.py:0
+#: model:ir.model.constraint,message:whatsapp_connector_bot.constraint_acrux_chat_bot_complete_name_uniq
+#, python-format
+msgid "Name has to be unique."
+msgstr "Nombre tiene que ser único."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,help:whatsapp_connector_bot.field_acrux_chat_bot__mute_minutes
+msgid "Number of minutes in which the automatic reply will not be send."
+msgstr "Numero de minutos en el cual la respuesta automática no será enviada."
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_search
+msgid "One Level Bot"
+msgstr "Nivel uno del Bot"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,help:whatsapp_connector_bot.field_acrux_chat_bot__connector_id
+msgid "Only apply for messages in this Connector. Leave empty if you have one"
+msgstr "Sólo aplica para mensajes en este Conector. Deje vacío si tiene uno"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,help:whatsapp_connector_bot.field_acrux_chat_bot__parent_id
+msgid "Only apply when it is a response from this BOT."
+msgstr "Sólo aplica cuando es una respuesta de este BOT."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__seq
+msgid "Order"
+msgstr "Orden"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__parent_id
+msgid "Parent Bot"
+msgstr "Bot Padre"
+
+#. module: whatsapp_connector_bot
+#: code:addons/whatsapp_connector_bot/models/Bot.py:0
+#, python-format
+msgid "Please write in this format: HH:MM (Min.: 00:00 - Max.: 24:00)"
+msgstr "Por favor escriba en este formato: HH:MM (Min.: 00:00 - Max.: 24:00)"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__product_ids
+msgid "Products"
+msgstr "Productos"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__bot_model_real
+msgid "Real Model"
+msgstr "Modelo Real"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__name
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__bot_res_id
+msgid "Res id"
+msgstr "Id Reg"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid ""
+"Return: One <code>ret={...}</code> or many <code>ret=[{}, {}, ...]</code>"
+msgstr ""
+"Retorne: Un <code>ret={...}</code> o muchos <code>ret=[{}, {}, ...]</code>"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_search
+msgid "Root Bot"
+msgstr "Raíz del Bot"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__show_name
+msgid "Route"
+msgstr "Ruta"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__product_image_send
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__product_image_send
+msgid "Send Image?"
+msgstr "Enviar Imagen?"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot__ws_template_id
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_bot_product_import__ws_template_id
+msgid "Template"
+msgstr "Plantilla"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.view_whatsapp_connector_connector_form
+msgid ""
+"This configuration is required to clean the database and set maximum values."
+msgstr ""
+"Esta configuración es requerida para limpiar la base de datos y establecer "
+"los valores máximos."
+
+#. module: whatsapp_connector_bot
+#: model:ir.model.fields,field_description:whatsapp_connector_bot.field_acrux_chat_conversation_activities__ttype
+msgid "Type"
+msgstr "Tipo"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid ""
+"Various fields may use Python code or Python expressions. The following "
+"variables can be used:"
+msgstr ""
+"Varios campos pueden usarse en código Python o expresiones Python. Las "
+"siguientesvariables pueden ser usadas:"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "View ChatBot Logs"
+msgstr "Ver ChatBot Logs"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "View ChatBot's"
+msgstr "Ver ChatBot's"
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.res_config_settings_view_form
+msgid "View all ChatBot's"
+msgstr "Ver todos los ChatBot's"
+
+#. module: whatsapp_connector_bot
+#: code:addons/whatsapp_connector_bot/models/Bot.py:0
+#, python-format
+msgid "You cannot create recursive categories."
+msgstr "No puede crear categorías recursivas."
+
+#. module: whatsapp_connector_bot
+#. openerp-web
+#: code:addons/whatsapp_connector_bot/static/src/js/fields/basic_fields.js:0
+#, python-format
+msgid "You must select a record before view."
+msgstr "Debe seleccionar un registro antes de verlo"
+
+#. module: whatsapp_connector_bot
+#. openerp-web
+#: code:addons/whatsapp_connector_bot/static/src/js/fields/basic_fields.js:0
+#: code:addons/whatsapp_connector_bot/static/src/js/fields/basic_fields.js:0
+#, python-format
+msgid "You must select your model first."
+msgstr "Debe selecionar un modelo primero."
+
+#. module: whatsapp_connector_bot
+#. openerp-web
+#: code:addons/whatsapp_connector_bot/static/src/js/fields/basic_fields.js:0
+#: code:addons/whatsapp_connector_bot/static/src/js/fields/basic_fields.js:0
+#, python-format
+msgid "You must set options with \"model_field\" in your xml."
+msgstr "Debe establecer options con  \"model_field\" en su xml."
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid ""
+"ret = []\n"
+"<span style=\"color:gray;\"># Search email in message (text: string)</span>\n"
+"emails = email_re.findall(text or '')\n"
+"if emails:\n"
+"    <span style=\"color:gray;\"># Send 2 messages:</span>\n"
+"    ret.append({'send_text': 'All good'})\n"
+"    ret.append({'send_text': 'Email has been updated (%s)' % emails[0]})\n"
+"\n"
+"    <span style=\"color:gray;\"># Action (Just one of these or empty):</span>\n"
+"    ret.append({'next': True})\n"
+"    ret.append({'exit': True})\n"
+"    ret.append({'goto_and_wait': '#12'})\n"
+"    ret.append({'goto_and_send': '#12'})\n"
+"\n"
+"    <span style=\"color:gray;\"># Write email in Odoo model (You can add multiple lines):</span>\n"
+"    ret.append({\n"
+"        'write': {\n"
+"            'res_model': 'res.partner',\n"
+"            'res_id': mess_id.contact_id.res_partner_id.id,\n"
+"            'data': {'email': emails[0]}\n"
+"        }\n"
+"    })\n"
+"\n"
+"    <span style=\"color:gray;\"># Or search and create Partner (You can add multiple lines):</span>\n"
+"    partner = search_partner()\n"
+"    if not partner:\n"
+"        ret.append({'create_partner': True})\n"
+"else:\n"
+"    ret.append({'send_text': 'oops, wrong email'}))"
+msgstr ""
+
+#. module: whatsapp_connector_bot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_bot.whatsapp_connector_bot_form
+msgid ""
+"ret = []\n"
+"<span style=\"color:gray;\"># Search words in received message (text: string)\n"
+"# Example of received message: text = \"What is the address and phone number?\"</span>\n"
+"if 'address' in text:\n"
+"    <span style=\"color:gray;\"># Send one message</span>\n"
+"    ret.append({'send_text': 'The address of our company is ...'})\n"
+"if 'phone number' in text:\n"
+"    <span style=\"color:gray;\"># Send another message</span>\n"
+"    ret.append({'send_text': 'Our phone number is +56 67 221 7777'})\n"
+"if not ret:\n"
+"    ret.append({'send_text': 'Hello'}))"
+msgstr ""

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="mailing_trace_view_search_ws" model="ir.ui.view">
+        <field name="name">mailing.trace.search</field>
+        <field name="model">mailing.trace</field>
+        <field name="arch" type="xml">
+            <search string="Mail Statistics">
+                <field name="mass_mailing_id"/>
+                <field name="ws_phone"/>
+                <field name="ws_message_id" />
+                <filter string="Scheduled" name="filter_scheduled" domain="[('trace_status', '=', 'outgoing')]"/>
+                <filter string="Sent" name="filter_sent" domain="[('sent_datetime', '!=', False)]"/>
+                <filter string="Delivered" name="filter_delivered" domain="[('sent_datetime', '!=', False), ('trace_status', 'not in', ['error', 'cancel'])]"/>
+                <separator/>
+                <filter string="Bounced" name="filter_bounced" domain="[('trace_status', '=', 'bounce')]"/>
+                <filter string="Failed" name="filter_failed" domain="[('trace_status', '=', 'error')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="State" name="state" domain="[]" context="{'group_by': 'trace_status'}"/>
+                    <filter string="Last State Update" name="state_update" domain="[]" context="{'group_by': 'write_date'}"/>
+                    <filter string="Mass Mailing" name="mass_mailing" domain="[]" context="{'group_by': 'mass_mailing_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="mailing_trace_view_tree_ws" model="ir.ui.view">
+        <field name="name">mailing.trace.view.tree.sms</field>
+        <field name="model">mailing.trace</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <tree string="Whatsapp Traces" create="0">
+                <field name="ws_phone"/>
+                <field name="mass_mailing_id"/>
+                <field name="ws_message_id" />
+                <field name="trace_status" widget="badge"/>
+                <field name="sent_datetime" optional="hide"/>
+                <field name="ws_error_msg"/>
+                <field name="ref_name"/>
+                <button name="action_view_contact" type="object"
+                        string="Open Recipient" icon="fa-user"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mailing_trace_view_form_ws" model="ir.ui.view">
+        <field name="name">mailing.trace.view.form.sms</field>
+        <field name="model">mailing.trace</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <form string="Whatsapp Trace" create="0">
+                <sheet>
+                    <header>
+                        <field name="trace_status" widget="statusbar"/>
+                    </header>
+                    <div class="alert alert-info text-center" attrs="{'invisible': [('trace_status', '!=', 'error')]}" role="alert">
+                        <strong>This Message could not be sent.</strong>
+                    </div>
+                    <div class="alert alert-info text-center" attrs="{'invisible': [('trace_status', '!=', 'bounce')]}" role="alert">
+                        <strong>This number appears to be invalid.</strong>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="ws_phone"/>
+                            <field name="mass_mailing_id"/>
+                            <field name="ws_message_id"/>
+                            <field name="campaign_id" groups="mass_mailing.group_mass_mailing_campaign"/>
+                            <field name="model" groups="base.group_no_one"/>
+                            <field name="res_id" groups="base.group_no_one"/>
+                        </group>
+                        <group>
+                            <field name="sent_datetime"/>
+                            <field name="trace_status"/>
+                            <field name="ws_error_msg" attrs="{'invisible': [('ws_error_msg', '=', False)]}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

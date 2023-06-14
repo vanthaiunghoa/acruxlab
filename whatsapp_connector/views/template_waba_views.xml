@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_whatsapp_template_waba_search">
+        <field name="name">acrux.chat.template.waba.search</field>
+        <field name="model">acrux.chat.template.waba</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="connector_id" />
+                <field name="template_id" />
+                <field name="template_type" />
+                <field name="status" />
+                <field name="model_id" />
+                <separator/>
+                <filter name="filter_approved" string="Approved" domain="[('status','=', 'APPROVED')]" />
+                <filter name="filter_rejected" string="Rejected" domain="[('status','=', 'REJECTED')]" />
+                <group string="Group by">
+                    <filter name="group_by_connector" string="Connector" context="{'group_by':'connector_id'}" />
+                    <filter name="group_by_type" string="Type" context="{'group_by':'template_type'}" />
+                    <filter name="group_by_status" string="Status" context="{'group_by':'status'}" />
+                    <filter name="group_by_template_id" string="Template id" context="{'group_by':'template_id'}" />
+                    <filter name="group_by_model_id" string="Model" context="{'group_by':'model_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_whatsapp_template_waba_tree">
+        <field name="name">acrux.chat.template.waba.tree</field>
+        <field name="model">acrux.chat.template.waba</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="connector_id" />
+                <field name="name" />
+                <field name="template_id" />
+                <field name="model_id" />
+                <field name="element_name" />
+                <field name="data"/>
+                <field name="template_type"/>
+                <field name="status"/>
+                <field name="category" optional="hide" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_whatsapp_template_waba_form">
+        <field name="name">acrux.chat.template.waba.form</field>
+        <field name="model">acrux.chat.template.waba</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" required="1" />
+                        </h1>
+                        <group>
+                            <field name="connector_id" />
+                            <field name="model_id" required="1" options="{'no_create': True}" />
+                            <field name="status" />
+                        </group>
+                    </div>
+                    <notebook>
+                        <page string="Content" name ="content">
+                            <field name="data" />
+                            <field name="meta" />
+                            <field name="param_ids" >
+                                <tree create="0" delete="0" editable="bottom">
+                                    <field name="key" readonly="1"/>       
+                                    <field name="value" required="1" />
+                                </tree>
+                            </field>
+                            <field name="ready_to_create_template" invisible="1" />
+                            <button name="create_mail_template" type="object" string="Create/Update Mail Template"
+                                class="btn-primary" attrs="{'invisible': [('ready_to_create_template', '=', False)]}" />
+                            <group attrs="{'invisible': [('ready_to_create_template', '=', False)]}">
+                                <field name="mail_template_id" />
+                            </group>
+                        </page>
+                        <page string="Info" name="info">
+                            <group string="Info">
+                                <field name="template_id" />
+                                <field name="category" />
+                                <field name="template_type" />
+                                <field name="app_id" />
+                                <field name="element_name" />
+                                <field name="external_id" />
+                                <field name="language_code" />
+                                <field name="language_policy" />
+                                <field name="master" />
+                                <field name="namespace" />
+                                <field name="vertical" />
+                            </group>
+                            <group string="Metadata">
+                                <field name="created_on" />
+                                <field name="modified_on" />
+                            </group>
+                        </page>
+                        <page string="Status" name="status">
+                            <group string="Status">
+                                <field name="reason" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="view_whatsapp_template_waba_action">
+        <field name="name">Template WaBa</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">acrux.chat.template.waba</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

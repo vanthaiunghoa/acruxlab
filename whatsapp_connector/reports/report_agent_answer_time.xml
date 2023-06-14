@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_agent_answer_time_report_search" model="ir.ui.view">
+        <field name="name">agent.answer.time.report.search</field>
+        <field name="model">agent.answer.time.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="user_id"/>
+                <field name="date_message"/>
+                <field name="connector_id"/>
+                <field name="contact_id"/>
+                <field name="prev_message_id"/>
+                <field name="next_message_id"/>
+                <filter string="Current Month" name="current_month"
+                    domain="[('date_message', '&lt;', (context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')),
+                             ('date_message', '&gt;=', time.strftime('%%Y-%%m-01'))]"/>
+                <filter string="Last Month" name="last_month"
+                    domain="[('date_message', '&gt;=', (context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),
+                             ('date_message', '&lt;', time.strftime('%%Y-%%m-01'))]"/>
+                <filter string="Current Year" name="current_year"
+                    domain="[('date_message','&gt;=', time.strftime('%%Y-01-01'))]"/>
+                <filter string="Last Year" name="last_year"
+                    domain="[('date_message','&gt;=', (context_today()-relativedelta(years=1)).strftime('%%Y-01-01')),
+                             ('date_message','&lt;', time.strftime('%%Y-01-01'))]"/>
+                <group string="Group by">
+                    <filter name="group_agent" string="Agent" context="{'group_by':'user_id'}"/>
+                    <filter name="group_connector" string="Connector" context="{'group_by':'connector_id'}" />
+                    <filter name="group_conversation" string="Conversation" context="{'group_by':'contact_id'}" />
+                    <filter name="group_month" string="Month" context="{'group_by':'date_message:month'}"/>
+                    <filter name="group_week" string="Week" context="{'group_by':'date_message:week'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_agent_answer_time_report_tree" model="ir.ui.view">
+        <field name="name">agent.answer.time.report.view.tree</field>
+        <field name="model">agent.answer.time.report</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0" delete="0">
+                <field name="user_id" />
+                <field name="connector_id" />
+                <field name="contact_id" />
+                <field name="prev_message_id" />
+                <field name="next_message_id" />
+                <field name="date_message" />
+                <field name="date_answer" />
+                <field name="answer_time" avg="Average" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_agent_answer_time_report_form" model="ir.ui.view">
+        <field name="name">agent.answer.time.report.view.form</field>
+        <field name="model">agent.answer.time.report</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0" delete="0">
+                <group>
+                    <group string="General Information">
+                        <field name="user_id" />
+                        <field name="connector_id" />
+                        <field name="contact_id" />
+                        <field name="date_message" />
+                        <field name="date_answer" />
+                        <field name="answer_time" />
+                    </group>
+                    <group string="Messages Information">
+                        <field name="prev_message_id" />
+                        <field name="info_message_id" />
+                        <field name="next_message_id" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_agent_answer_time_report_pivot" model="ir.ui.view">
+        <field name="name">agent.answer.time.report.view.pivot</field>
+        <field name="model">agent.answer.time.report</field>
+        <field name="arch" type="xml">
+            <pivot string="Answer Time Report" display_quantity="true" sample="1">
+                <field name="user_id" type="row" />
+                <field name="date_message" type="col" />
+                <field name="connector_id" />
+                <field name="contact_id" />
+                <field name="answer_time" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_agent_answer_time_report_graph" model="ir.ui.view">
+        <field name="name">agent.answer.time.report.view.graph</field>
+        <field name="model">agent.answer.time.report</field>
+        <field name="arch" type="xml">
+            <graph string="Answer Time Report" type="bar">
+                <field name="date_message" type="row" />
+                <field name="user_id" type="col" />
+                <field name="answer_time" type="measure" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_agent_answer_time_report_action" model="ir.actions.act_window">
+        <field name="name">Answer Time</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">agent.answer.time.report</field>
+        <field name="view_mode">graph,pivot</field>
+        <field name="context">{'search_default_current_year':1}</field>
+    </record>
+
+</odoo>

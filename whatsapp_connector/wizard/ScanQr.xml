@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_scanqr_wizard" model="ir.ui.view">
+        <field name="name">acrux.chat.connector.scanqr.wizard</field>
+        <field name="model">acrux.chat.connector.scanqr.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <div attrs="{'invisible':[('ca_qr_code','=', False)]}" class="mb8 mt8 text-danger">
+                    QR code is valid for 20 seconds.
+                </div>
+                <div attrs="{'invisible':[('ca_qr_code','=', False)]}">
+                    <field name="connector_id" invisible="1"/>
+                    <div class="col-12">
+                        <div class="row" style="margin-top: 8px;">
+                            <div class="float-left" style="width: 90px;">
+                                Problem?
+                            </div>
+                            <button name="action_ca_get_status" type="object" string="Refresh QR code"
+                                    class="oe_highlight"/>
+                        </div>
+                        <div class="row" style="margin-top: 8px;">
+                            <div class="float-left" style="width: 90px;">
+                                All good?
+                            </div>
+                            <button name="action_close" type="object" string="Close" class="oe_highlight"/>
+                        </div>
+                        <div class="row text-center" style="margin-top: 8px;">
+                            <field name="ca_qr_code" widget="image" class="o_acrux_wa_qr"/>
+                        </div>
+                    </div>
+                </div>
+                <div attrs="{'invisible':[('ca_qr_code','!=', False)]}">
+                    <div class="mb8 mt8 text-danger">
+                        An error? On your device close all sessions and try again.
+                    </div>
+                    <button special="cancel" string="Close" class="oe_highlight"/>
+                </div>
+                <footer/>
+           </form>
+        </field>
+    </record>
+
+</odoo>

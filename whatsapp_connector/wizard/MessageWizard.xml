@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="acrux_chat_message_wizard_form" model="ir.ui.view">
+        <field name="name">acrux.chat.message.wizard.form</field>
+        <field name="model">acrux.chat.message.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group name="top_area" attrs="{'invisible': [('invisible_top', '=', True)]}">
+                    <group>
+                        <div attrs="{'invisible': [('partner_id', '=', False)]}">
+                            <field name="partner_id" readonly="1" nolabel="1" colspan="2" options="{'no_open': True}"
+                                   class="h2"/>
+                        </div>
+                    </group>
+                    <group>
+                        <div colspan="2">
+                            New number <field name="new_number" widget="boolean_toggle" nolabel="1"/>
+                        </div>
+                        <field name="conversation_id" nolabel="1" colspan="2" options="{'no_create': True, 'no_open': True}"
+                               context="{'full_name': True}" placeholder="Select conversation"
+                               attrs="{'invisible': [('new_number', '=', True)], 'required': [('new_number', '=', False)]}"/>
+                        <field name="connector_id" options="{'no_create': True, 'no_open': True}"
+                               domain="[('connector_type', 'in', ['apichat.io', 'chatapi', 'gupshup', 'waba_extern'])]"
+                               attrs="{'invisible': [('new_number', '=', False)], 'required': [('new_number', '=', True)]}"/>
+                        <field name="number"
+                               attrs="{'invisible': [('new_number', '=', False)], 'required': [('new_number', '=', True)]}"/>
+                        <field name="numbers_available"
+                               attrs="{'invisible': ['|', ('new_number', '=', False), ('numbers_available', '=', False)]}"/>
+                        <field name="invisible_top" invisible="1"/>
+                        <field name="conn_type" invisible="1" />
+                        <field name="conv_opt_in" widget="boolean_toggle" readonly="1"
+                            attrs="{'invisible': [('conn_type', '!=', 'gupshup')]}" />
+                        <button name="req_opt_in" type="object" string="Request Opt-in"
+                            class="btn-primary" attrs="{'invisible': ['|', ('conv_opt_in', '=', True), ('conn_type', '!=', 'gupshup')]}" />
+                    </group>
+                </group>
+                <group name="text_area" col="4">
+                    <label for="text" colspan="4"/>
+                    <field name="text" nolabel="1" colspan="4"/>
+                    <field name="attachment_id" colspan="4" readonly="1" force_save="1"
+                           options="{'no_open': True}"
+                           attrs="{'invisible': [('attachment_id', '=', False)]}"/>
+                </group>
+                <group name="others" col="4"/>
+                <footer>
+                    <button class="oe_highlight" type="object" name="send_message_wizard">Send</button>
+                    <button class="oe_link" special="cancel">Cancel</button>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="acrux_chat_message_wizard_action" model="ir.actions.act_window">
+        <field name="name">Send ChatRoom Message</field>
+        <field name="res_model">acrux.chat.message.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'acrux_from_message_wizard': True}</field>
+    </record>
+
+</odoo>

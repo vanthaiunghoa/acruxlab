@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="whatsapp_connector_bot_search" model="ir.ui.view">
+        <field name="name">acrux.chat.bot.search</field>
+        <field name="model">acrux.chat.bot</field>
+        <field name="arch" type="xml">
+            <search string="ChatBot">
+                <field name="bot_key"/>
+                <field name="name"/>
+                <field name="complete_name"/>
+                <field name="complete_name" string="Child of" filter_domain="[('complete_name', 'ilike', self)]" />
+                <filter string="Root Bot" name="only_root" domain="[('parent_id', '=', False)]" />
+                <filter string="One Level Bot" name="one_level" domain="['|', ('parent_id', '=', False), ('parent_id.parent_id', '=', False)]" />
+                <separator/>
+                <filter string="All" name="all" domain="['|', ('active', '=', False), ('active', '=', True)]" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="whatsapp_connector_bot_tree">
+        <field name="name">acrux.chat.bot.tree</field>
+        <field name="model">acrux.chat.bot</field>
+        <field name="arch" type="xml">
+            <tree class="chat_bot_tree">
+                <field name="seq" invisible="1"/>
+                <field name="sequence" widget="handle" />
+                <field name="bot_key" string="Key" optional="show"/>
+                <field name="show_name" widget="html"/>
+                <field name="body_whatsapp" optional="hide"/>
+                <field name="code" optional="hide"/>
+                <field name="connector_id" widget="selection" optional="hide"/>
+                <field name="apply_from" widget="float_time" optional="hide"/>
+                <field name="apply_to" widget="float_time" optional="hide"/>
+                <field name="apply_weekday" optional="hide"/>
+                <field name="mute_minutes" string="Mute" optional="show"/>
+                <field name="active" widget="boolean_toggle"/>
+                <field name="name" invisible="1"/>
+                <field name="parent_id" invisible="1"/>
+                <field name="complete_name" invisible="1" force_save="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="whatsapp_connector_bot_form">
+        <field name="name">acrux.chat.bot.form</field>
+        <field name="model">acrux.chat.bot</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="import_product" type="object" string="Import Products"
+                            class="btn-primary" help="Create children with products imported."/>
+                </header>
+                <sheet>
+                    <field name="product_image" widget="image" class="acrux_oe_avatar"
+                           attrs="{'invisible': [('is_product', '=', False)]}"/>
+                    <div class="oe_title">
+                        <field name="id" invisible="1"/>
+                        <field name="sequence" invisible="1"/>
+                        <field name="child_ids" invisible="1"/>
+                        <field name="complete_name" invisible="1"/>
+                        <field name="show_name" invisible="1"/>
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Reference"/>
+                        </h1>
+                        <div class="o_row">
+                            <group>
+                                <field name="parent_id" options="{'no_create': True}" domain="[('id', '!=', id)]"/>
+                                <field name="is_product" widget="boolean_toggle" />
+                                <field name="product_id" options="{'no_create': True}"
+                                       attrs="{'invisible': [('is_product', '=', False)],
+                                               'required': [('is_product', '=', True)]}" />
+                                <field name="product_image_send" widget="boolean_toggle"
+                                       attrs="{'invisible': ['|', ('is_product', '=', False),
+                                                                  ('product_id', '=', False)]}"/>
+                            </group>
+                        </div>
+                    </div>
+                    <notebook>
+                        <page string="Message" name='basic'>
+                            <group>
+                                <group>
+                                    <field name="body_whatsapp" attrs="{'invisible': [('ws_template_id', '!=', False)]}"
+                                           force_save="1"/>
+                                    <field name="body_whatsapp_html" force_save="1" readonly="1"
+                                           string="Message"
+                                           attrs="{'invisible': [('ws_template_id', '=', False)]}"
+                                           widget="html" options="{'style-inline': true, 'codeview': true}"/>
+                                    <field name="attachment_ids" widget="many2many_binary" class="oe_inline" />
+                                    <field name="ws_template_id"
+                                           attrs="{'invisible': [('is_product', '=', False)],
+                                                   'required': ['|', ('is_product', '=', True),
+                                                                     ('bot_model_id', '!=', False)]}" />
+
+                                </group>
+                                <group string="Apply if">
+                                    <field name="text_match"/>
+                                    <field name="mute_minutes"/>
+                                    <field name="apply_from" widget="float_time"/>
+                                    <field name="apply_to" widget="float_time"/>
+                                    <field name="apply_weekday" placeholder="5,6"/>
+                                    <field name="active" widget="boolean_toggle"/>
+                                </group>
+                                <group invisible="1">
+                                    <field name="bot_model_real" force_save="1"/>
+                                    <field name="bot_model_id" options="{'no_create': True, 'no_open': True}"
+                                           force_save="1"/>
+                                    <field name="bot_res_id"
+                                           attrs="{'required': [('bot_model_id', '!=', False)]}"
+                                           force_save="1"
+                                           options="{'model_field': 'bot_model_real'}"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Advanced" name='code'>
+                            <group>
+                                <field name="connector_id" widget="selection"/>
+                                <field name="bot_key"/>
+                                <field name="code" widget="ace" options="{'mode': 'python'}"/>
+                            </group>
+                        </page>
+                        <page string="Help" name="help_info">
+                            <group>
+                                <div style="margin-top: 4px;">
+                                    <h3>Help with Python expressions</h3>
+                                    <p>Various fields may use Python code or Python expressions. The following variables can be used:</p>
+                                    <ul>
+                                        <li><code>env</code>: Odoo Environment on which the action is triggered</li>
+                                        <li><code>text</code>: Text of the Message on which the action is triggered</li>
+                                        <li><code>mess_id</code>: Message record on which the action is triggered</li>
+                                        <li><code>email_re</code>: Search email in string</li>
+                                        <li><code>search_partner</code>: Search partner by cell phone number</li>
+                                        <li><code>now_local</code>: datetime in local time</li>
+                                        <li><code>datetime</code>, <code>dateutil</code>, <code>timezone</code>: useful Python libraries</li>
+                                        <li><code>UserError</code>: Warning Exception to use with <code>raise</code></li>
+                                        <li>Return: One <code>ret={...}</code> or many <code>ret=[{}, {}, ...]</code></li>
+                                        <li>Keys to return:
+                                            <ul>
+                                                <li><b>send_text</b>: Text of the message. You can send multiple.</li>
+                                                <li><b>goto_and_wait</b>: Go to Bot thread and wait</li>
+                                                <li><b>goto_and_send</b>: Go to Bot thread and run</li>
+                                                <li><b>next</b>: Continue to the next thread in its level</li>
+                                                <li><b>exit</b>: If the current thread has children, don't run and go to the top level.</li>
+                                                <li><b>write</b>: Write in Odoo Model</li>
+                                                <li><b>create</b>: Create record in Odoo model</li>
+                                                <li><b>create_partner</b>: Create partner automatically</li>
+                                                <li><b>link_partner</b>: Link partner to this chat</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div>
+                                        <p><b>Simple example (Python)</b></p>
+<div style="white-space: pre-wrap; font-size: 90%; color: #e83e8c;">ret = []
+<span style="color:gray;"># Search words in received message (text: string)
+# Example of received message: text = "What is the address and phone number?"</span>
+if 'address' in text:
+    <span style="color:gray;"># Send one message</span>
+    ret.append({'send_text': 'The address of our company is ...'})
+if 'phone number' in text:
+    <span style="color:gray;"># Send another message</span>
+    ret.append({'send_text': 'Our phone number is +56 67 221 7777'})
+if not ret:
+    ret.append({'send_text': 'Hello'}))
+</div>
+                                        <br/>
+                                        <p><b>Advanced example (Python)</b></p>
+<div style="white-space: pre-wrap; font-size: 90%; color: #e83e8c;">ret = []
+<span style="color:gray;"># Search email in message (text: string)</span>
+emails = email_re.findall(text or '')
+if emails:
+    <span style="color:gray;"># Send 2 messages:</span>
+    ret.append({'send_text': 'All good'})
+    ret.append({'send_text': 'Email has been updated (%s)' % emails[0]})
+
+    <span style="color:gray;"># Action (Just one of these or empty):</span>
+    ret.append({'next': True})
+    ret.append({'exit': True})
+    ret.append({'goto_and_wait': '#12'})
+    ret.append({'goto_and_send': '#12'})
+
+    <span style="color:gray;"># Write email in Odoo model (You can add multiple lines):</span>
+    ret.append({
+        'write': {
+            'res_model': 'res.partner',
+            'res_id': mess_id.contact_id.res_partner_id.id,
+            'data': {'email': emails[0]}
+        }
+    })
+
+    <span style="color:gray;"># Or search and create Partner (You can add multiple lines):</span>
+    partner = search_partner()
+    if not partner:
+        ret.append({'create_partner': True})
+else:
+    ret.append({'send_text': 'oops, wrong email'}))
+</div>
+                                    </div>
+                                </div>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="whatsapp_connector_bot_action">
+        <field name="name">ChatBot</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">acrux.chat.bot</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_all': 1}</field>
+    </record>
+
+</odoo>

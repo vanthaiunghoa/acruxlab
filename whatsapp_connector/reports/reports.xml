@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="act_event_pivot" model="ir.actions.act_window">
+        <field name="name">Message Analysis</field>
+        <field name="res_model">acrux.chat.message</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="view_id" ref="whatsapp_connector.view_whatsapp_connector_message_pivot"/>
+        <field name="context">{'search_default_6months':1, 'group_by':['event']}</field>
+        <field name="domain">[('event', '!=', False)]</field>
+    </record>
+    <record id="act_event_graph" model="ir.actions.act_window">
+        <field name="name">Message Analysis</field>
+        <field name="res_model">acrux.chat.message</field>
+        <field name="view_mode">graph,pivot</field>
+        <field name="context">{'search_default_6months':1, 'group_by':['event','user_id']}</field>
+        <field name="domain">[('event', '!=', False)]</field>
+    </record>
+
+    <menuitem name="ChatRoom Analysis" id="menu_chatroom_report_root"
+              parent="mail.menu_root_discuss"
+              sequence="4"
+              groups="whatsapp_connector.group_chat_basic_extra"/>
+        <menuitem action="view_conversation_init_report_action"
+                  id="view_conversation_init_report_menu"
+                  parent="menu_chatroom_report_root"
+                  sequence="10"/>
+        <menuitem name="Message Analysis" id="menu_chatroom_report_event_pivot"
+                  action="act_event_graph"
+                  parent="menu_chatroom_report_root"
+                  sequence="5"/>
+       <menuitem name="Answer Time Analysis" id="view_agent_answer_time_report_menu"
+                  action="view_agent_answer_time_report_action"
+                  parent="menu_chatroom_report_root"
+                  sequence="5"/>
+
+</odoo>

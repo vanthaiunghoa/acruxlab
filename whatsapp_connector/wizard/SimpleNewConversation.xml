@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_simple_new_conversation_wizard" model="ir.ui.view">
+        <field name="name">acrux.chat.simple.new.conversation.wizard</field>
+        <field name="model">acrux.chat.simple.new.conversation.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="connector_id" options="{'no_create': True, 'no_open': True}" />
+                    <field name="search_str" default_focus="1" required="1"/>
+                    <field name="operation" invisible="1" />
+                </group>
+                <group attrs="{'invisible': [('operation', '!=', 'open')]}">
+                    <field name="conversation_ids" readonly="1" nolabel="1" colspan="2">
+                        <tree>
+                            <field name="name" />
+                            <field name="number_format" />
+                            <field name="agent_id" />
+                            <field name="status" />
+                            <button name="open_conversation" type="object" class="btn btn-primary"
+                                string="Open" />
+                        </tree>
+                    </field>
+                </group>
+                <footer>
+                    <button name="create_conversation" type="object" class="btn btn-primary"
+                        string="Create" attrs="{'invisible': [('operation', '!=', 'create')]}" />
+                    <button string="Close" class="btn btn-secondary" special="cancel" />
+                </footer>
+           </form>
+        </field>
+    </record>
+
+</odoo>
+

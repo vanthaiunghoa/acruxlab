@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<odoo>
+<data>
+
+    <record model="ir.ui.view" id="view_whatsapp_connector_connector_tree">
+        <field name="name">acrux.chat.connector.tree</field>
+        <field name="model">acrux.chat.connector</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="border_color" widget="color" nolabel="1"/>
+                <field name="name"/>
+                <field name="connector_type"/>
+                <field name="auto_valid_number" widget="boolean_toggle"
+                       attrs="{'invisible':[('connector_type','!=', 'apichat.io')]}"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_whatsapp_connector_connector_form">
+        <field name="name">acrux.chat.connector.form</field>
+        <field name="model">acrux.chat.connector</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="init_free_test_wizard" type="object" string="Init Free Test"
+                            class="btn-primary" attrs="{'invisible': ['|', ('token', '!=', '123456'), ('connector_type', '!=', 'apichat.io')]}"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="del_and_recreate_image_chat" type="object" string="Compress images"
+                                class="oe_stat_button" icon="fa-cog"
+                                title="Size for all connector! Set size in Config Parameters."/>
+                        <button name="ca_get_chat_list" type="object" string="Get Chat List"
+                                class="oe_stat_button" icon="fa-cog"
+                                attrs="{'invisible':['|', ('connector_type','not in', ['apichat.io']), ('ca_status','=', False)]}"/>
+                        <button name="update_template_waba" type="object" string="Get Templates WABA"
+                            class="oe_stat_button" icon="fa-download"
+                            attrs="{'invisible':['|', ('connector_type','not in', ['gupshup', 'waba_extern']), ('ca_status','=', False)]}"/>
+                    </div>
+                    <widget name="web_ribbon" title="Disconnected" bg_color="bg-danger"
+                            attrs="{'invisible': [('ca_status', '=', True)]}"/>
+                    <widget name="web_ribbon" title="Connected " bg_color="bg-success"
+                            attrs="{'invisible': [('ca_status', '=', False)]}"/>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="WhatsApp (+nnn nnnn nnnn)"/>
+                        </h1>
+                        <div class="o_row" name="preferences">
+                            <group>
+                                <field name="source"/>
+                                <field name="odoo_url"/>
+                                <field name="tz" required="1"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                                <field name="team_id"/>
+                                <field name="border_color" widget="color"/>
+                                <field name="show_icon" widget="boolean_toggle" />
+                                <field name="desk_notify" />
+                                <field name="allow_signing" widget="boolean_toggle" />
+                                <label for="auto_valid_number" attrs="{'invisible':[('connector_type', '!=', 'apichat.io')]}"/>
+                                <div class="o_row" name="auto_valid_number" attrs="{'invisible':[('connector_type', '!=', 'apichat.io')]}">
+                                    <field name="auto_valid_number" widget="boolean_toggle"/>
+                                    <div class="oe_inline" attrs="{'invisible':[('auto_valid_number', '=', False)]}">
+                                        <field name="valid_balance" force_save="1" style="color: darkred;"/>/<field name="valid_limit" force_save="1"/>
+                                        <span> Available queries</span> <span attrs="{'invisible':[('valid_date', '=', False)]}"> until </span>
+                                        <field name="valid_date" force_save="1"/>
+                                        <button name="check_is_valid_update" type="object" string=""
+                                                class="text-primary pt0 pb0" style="font-size:1.5em; line-height: normal;" icon="fa-cloud-download"/>
+                                    </div>
+                                </div>
+                                <field name="verify" invisible="1"/>
+                                <field name="sequence" invisible="1"/>
+                                <field name="id" invisible="1"/>
+                            </group>
+                        </div>
+                    </div>
+                    <notebook colspan="4">
+                        <page string="Assignment" name="assign_page" autofocus="autofocus">
+                            <group>
+                                <group name="assign_left">
+                                    <group string="End and Release" class="acrux_label_space">
+                                        <field name="time_to_reasign"/>
+                                        <field name="reassign_current_conversation" widget="boolean_toggle" />
+                                        <field name="time_to_done"/>
+                                        <field name="time_to_respond" attrs="{'invisible':[('connector_type','!=', 'gupshup')]}"/>
+                                    </group>
+                                </group>
+                                <group name="assign_right"/>
+                            </group>
+                        </page>
+                        <page string="Validate Numbers" name="validate_options"
+                              attrs="{'invisible':['|', ('auto_valid_number','=', False), ('connector_type', 'not in', ['apichat.io'])]}">
+                             <div class="mt8 o_settings_container o_group_col_12">
+                                <div class="col-12 mb16">
+You can associate with this <b>apichat.io</b> Plan a monthly query package to check if a number exists on Whatsapp.<br/>
+Hire the service in <a href="https://acruxlab.com/whatsapp-checker" target="_blank">acruxlab.com/whatsapp-checker</a><br/>
+The value of 'Available queries' will be automatically updated.<br/>
+<b style="color: darkred;">Tip:</b> Go to <b>ChatRoom > Conversation</b> and select '<b>Invalid numbers</b>' Filter.
+                                </div>
+                                <div class="col-12 o_setting_box">
+                                    <div class="o_setting_left_pane" style="width: 130px;">
+                                        <label for="valid_restriction" style="font-weight: bold;"/>
+                                    </div>
+                                    <div class="o_setting_right_pane" style="margin-left: 130px;">
+                                        <div class="content-group">
+                                            <field name="valid_restriction" widget="boolean_toggle"/>
+                                            <div>
+If you check this option and 'Available queries' have been exhausted,<br/>
+then you will be prevented from creating a contact manually.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_setting_left_pane pt16" style="width: 130px;" name="label_validate_conn_id" invisible="1">
+                                        <label for="validate_conn_id" style="font-weight: bold;"/>
+                                    </div>
+                                    <div class="o_setting_right_pane pt16" style="margin-left: 130px;" name="field_validate_conn_id" invisible="1">
+                                        <div class="content-group">
+                                            <field name="validate_conn_id" widget="selection"/>
+                                            <div>
+If you make intensive use of the validation service, then it is recommended that you have a dedicated connector.<br/>
+All queries will be performed by the connector you specify here.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_setting_left_pane pt16" style="width: 130px;">
+                                        <b style="color: black">Old Chat</b>
+                                    </div>
+                                    <div class="o_setting_right_pane pt16" style="margin-left: 130px;">
+                                        <div class="content-group">
+                                            <div>
+This action is necessary only once.<br/>
+All conversations that have incoming messages will be set to "Valid".
+                                            </div>
+                                            <button name="check_is_valid_old_records" type="object"
+                                                    string="Validate old chat"
+                                                    class="btn-primary mt8" icon="fa-cog"/>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </page>
+                        <page string="Connector" name="connector_page">
+                            <group string="Connector" name="connector">
+                                <field name="ca_status" force_save="1" invisible="1"/>
+                                <field name="connector_type"/>
+                                <field name="endpoint"/>
+                                <field name="message"/>
+                            </group>
+
+                            <separator string="Connection Instructions" class="mt32 o_group_col_12" colspan="4"/>
+                            <div class="mt8 o_settings_container o_group_col_12" name="connector_info">
+                                <div class="col-12">
+                                    Hire the service in <a href="https://acruxlab.com" target="_blank">acruxlab.com</a> and we give you the ID and Token for production environment.
+                                </div>
+                                <div class="col-12 o_setting_box">
+                                    <div class="o_setting_left_pane" style="width: 90px;">
+                                        <label for="uuid" style="font-weight: bold;"/>
+                                    </div>
+                                    <div class="o_setting_right_pane" style="margin-left: 90px;">
+                                        <div class="content-group">
+                                            <field name="uuid"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="o_setting_left_pane" style="width: 90px;">
+                                        <label for="token" style="font-weight: bold;"/>
+                                    </div>
+                                    <div class="o_setting_right_pane" style="margin-left: 90px;">
+                                        <div class="content-group">
+                                            <field name="token" password="True"/>
+                                        </div>
+                                    </div>
+
+                                    <div attrs="{'invisible':[('connector_type','in', ['apichat.io', 'chatapi'])]}">
+                                        <div class="o_setting_left_pane" style="width: 90px;">
+                                            <label for="ca_qr_code" string="Connect" style="font-weight: bold;"/>
+                                        </div>
+                                        <div class="o_setting_right_pane" style="margin-left: 90px;">
+                                            <div class="list-group">
+                                                <button name="ca_get_status" type="object" string="Connect or Check Status"
+                                                        class="btn-primary" icon="fa-cog" style="margin-right: 16px; width: 250px;"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ADD: apichat.io -->
+                                    <div attrs="{'invisible':[('connector_type','not in', ['apichat.io', 'chatapi'])]}">
+                                        <div class="o_setting_right_pane" style="margin-left: 90px;">
+                                            <div attrs="{'invisible':[('ca_status','=', False)]}">
+                                                <div class="list-group">
+                                                    <div class="list-group-item list-group-item-success" style="width: fit-content;">
+                                                        Status: <b>Connected</b><span class="spinner-grow spinner-grow-sm"/><br/><br/>
+                                                        <button name="action_ca_get_status" type="object" string="Check Status or Get QR"
+                                                                class="btn-primary" icon="fa-cog" style="margin-right: 16px;"/>
+                                                        <button name="ca_set_logout" type="object" string="Logout from WhatsApp Web"
+                                                                class="btn-primary" icon="fa-cog"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div attrs="{'invisible':[('ca_status','=', True)]}">
+                                                You must scan QR code from device with Whatsapp.
+                                                <div class="mb16 mt8">
+                                                    <button name="action_ca_get_status" type="object" string="Check Status or Get QR"
+                                                            class="btn-primary" icon="fa-cog"/>
+                                                </div>
+                                                An error? On your device close all sessions and try again.
+                                                <div class="mb16 mt8">
+                                                    <button name="ca_set_logout" type="object" string="Logout from WhatsApp Web"
+                                                            class="btn-primary" icon="fa-cog"/>
+                                                </div>
+                                            </div>
+                                            <field name="ca_qr_code" invisible="1"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <hr style="margin-top: 32px;"/>
+                            <!-- ADD: apichat.io -->
+                            <group string="Information" col="1" colspan="4" attrs="{'invisible':[('connector_type','not in', ['apichat.io', 'chatapi'])]}">
+<ul>
+<li>Set in System Parameters de value for 'acrux_image_resize' image width in pixels to prevent sending images over 64 Kb.<br/>
+Possible values: <b>original</b> or number less than <b>1024</b>.</li>
+<li>Default value of 500 means 500x500 Pixels. Over 600 is at risk of exceeding 64 Kb. 600 is good value.</li>
+</ul>
+                            </group>
+                            <!-- ADD: gupshup -->
+                            <group string="Information" col="1" colspan="4" attrs="{'invisible':[('connector_type','!=', 'gupshup')]}">
+<ul>
+<li>The connector charges an additional fee when sending a message after 24 hours or if it exceeds the size limit.</li>
+<li>In Users form select the appropriate permission to allow an extra fee.</li>
+<li>Set in System Parameters de value for 'acrux_image_resize' image width in pixels to prevent extra fee (Weight up to 64 Kb).<br/>
+Possible values: <b>original</b> or number less than <b>1024</b>.<br/>
+Default value of 500 means 500x500 Pixels. Over 600 is at risk of exceeding 64 Kb. 600 is good value.</li>
+</ul>
+                            </group>
+                            <group string="Module Terms of Service" col="1" colspan="4">
+<ul>
+<li>By purchasing or using this module you accept the terms of service under the OPL-1 License published in the Odoo application store.</li>
+<li>It is forbidden to publish, distribute, sublicense, or sell copies of the Module or modified copies of the Module, which do not use the AcruxLab service or plans.</li>
+</ul>
+                            </group>
+                            <group col="1" colspan="4" attrs="{'invisible':[('connector_type','!=', 'chatapi')]}">
+                                <div class="list-group col-sm-12">
+                                    <div class="list-group-item text-danger">
+<strong>Chat-Api Terms of Service</strong><br/><br/>
+<div>
+1. Chat-Api is unofficial and independent of WhatsApp Inc.<br/>
+2. Your account can be banned by anti-spam system WhatsApp after several clicking the "block" button.<br/>
+3. Message files will be stored for 30 days and then deleted.<br/>
+4. You agree not to use the Chat-Api service for spam and bulk messaging.<br/>
+5. By authorizing the phone number (messenger account) in the Chat-Api service, you agree that Chat-Api will have full access to the authorized account in the messenger.<br/>
+6. Chat-Api has the right to block your access to the service in case of violation of the "Public Agreement" or "Message Content Requirements".
+</div>
+<br/>
+Authorising your number you agree on our terms of service. We advise you to read our tips on using Chat-Api.
+                                    </div>
+                                </div>
+                            </group>
+                            <group col="1" colspan="4" attrs="{'invisible':[('connector_type','!=', 'apichat.io')]}">
+                                <div class="list-group col-sm-12">
+                                    <div class="list-group-item text-danger">
+<strong>ApiChat.io Terms of Service</strong><br/><br/>
+<div>
+1. ApiChat.io is unofficial and independent of WhatsApp Inc.<br/>
+2. Your account can be banned by anti-spam system WhatsApp after several clicking the "block" button.<br/>
+3. Message files will be stored until they are received correctly (status = 200) or for 7 days and then deleted.<br/>
+4. You agree not to use the ApiChat.io service for spam and bulk messaging.<br/>
+5. By authorizing the phone number (messenger account) in the ApiChat.io service, you agree that ApiChat.io will have full access to the authorized account in the messenger.<br/>
+6. ApiChat.io has the right to block your access to the service in case of violation of the "Public Agreement" or "Message Content Requirements".
+</div>
+<br/>
+Authorising your number you agree on our terms of service. We advise you to read our tips on using ApiChat.io.
+                                    </div>
+                                </div>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="whatsapp_connector_connector_action">
+        <field name="name">Connectors</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">acrux.chat.connector</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_create,perm_write,perm_unlink
+access_acrux_bot_answer_user,access_acrux_bot_answer_user,model_acrux_chat_bot,base.group_user,1,0,0,0
+access_acrux_bot_answer_admin,access_acrux_bot_answer_admin,model_acrux_chat_bot,base.group_system,1,1,1,1
+access_acrux_bot_log_answer_admin,access_acrux_bot_log_answer_admin,model_acrux_chat_bot_log,base.group_system,1,1,1,1
+access_acrux_chat_bot_product_import_user,access_acrux_chat_bot_product_import_user,model_acrux_chat_bot_product_import,base.group_user,1,0,0,0
+access_acrux_chat_bot_product_import_admin,access_acrux_chat_bot_product_import_admin,model_acrux_chat_bot_product_import,base.group_system,1,1,1,1

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="whatsapp_connector_bot_log_search" model="ir.ui.view">
+        <field name="name">acrux.chat.bot.log.search</field>
+        <field name="model">acrux.chat.bot.log</field>
+        <field name="arch" type="xml">
+            <search string="ChatBot Log">
+                <field name="create_date"/>
+                <field name="text"/>
+                <field name="conversation_id"/>
+                <field name="connector_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="whatsapp_connector_bot_log_tree">
+        <field name="name">acrux.chat.bot.log.tree</field>
+        <field name="model">acrux.chat.bot.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="create_date"/>
+                <field name="conversation_id" optional="show"/>
+                <field name="text"/>
+                <field name="bot_log"/>
+                <field name="connector_id" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="whatsapp_connector_bot_log_form">
+        <field name="name">acrux.chat.bot.log.form</field>
+        <field name="model">acrux.chat.bot.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="create_date"/>
+                            <field name="conversation_id"/>
+                            <field name="connector_id"/>
+                            <field name="text"/>
+                        </group>
+                        <group>
+                            <field name="bot_log"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="whatsapp_connector_bot_log_action">
+        <field name="name">ChatBot Log</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">acrux.chat.bot.log</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

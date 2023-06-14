@@ -1,0 +1,97 @@
+# Translation of Odoo Server.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-18 15:39+0000\n"
+"PO-Revision-Date: 2022-02-18 15:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: whatsapp_connector_send_stock
+#: model:mail.template,body_html:whatsapp_connector_send_stock.chatroom_email_template_product_link_3
+msgid ""
+"<p>\n"
+"*<t t-out=\"object.name\"/>*:<br/>\n"
+"<t t-foreach=\"object.attribute_line_ids\" t-as=\"attr\">\n"
+"<t t-set=\"values\" t-value=\"', '.join(attr.value_ids.mapped('name'))\"/>\n"
+"*<t t-out=\"attr.attribute_id.name\"/>*: <t t-out=\"values\"/><br>\n"
+"</t>\n"
+"</p>"
+msgstr ""
+
+#. module: whatsapp_connector_send_stock
+#: model:mail.template,body_html:whatsapp_connector_send_stock.chatroom_email_template_product_link_4
+msgid ""
+"<p>\n"
+"*<t t-out=\"object.name\"/>*:<br/>\n"
+"<t t-foreach=\"object.attribute_line_ids\" t-as=\"attr\">\n"
+"<t t-set=\"values\" t-value=\"', '.join(attr.value_ids.mapped('name'))\"/>\n"
+"*<t t-out=\"attr.attribute_id.name\"/>*: <t t-out=\"values\"/><br>\n"
+"</t>\n"
+"<br/>\n"
+"See on our website: https://acruxlab.com/shop/<t t-out=\"object.id\"/>\n"
+"</p>"
+msgstr ""
+"<p>\n"
+"*<t t-out=\"object.name\"/>*:<br/>\n"
+"<t t-foreach=\"object.attribute_line_ids\" t-as=\"attr\">\n"
+"<t t-set=\"values\" t-value=\"', '.join(attr.value_ids.mapped('name'))\"/>\n"
+"*<t t-out=\"attr.attribute_id.name\"/>*: <t t-out=\"values\"/><br>\n"
+"</t>\n"
+"<br/>\n"
+"Vea en nuestra web: https://acruxlab.com/shop/<t t-out=\"object.id\"/>\n"
+"</p>"
+
+#. module: whatsapp_connector_send_stock
+#: model:mail.template,body_html:whatsapp_connector_send_stock.chatroom_email_template_product_link_1
+msgid ""
+"<p>\n"
+"See on our website <t t-out=\"object.name\"/><br/>\n"
+"https://acruxlab.com/shop/<t t-out=\"object.product_tmpl_id.id\"/></p>"
+msgstr ""
+"<p>\n"
+"Vea en nuestra web *<t t-out=\"object.name\"/>*<br/>\n"
+"https://acruxlab.com/shop/<t t-out=\"object.product_tmpl_id.id\"/></p>"
+
+#. module: whatsapp_connector_send_stock
+#: model:mail.template,body_html:whatsapp_connector_send_stock.chatroom_email_template_product_link_2
+msgid ""
+"<p>\n"
+"https://my_external_website.com/product/<t t-out=\"object.product_tmpl_id.default_code\"/></p>"
+msgstr ""
+
+#. module: whatsapp_connector_send_stock
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_send_stock.res_config_settings_view_form
+msgid "Product"
+msgstr "Producto"
+
+#. module: whatsapp_connector_send_stock
+#: model:mail.template,report_name:whatsapp_connector_send_stock.chatroom_email_template_stock_pdf
+msgid "{{(object.name or '').replace('/','_')}}"
+msgstr ""
+
+#. module: whatsapp_connector_send_stock
+#: model:mail.template,body_html:whatsapp_connector_send_stock.chatroom_email_template_stock_simple
+msgid ""
+"<p>Hello <t t-out=\"object.partner_id.name\"/><br/>We are glad to inform you that your "
+"order *<t t-out=\"object.name or 'n/a'\"/>* has been shipped.</p>"
+msgstr ""
+"<p>Hola <t t-out=\"object.partner_id.name\"/><br/>Nos complace informarle que su pedido "
+"*<t t-out=\"object.name or 'n/a'\"/>* ha sido enviado.</p>"
+
+#. module: whatsapp_connector_send_stock
+#: model:mail.template,body_html:whatsapp_connector_send_stock.chatroom_email_template_stock_pdf
+msgid ""
+"<p>Hello <t t-out=\"object.partner_id.name\"/><br>We are glad to inform you that your "
+"order *<t t-out=\"object.name or 'n/a'\"/>* has been shipped.<br>Please find your "
+"delivery order attached for more details.</p>"
+msgstr ""
+"<p>Hola <t t-out=\"object.partner_id.name\"/><br>Nos complace informarle que su pedido "
+"*<t t-out=\"object.name or 'n/a'\"/>* ha sido enviado.<br>Por favor, encuentre su orden "
+"de entrega en adjunto para más detalles.</p>"

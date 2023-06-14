@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!--search -->
+    <record id="view_res_partner_filter" model="ir.ui.view">
+        <field name="name">res.partner.acrux.chat.search</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <filter string="From ChatRoom" name="from_chatroom_filter" domain="[('contact_ids', '!=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!--form -->
+    <record id="res_partner_form_view" model="ir.ui.view">
+        <field name="name">res.partner.acrux.chat.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" type="action" name="%(whatsapp_connector.acrux_chat_message_wizard_action)d"
+                        groups="whatsapp_connector.group_chat_basic"
+                        icon="fa-whatsapp"
+                        style="max-width: 48px; text-align: center; padding-right: 16px !important;"
+                        context="{'default_partner_id': id, 'full_name': True}">
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='user_ids']" position="before">
+                <field name="contact_ids" widget="many2many_tags" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/form//field[@name='mobile']" position="after">
+                <field name="contact_ids" widget="many2many_tags" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_whatsapp_connector_message_search">
+        <field name="name">acrux.chat.message.search</field>
+        <field name="model">acrux.chat.message</field>
+        <field name="arch" type="xml">
+            <search string="Connected to">
+                <field name="name"/>
+                <field name="contact_id"/>
+                <field name="ttype"/>
+                <field name="date_message"/>
+                <field name="event"/>
+                <filter string="This Month" name="this_month"
+                        domain="[('date_message', '&gt;=', context_today().strftime('%%Y-%%m-01'))]"/>
+                <filter string="Last Month" name="last_month"
+                        domain="['&amp;', ('date_message', '&gt;=', (context_today() - relativedelta(months=1)).strftime('%%Y-%%m-01')), ('date_message', '&lt;', context_today().strftime('%%Y-%%m-01'))]"/>
+                <filter string="Last 6 Months" name="6months"
+                        domain="[('date_message','&gt;=',(context_today()-relativedelta(months=5)).strftime('%Y-%m-01'))]"/>
+                <separator/>
+                <filter name="filter_pending_from_me" string="From me" domain="[('from_me','=',True)]"/>
+                <filter name="filter_pending_from_me_not" string="From Partner" domain="[('from_me','=',False)]"/>
+                <filter name="filter_attachment" string="With Attachment" domain="[('res_model','!=',False), ('res_id','!=',False)]"/>
+                <filter name="filter_attachment_not" string="Without Attachment" domain="[('res_model','=',False), ('res_id','=',False)]"/>
+                <filter name="filter_event" string="With Event" domain="[('event','!=',False)]"/>
+                <group string="Group by">
+                    <filter name="group_by_connector" string="Connector" context="{'group_by':'connector_id'}"/>
+                    <filter name="group_by_contact" string="Partner" context="{'group_by':'contact_id'}"/>
+                    <filter name="group_by_user" string="Agent" context="{'group_by':'user_id'}"/>
+                    <filter name="group_by_ttype" string="Type" context="{'group_by':'ttype'}"/>
+                    <filter name="group_by_date_message" string="Date" context="{'group_by':'date_message'}"/>
+                    <filter name="group_by_event" string="Event" context="{'group_by':'event'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_whatsapp_connector_message_tree">
+        <field name="name">acrux.chat.message.tree</field>
+        <field name="model">acrux.chat.message</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="connector_id" optional="hide"/>
+                <field name="contact_id"/>
+                <field name="name"/>
+                <field name="ttype"/>
+                <field name="from_me"/>
+                <field name="date_message"/>
+                <field name="user_id"/>
+                <field name="event"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- pivot | group by user_id -->
+    <record model="ir.ui.view" id="view_whatsapp_connector_message_pivot">
+        <field name="name">acrux.chat.message.pivot</field>
+        <field name="model">acrux.chat.message</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="user_id" string="Agent" type="row"/>
+                <field name="date_message" interval="month" type="col"/>
+            </pivot>
+        </field>
+    </record>
+    <!-- graph | group by user_id -->
+    <record model="ir.ui.view" id="view_whatsapp_connector_message_graph">
+        <field name="name">acrux.chat.message.graph</field>
+        <field name="model">acrux.chat.message</field>
+        <field name="arch" type="xml">
+            <graph>
+                <field name="user_id" type="row"/>
+                <field name="event" type="row"/>
+                <field name="date_message" interval="month" type="col"/>
+            </graph>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_whatsapp_connector_message_form">
+        <field name="name">acrux.chat.message.form</field>
+        <field name="model">acrux.chat.message</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <div colspan="2" style="font-size: 18px;">
+                            <field name="text"/>
+                            <hr class="mb0"/>
+                        </div>
+                        <group string="Registry">
+                            <field name="from_me"/>
+                            <field name="user_id"/>
+                            <field name="contact_id"/>
+                            <field name="date_message"/>
+                            <field name="name" invisible="1"/>
+                            <field name="ttype"/>
+                            <field name="event"/>
+                            <field name="msgid"/>
+                            <field name="error_msg"/>
+                            <field name="try_count"/>
+                            <field name="show_product_text"/>
+                        </group>
+                        <group string="Resource">
+                            <field name="connector_id"/>
+                            <field name="res_model"/>
+                            <field name="res_id"/>
+                            <field name="metadata_type" />
+                            <field name="metadata_json" widget="ace" options="{'mode': 'json'}" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="view_whatsapp_connector_message_action">
+        <field name="name">Messages</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">acrux.chat.message</field>
+        <field name="view_mode">tree,form,pivot</field>
+    </record>
+
+</odoo>

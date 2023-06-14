@@ -1,0 +1,1292 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* whatsapp_connector_mass
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-21 22:50+0000\n"
+"PO-Revision-Date: 2022-03-21 22:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_ws_test_view_form
+msgid "+56 67 221 7777"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_mailing_mailing__enable_from_hour
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_mailing_mailing__enable_to_hour
+msgid "00:00 to 23:59"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields.selection,name:whatsapp_connector_mass.selection__mailing_mailing__spam_level__3
+msgid "100 messages per hour"
+msgstr "100 mensajes por hora"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields.selection,name:whatsapp_connector_mass.selection__mailing_mailing__spam_level__2
+msgid "200 messages per hour"
+msgstr "200 mensajes por hora"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields.selection,name:whatsapp_connector_mass.selection__mailing_mailing__spam_level__1
+msgid "600 messages per hour"
+msgstr "600 mensajes por hora"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_kanban
+msgid "<i class=\"fa fa-user\" role=\"img\" aria-label=\"Contacts\" title=\"Contacts\"/>"
+msgstr "<i class=\"fa fa-user\" role=\"img\" aria-label=\"Contactos\" title=\"Contactos\"/>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_kanban
+msgid ""
+"<i class=\"fa fa-user\" role=\"img\" aria-label=\"Contacts\" title=\"Contacts\"/>\n"
+"                                    Import Partners"
+msgstr ""
+"<i class=\"fa fa-user\" role=\"img\" aria-label=\"Contactos\" title=\"Contactos\"/>\n"
+"                                    Importar Contactos"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_kanban
+msgid ""
+"<i class=\"fa fa-user\" role=\"img\" aria-label=\"Conversations\" title=\"Conversations\"/>\n"
+"                                    Import Conversations"
+msgstr ""
+"<i class=\"fa fa-user\" role=\"img\" aria-label=\"Conversaciones\" title=\"Conversaciones\"/>\n"
+"                                    Importar Conversaciones"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.res_config_settings_view_form
+msgid ""
+"<i>You will be able to group and select records in list views and create "
+"Whatsapp batch messages with templates.</i>"
+msgstr ""
+"<i>Podrá agrupar y seleccionar registros en vistas de lista y crear mensajes"
+" por lotes de Whatsapp con plantillas.</i>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid ""
+"<span class=\"fa fa-calendar-check-o mr-2 small my-auto\" aria-label=\"Sent "
+"date\"/>"
+msgstr ""
+"<span class=\"fa fa-calendar-check-o mr-2 small my-auto\" aria-label=\"Fecha"
+" envío\"/>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid ""
+"<span class=\"fa fa-hourglass-half mr-2 small my-auto\" aria-"
+"label=\"Scheduled date\"/>"
+msgstr ""
+"<span class=\"fa fa-hourglass-half mr-2 small my-auto\" aria-label=\"Fecha "
+"programada\"/>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid ""
+"<span class=\"fa fa-hourglass-o mr-2 small my-auto\" aria-label=\"Scheduled date\"/>\n"
+"                                        <span class=\"align-self-baseline\">Next Batch</span>"
+msgstr ""
+"<span class=\"fa fa-hourglass-o mr-2 small my-auto\" aria-label=\"Fecha programada\"/>\n"
+"                                        <span class=\"align-self-baseline\">Próxima ejecución</span>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "<span name=\"failed_text\">Continue?</span>"
+msgstr "<span name=\"failed_text\">Continuar?</span>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "<span name=\"failed_text\">Messages could not be sent.</span>"
+msgstr "<span name=\"failed_text\">Mensajes no pudieron ser enviados.</span>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "<span name=\"schedule_date_text\">This marketing is scheduled for </span>"
+msgstr ""
+"<span name=\"schedule_date_text\">Este envío está programado para el "
+"</span>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid ""
+"<span name=\"scheduled_text\">Messages are in queue and will be sent "
+"soon.</span>"
+msgstr ""
+"<span name=\"scheduled_text\">Mensajes están en la cola y serán enviados "
+"pronto.</span>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "<span name=\"sent\">Messages have been sent.</span>"
+msgstr "<span name=\"sent\">Mensajes han sido enviados.</span>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid "<span>Pending</span>"
+msgstr "<span>Pendientes</span>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_form_ws
+msgid "<strong>This Message could not be sent.</strong>"
+msgstr "<strong>Este mensaje no pudo ser enviado.</strong>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_form_ws
+msgid "<strong>This number appears to be invalid.</strong>"
+msgstr "<strong>Este número parece ser invalido.</strong>"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "All Stages"
+msgstr "Estados"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_kanban
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid "Archive"
+msgstr "Archivar"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_search_ws
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Attach a file"
+msgstr "Adjunte un archivo"
+
+#. module: whatsapp_connector_mass
+#: model:ir.ui.menu,name:whatsapp_connector_mass.whatsapp_mass_menu_ws
+msgid "Batch Messaging"
+msgstr "Whatsapp Marketing"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_search_ws
+msgid "Batch messaging that are assigned to me"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.res_config_settings_view_form
+msgid "Batch/Group Messages"
+msgstr "Mensajes en Lotes/Grupos"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "Bounced"
+msgstr "Rebotado"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_tree_ws
+msgid "Bounced (%)"
+msgstr "Rebotado (%)"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.res_config_settings_view_form
+msgid "CRM Leads"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_search_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_tree_ws
+msgid "Campaign"
+msgstr "Campaña"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.acrux_send_multi_wizard_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_ws_test_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Caption"
+msgstr "Leyenda"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_acrux_chat_message
+msgid "Chat Message"
+msgstr "Mensaje Chat"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.res_config_settings_view_form
+msgid "ChatRoom"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_acrux_chat_send_multi_wizard
+msgid "ChatRoom Message Multi"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.actions.server,name:whatsapp_connector_mass.ir_cron_mass_chatroom_check_is_valid_ir_actions_server
+#: model:ir.cron,cron_name:whatsapp_connector_mass.ir_cron_mass_chatroom_check_is_valid
+#: model:ir.cron,name:whatsapp_connector_mass.ir_cron_mass_chatroom_check_is_valid
+msgid "Chatroom Marketing: Check is valid"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.actions.server,name:whatsapp_connector_mass.ir_cron_mass_chatroom_queue_ir_actions_server
+#: model:ir.cron,cron_name:whatsapp_connector_mass.ir_cron_mass_chatroom_queue
+#: model:ir.cron,name:whatsapp_connector_mass.ir_cron_mass_chatroom_queue
+msgid "Chatroom Marketing: Process queue"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.view_pop_message_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuraciones"
+
+#. module: whatsapp_connector_mass
+#: model:ir.ui.menu,name:whatsapp_connector_mass.whatsapp_mass_menu_configuration
+#: model:ir.ui.menu,name:whatsapp_connector_mass.whatsapp_mass_menu_setting
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__connector_type
+msgid "Connect to"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__connector_status
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Connected"
+msgstr "Conectado"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__connector_id
+msgid "Connector"
+msgstr "Conector"
+
+#. module: whatsapp_connector_mass
+#: model:ir.actions.act_window,name:whatsapp_connector_mass.whatsapp_mailing_list_action
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_tree
+msgid "Contact Lists"
+msgstr "Lista de contactos"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/wizards/mailing_ws_test.py:0
+#, python-format
+msgid ""
+"Contact number must be updated to a valid number in Whatsapp: +%s to +%s."
+msgstr "Número del contacto se debe actualizar a número válido en Whatsapp: +%s a +%s."
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Contact's name is available in <b>{name}</b>"
+msgstr "El nombre del contacto está disponible en <b>{name}</b>"
+
+#. module: whatsapp_connector_mass
+#: model:ir.actions.act_window,name:whatsapp_connector_mass.mailing_contact_action_whatsapp
+#: model:ir.ui.menu,name:whatsapp_connector_mass.whatsapp_mass_contact_menu
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.res_config_settings_view_form
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form_simplified
+msgid "Contacts List"
+msgstr "Lista de Contactos"
+
+#. module: whatsapp_connector_mass
+#: model:ir.ui.menu,name:whatsapp_connector_mass.whatsapp_mass_list_menu
+#: model:ir.ui.menu,name:whatsapp_connector_mass.whatsapp_mass_menu_contacts
+msgid "Contacts Lists"
+msgstr "Lista de Contactos"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__conversation_ids
+#: model:ir.model.fields.selection,name:whatsapp_connector_mass.selection__mass_whatsapp_import_wizard__ttype__conversation
+msgid "Conversations"
+msgstr "Conversaciones"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form_simplified
+msgid "Create"
+msgstr "Crear"
+
+#. module: whatsapp_connector_mass
+#: model:ir.actions.act_window,name:whatsapp_connector_mass.open_create_mass_mailing_list
+msgid "Create a Mailing List"
+msgstr "Crear una lista de envío"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.action_view_utm_campaigns
+msgid "Create a mailing campaign"
+msgstr "Crear un campaña de envío"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.mailing_mailing_action_view_ws_from_campaign
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.mailing_mailing_action_ws
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.mailing_mailing_action_ws_from_campaign
+msgid "Create a new Whatsapp Marketing"
+msgstr "Crear un nuevo Marketing por whatsapp"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.mailing_contact_action_whatsapp
+msgid "Create a new contact"
+msgstr "Crear un nuevo contacto"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.whatsapp_mailing_list_action
+msgid "Create a new contacts list"
+msgstr "Crear una nueva lista de contactos"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.utm_campaign_view_form
+msgid "Create new Mailing"
+msgstr "Crear un nuevo envío"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_ws_test__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_ws_test__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_search
+msgid "Creation Date"
+msgstr "Fecha Creación"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_kanban
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid "Delete"
+msgstr "Borrar"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "Delivered"
+msgstr "Entregado"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_tree_ws
+msgid "Delivered (%)"
+msgstr "Entregado (%)"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form_simplified
+msgid "Discard"
+msgstr "Descartar"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Disconnected"
+msgstr "Desconectado"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_ws_test__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid ""
+"Document's name is available in <b>{doc_name}</b> (Sale Order example: "
+"SO123)"
+msgstr ""
+"El nombre del documento está disponible en <b>{doc_name}</b> (Ejemplo Pedido"
+" de Venta: SO123)"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_kanban
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid "Dropdown menu"
+msgstr "Menú desplegable"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_kanban
+msgid "Edit"
+msgstr "Editar"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__enable_from_hour
+msgid "Enable From"
+msgstr "Habilitar Desde"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Enable From must be less than Enable To."
+msgstr "Habilitar desde tiene que ser menor que Habilitar Hasta"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__enable_to_hour
+msgid "Enable To"
+msgstr "Habilitar Hasta"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.res_config_settings_view_form
+msgid "Enable batch messages in:"
+msgstr "Habilitar los mensajes por lotes en:"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_trace__ws_error_msg
+msgid "Error"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__error_message
+msgid "Error Message"
+msgstr "Mensaje de Error"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "Failed"
+msgstr "Fallido"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_search_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__body_whatsapp_html
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__body_whatsapp_html
+msgid "Html Message"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__id
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_ws_test__id
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_mailing_mailing__spam_level
+msgid "If sending to new numbers, a lower speed is recommended."
+msgstr "Si envía a números nuevos, se recomienda una velocidad menor."
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.view_pop_message_form
+msgid "Import"
+msgstr "Importar"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form
+msgid "Import Conversations"
+msgstr "Importar Conversaciones"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form
+msgid "Import Partners"
+msgstr "Importar Contactos"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_list.py:0
+#, python-format
+msgid "Import Records"
+msgstr "Importar Registros"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_mass_whatsapp_import_wizard
+msgid "Import records to contacts list"
+msgstr "Importar registro a una lista de contactos"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_list.py:0
+#: code:addons/whatsapp_connector_mass/models/mailing_list.py:0
+#, python-format
+msgid "Import successful"
+msgstr "Importación exitosa"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_list.py:0
+#: code:addons/whatsapp_connector_mass/models/mailing_list.py:0
+#, python-format
+msgid "Imported %s of %s records selected."
+msgstr "%s importados de %s registros seleccionados."
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_mailing_mailing__ws_subject
+msgid "Internal reference"
+msgstr "Referencia interna"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Invalid number"
+msgstr "Número inválido"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Invalid phone"
+msgstr "Número inválido"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_contact__is_whatsapp
+msgid "Is Whatsapp"
+msgstr "Es Whatsapp"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_ws_test____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "Last State Update"
+msgstr "Últio estado actualizado"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_ws_test__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_ws_test__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.res_config_settings_view_form
+msgid ""
+"Let's check if you have the required modules to create each menu. Please "
+"click on each option."
+msgstr ""
+"Verificar si tiene los módulos necesarios para crear cada menú. Por favor "
+"haga clic en cada opción."
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__contact_list_id
+msgid "List"
+msgstr "Lista"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__chatter_log
+msgid "Log in chatter"
+msgstr "Guardar en chatter"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__loop_count
+msgid "Loop counter"
+msgstr "Contador de ciclos"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "Mail Statistics"
+msgstr "Estadísiticas"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_ws_test__mailing_id
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_graph_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_search_ws
+msgid "Mailing"
+msgstr "Envío"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Mailing Campaign"
+msgstr "Campaña de envío"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_mailing_contact
+msgid "Mailing Contact"
+msgstr "Contacto de correo"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_mailing_list
+msgid "Mailing List"
+msgstr "Lista de correo"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_tree
+msgid "Mailing List Contacts"
+msgstr "Lista de Contactos para envíos."
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_message__mailing_res_id
+msgid "Mailing Res"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_mailing_trace
+msgid "Mailing Statistics"
+msgstr "Estadísticas de correo"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__mailing_type
+msgid "Mailing Type"
+msgstr "Tipo de correo"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_search_ws
+msgid "Mailings"
+msgstr "Envíos"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__mark_invoice_as_sent
+msgid "Mark as sent"
+msgstr "Marcar enviado"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_message__mailing_id
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Marketing"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_mailing_mailing
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "Mass Mailing"
+msgstr "Correo masivo"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_utm_campaign__mailing_ws_ids
+msgid "Mass Whatsapp"
+msgstr "Whatsapp Masivo"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_mailing_mailing__message_limit
+msgid "Maximum messages number allowed to send in one day."
+msgstr "Número máximo de mensajes permitidos para enviar en un día."
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Medium"
+msgstr "Medio"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/ResConfigSettings.py:0
+#, python-format
+msgid ""
+"Menu already exists.<br/>In the 'Action' menu you can find 'Send Multi "
+"Whatsapp'."
+msgstr ""
+"El menú ya existe.<br/>En menú 'Acción' encontrará 'Enviar Multi Whatsapp'."
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/ResConfigSettings.py:0
+#, python-format
+msgid ""
+"Menu has been created.<br/>In the 'Action' menu you can find 'Send Multi "
+"Whatsapp'."
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__body_whatsapp
+msgid "Message"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Message Content"
+msgstr "Contenido del Mensaje"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_mailing_mailing__error_message
+msgid "Message error."
+msgstr "Mensaje de error."
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__message_limit
+msgid "Messages limit"
+msgstr "Límite de Mensajes"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_search_ws
+msgid "My Batch"
+msgstr "Mis Lotes/Grupos"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form_simplified
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_tree
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Name"
+msgstr "Nombre"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_search
+msgid "Name / Phone"
+msgstr "Nombre / Teléfono"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_ws_test__numbers
+msgid "Number"
+msgstr "Número"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Number already exists when trying to fix (%s)"
+msgstr "El número ya existe al intentar corregir (%s)"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/wizards/mailing_ws_test.py:0
+#, python-format
+msgid ""
+"Number are not correctly encoded: %s, example : \"+56 67 221 7777, +33 545 "
+"55 55 55\""
+msgstr ""
+"El número no es correcto: %s, ejemplo : \"+56 67 221 7777, +33 545 55 55 "
+"55\""
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/wizards/mailing_ws_test.py:0
+#, python-format
+msgid "Number does not exist in contacts (%s)."
+msgstr "Número no existe en contactos (%s)."
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Number not exist in WhatsApp (%s)"
+msgstr "Número no existe en WhatsApp (%s)"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_utm_campaign__mailing_ws_count
+msgid "Number of Mass Whatsapp"
+msgstr "Número de Whatspp Masivos"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_tree_ws
+msgid "Open Recipient"
+msgstr "Abrir Documento"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/wizards/import_records.py:0
+#, python-format
+msgid "Operation not allowed."
+msgstr "Operación no permitida."
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Option not allowed with whatsapp."
+msgstr "Opción no permitida en whatsapp."
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields.selection,name:whatsapp_connector_mass.selection__mass_whatsapp_import_wizard__ttype__partner
+msgid "Partner"
+msgstr "Contacto"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__partner_ids
+msgid "Partners"
+msgstr "Contactos"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_contact__ws_phone
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_trace__ws_phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_contact__ws_phone_normalized
+msgid "Phone Normalize"
+msgstr "Teléfono Normalizado"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Please select WABA template."
+msgstr "Por favor seleccionar una plantilla WABA."
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/wizards/send_multi.py:0
+#, python-format
+msgid "Please select model."
+msgstr "Por favor seleccione un modelo"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/wizards/send_multi.py:0
+#, python-format
+msgid "Please select records."
+msgstr "Por favor seleccione un registro"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Please write in this format: HH:MM (Min: 00:00 - Max: 24:00)"
+msgstr "Por favor escriba en este formato: HH:MM (Min: 00:00 - Max: 24:00)"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Put in Queue"
+msgstr "Poner en Cola"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__put_in_queue
+msgid "Put in queue"
+msgstr "Poner en Cola"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Received"
+msgstr "Recibidos"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_trace__ref_name
+msgid "Recipient"
+msgstr "Documento"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_tree_ws
+msgid "Recipients"
+msgstr "Destinatarios"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__name
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__ws_subject
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__model
+msgid "Related Document Model"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.ui.menu,name:whatsapp_connector_mass.whatsapp_mass_menu_reporting
+msgid "Reporting"
+msgstr "Reporte"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_kanban
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid "Restore"
+msgstr "Restaurar"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Retry"
+msgstr "Reintentar"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.res_config_settings_view_form
+msgid "Sales Orders"
+msgstr "Pedidos de Venta"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Schedule"
+msgstr "Programar"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_tree_ws
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "Scheduled"
+msgstr "Programado"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid "Scheduled on #{record.next_departure.value}"
+msgstr "Programado para #{record.next_departure.value}"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid "Scheduled on #{record.schedule_date.value}"
+msgstr "Programado para #{record.schedule_date.value}"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Select a connector."
+msgstr "Seleccione un conector."
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Select mailing lists..."
+msgstr "Seleccione listas de envío..."
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Select mailing lists:"
+msgstr "Seleccione listas de envío:"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.acrux_send_multi_wizard_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_ws_test_view_form
+msgid "Send"
+msgstr "Envíar"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.acrux_send_multi_wizard_form
+msgid "Send Messages"
+msgstr "Enviar Mensajes"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_ws_test_view_form
+msgid "Send a Whatsapp Message"
+msgstr "Envía a Mensaje por Whatsapp"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_ws_test_view_form
+msgid "Send a sample Whatsapp for testing purpose to the number below."
+msgstr "Envíe un mensaje al siguiente número para probar."
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__connector_id
+msgid "Send by"
+msgstr "Enviado por"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "Sent"
+msgstr "Envidado"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_search_ws
+msgid "Sent Period"
+msgstr "Perido enviado"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Sent messages"
+msgstr "Enviados"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid "Sent on #{record.sent_date.value}"
+msgstr "Enviado el #{record.sent_date.value}"
+
+#. module: whatsapp_connector_mass
+#: model:ir.actions.act_window,name:whatsapp_connector_mass.action_whatsapp_mass_configuration
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Settings"
+msgstr "Configuraciones"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Some messages were sent."
+msgstr "Algunos mensajes fueron enviados"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Source"
+msgstr "Fuente"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__spam_level
+msgid "Speed"
+msgstr "Velocidad"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_search_ws
+msgid "State"
+msgstr "Estado"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_search_ws
+msgid "Status"
+msgstr "Estatus"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_mailing_mailing__stopped_date
+msgid "Stop this mailing for this date"
+msgstr "Detiene este envío por esta fecha"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__stopped_date
+msgid "Stopped Date"
+msgstr "Fecha detenido"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Stopped for %s"
+msgstr "Detenido por %s"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_kanban_ws
+msgid "Stopped #{record.stopped_date.value}"
+msgstr "Detenido #{record.stopped_date.value}"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__ws_template_id
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__ws_template_id
+msgid "Template"
+msgstr "Plantilla"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Test"
+msgstr "Probar"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_mailing_ws_test
+msgid "Test Whatsapp Mailing"
+msgstr "Probar Envío por Whatsapp"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#: model:ir.actions.act_window,name:whatsapp_connector_mass.mailing_ws_test_action
+#, python-format
+msgid "Test Whatsapp Marketing"
+msgstr "Probar Marketing por Whatsapp"
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/mailing_mailing.py:0
+#, python-format
+msgid "Text body is empty."
+msgstr "El cuerpo del mensaje está vácio."
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_mailing_mailing__connector_type
+msgid "Third-party connector type."
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid ""
+"This will schedule an Whatsapp marketing to all recipients. Do you still "
+"want to proceed ?"
+msgstr ""
+"Esto programará un marketing por Whatsapp para todos los destinatarios. "
+"Usted desea continuar ?"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_form_ws
+msgid "Title"
+msgstr "Título"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__count_ids
+msgid "Total"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__total_ws
+msgid "Total Ws"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__total_ws_contact
+msgid "Total Ws Contact"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_message__mailing_trace_ids
+msgid "Trace"
+msgstr "Seguimiento"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_trace__trace_type
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mass_whatsapp_import_wizard__ttype
+msgid "Type"
+msgstr "Tipo"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_utm_campaign
+msgid "UTM Campaign"
+msgstr "Campaña de UTM"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__check_unique_contact
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__check_unique_contact
+msgid "Unique contact?"
+msgstr "Contactos únicos"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_search
+msgid "Valid Recipients"
+msgstr "Destinatarios Validos"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_acrux_chat_send_multi_wizard__check_unique_contact
+#: model:ir.model.fields,help:whatsapp_connector_mass.field_mailing_mailing__check_unique_contact
+msgid "Verify that messages are not repeated for the same contact"
+msgstr "Verificar que los mensajes no se repitan para el mismo contacto"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields.selection,name:whatsapp_connector_mass.selection__mailing_mailing__mailing_type__whatsapp
+#: model:ir.model.fields.selection,name:whatsapp_connector_mass.selection__mailing_trace__trace_type__whatsapp
+msgid "Whatsapp"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model:ir.ui.menu,name:whatsapp_connector_mass.whatsapp_mass_menu_root
+msgid "Whatsapp Batch"
+msgstr "Whatsapp Multi"
+
+#. module: whatsapp_connector_mass
+#: model:ir.actions.act_window,name:whatsapp_connector_mass.mailing_mailing_action_view_ws_from_campaign
+#: model:ir.actions.act_window,name:whatsapp_connector_mass.mailing_mailing_action_ws
+msgid "Whatsapp Batch messaging"
+msgstr "Whatsapp Lotes/Grupos"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_mailing__body_whatsapp
+msgid "Whatsapp Body"
+msgstr "Cuerpo"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_search
+msgid "Whatsapp Contacts"
+msgstr "Contactos de Whatsapp"
+
+#. module: whatsapp_connector_mass
+#: model:ir.actions.act_window,name:whatsapp_connector_mass.mailing_mailing_action_ws_from_campaign
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_mailing_view_tree_ws
+msgid "Whatsapp Marketing"
+msgstr "Whatsapp Lotes/Grupos"
+
+#. module: whatsapp_connector_mass
+#: model:ir.actions.act_window,name:whatsapp_connector_mass.mailing_trace_report_action_ws
+msgid "Whatsapp Marketing Analysis"
+msgstr "Whatsapp Marketing Análisis"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.mailing_trace_report_action_ws
+msgid ""
+"Whatsapp Marketing Statistics allows you to check different mailing related information like number of sent message or bounced message.\n"
+"                You can sort out your analysis by different groups to get accurate grained analysis."
+msgstr ""
+"Análisis de Marketing por Whatsapp le permiten consultar la informacion de las diferentes campañas, como el numero de mensajes enviado o rechazados.\n"
+"                Puede ordenar su análisis por diferentes grupos para obtener un análisis detallado y preciso."
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.res_config_settings_view_form
+msgid "Whatsapp Marketing and Batch/Group messaging"
+msgstr "Whatsapp Marketing y mensajería por Lotes/Grupos"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_trace__ws_message_id
+msgid "Whatsapp Message"
+msgstr "Mensaje de Whatsapp"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_report_ws_view_graph
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_report_ws_view_pivot
+msgid "Whatsapp Statistics"
+msgstr "Estadísticas Whatsapp"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_form_ws
+msgid "Whatsapp Trace"
+msgstr "Seguimiento Whatsapp"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_trace_view_tree_ws
+msgid "Whatsapp Traces"
+msgstr "Seguimientos Whatsapp"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model.fields,field_description:whatsapp_connector_mass.field_mailing_trace__ws_error_msg_trace
+msgid "Ws Error Msg Trace"
+msgstr ""
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.mailing_mailing_action_view_ws_from_campaign
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.mailing_mailing_action_ws
+#: model_terms:ir.actions.act_window,help:whatsapp_connector_mass.mailing_mailing_action_ws_from_campaign
+msgid ""
+"You can easily send Whatsapp message to any contact saved in other Odoo "
+"apps."
+msgstr ""
+"Puede enviar fácilmente un mensaje de Whatsapp a cualquier contacto guardado"
+" en otra aplicación de Odoo."
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/wizards/send_multi.py:0
+#, python-format
+msgid "You can only send invoices."
+msgstr "Solo puede enviar facturas."
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/ResConfigSettings.py:0
+#, python-format
+msgid ""
+"You cannot activate this option because you do not have the %s model "
+"installed."
+msgstr "No puede activar esta opción porque el modelo %s no está instalado."
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/models/ResConfigSettings.py:0
+#, python-format
+msgid ""
+"You cannot activate this option because you do not have the %s module "
+"installed."
+msgstr "No puede activar esta opción porque el módulo %s no está instalado."
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/wizards/import_records.py:0
+#, python-format
+msgid "You have to select at least one conversation."
+msgstr "Tiene que seleccionar al menos una conversación."
+
+#. module: whatsapp_connector_mass
+#: code:addons/whatsapp_connector_mass/wizards/import_records.py:0
+#, python-format
+msgid "You have to select at least one partner."
+msgstr "Tiene que seleccionar al menos un contacto."
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_list_view_form_simplified
+msgid "e.g. Consumer Newsletter"
+msgstr "ej. Boletín para Consumidores"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.mailing_contact_view_form
+msgid "e.g. John Smith"
+msgstr "ej. John Smith"
+
+#. module: whatsapp_connector_mass
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_mass.acrux_send_multi_wizard_form
+msgid "records selected"
+msgstr "registros seleccionados"
+
+#. module: whatsapp_connector_mass
+#: model:ir.model,name:whatsapp_connector_mass.model_mailing_mailing_schedule_date
+msgid "schedule a mailing"
+msgstr "programar un envío"

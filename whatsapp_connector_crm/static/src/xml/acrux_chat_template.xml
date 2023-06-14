@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-extend="acrux_chat_tabs">
+        <t t-jquery="ul.nav-tabs" t-operation="append">
+            <li id="tab_crm_lead" class="nav-item">
+                <a data-toggle="tab" disable_anchor="true"
+                    href="#tab_content_crm_lead" role="tab"
+                    class="nav-link">
+                    <i class="fa fa-handshake-o"/>
+                    <span id="hide-mobile">CRM</span>
+                </a>
+            </li>
+        </t>
+        <t t-jquery="div.tab-content" t-operation="append">
+            <div id="tab_content_crm_lead" class="tab-pane">
+                <div class="o_group">
+                </div>
+            </div>
+        </t>
+    </t>
+
+</templates>

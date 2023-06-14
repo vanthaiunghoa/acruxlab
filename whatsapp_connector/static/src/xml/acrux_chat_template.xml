@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Client Action -->
+    <t t-name="acrux_chat_action">
+        <div class="o_acrux_chat" id="acrux_chat_main_view">
+            <div class="o_acrux_chat_sidebar o_sidebar_left col-xl-2 col-lg-3 col-md-4 col-12">
+                <div class="o_acrux_group">
+                </div>
+                <div class="o_zone_chats">
+                    <div class="o_acrux_group o_zone_current_chats">
+                        <div class="o_acrux_chat_items o_current_chats">
+                        </div>
+                    </div>
+                    <div class="o_acrux_group o_zone_new_chats">
+                        <div class="o_acrux_chat_sidebar_title">
+                            <span>
+                                Waiting
+                            </span>
+                        </div>
+                        <div class="o_acrux_chat_items o_new_chats">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="o_acrux_chat_content col-xl-4 col-lg-4 col-md-8 col-12">
+                <div t-if="widget.notification_bar" class="o_acrux_chat_notification">
+                    <span class="o_acrux_chat_request_permission">
+                        <t t-out="widget.company_name"/> 
+                        needs your permission to 
+                        <a href="#">enable notifications</a>
+                    </span>
+                    <span class="fa fa-close"></span>
+                </div>
+                <div t-if="!widget.selected_conversation" class="o_chat_title navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler navbar-toggler-left show_conv d-md-none navbar-conv" type="button">
+                        <span class="fa fa-chevron-circle-left"></span>
+                    </button>
+                    <div class="o_conv_title">
+                        Select a conversation to begin to chat
+                    </div>
+                    <button class="navbar-toggler navbar-toggler-right show_option d-lg-none" type="button">
+                        <span class="fa fa-chevron-circle-right"></span>
+                    </button>
+                </div>
+                <div t-if="!widget.selected_conversation" class="o_chat_thread">
+                </div>
+            </div>
+            <div class="o_acrux_chat_sidebar o_sidebar_right col-xl-6 col-lg-5 col-md-12">
+                <t t-call="acrux_chat_tabs" />
+            </div>
+        </div>
+    </t>
+
+    <t t-name="acrux_chat_tabs">
+        <div id="acrux_tabs" class="o_acrux_group" style="height: 70%;">
+            <div class="o_notebook">
+                <div class="o_notebook_headers">
+                    <ul class="nav nav-tabs">
+                        <li id="tab_default_answer" class="nav-item">
+                            <a data-toggle="tab" disable_anchor="true"
+                               href="#tab_content_default_answer" role="tab"
+                               class="nav-link">
+                                <i class="fa fa-bolt"/>
+                            </a>
+                        </li>
+                        <li id="tab_conv_info" class="nav-item">
+                            <a data-toggle="tab" disable_anchor="true"
+                                href="#tab_content_conv_info" role="tab"
+                                class="nav-link">
+                                <i class="fa fa-info-circle"/>
+                            </a>
+                        </li>
+                        <li id="tab_init_chat" class="nav-item">
+                            <a data-toggle="tab" disable_anchor="true"
+                                href="#tab_content_init_chat" role="tab"
+                                class="nav-link">
+                                <i class="fa fa-users"/>
+                            </a>
+                        </li>
+                        <li id="tab_partner" class="nav-item">
+                            <a data-toggle="tab" disable_anchor="true"
+                               href="#tab_content_partner" role="tab"
+                               class="nav-link">
+                                <i class="fa fa-vcard-o"/>
+                                <span id="hide-mobile">Partner</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="tab_content_default_answer" class="tab-pane">
+                        <div class="o_group">
+                            <div t-if="widget.default_answers.length > 0" class="default_table_answers">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab_content_init_chat" class="tab-pane">
+                    </div>
+                    <div id="tab_content_partner" class="tab-pane">
+                        <div class="o_group">
+                        </div>
+                    </div>
+                    <div id="tab_content_conv_info" class="tab-pane">
+                        <div class="o_group">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="acrux_chat_conv_title">
+        <t t-out="conversation.name" />
+        <t t-if="conversation.number_format">
+            (<t t-out="conversation.number_format" />)
+        </t>
+        <t t-if="conversation.show_icon">
+            <div t-attf-class="#{conversation.getIconClass()} d-lg-none" />
+        </t>
+    </t>
+
+    <t t-name="acrux_chat_message">
+        <t t-if="widget.ttype.startsWith('info')">
+            <div class="o_acrux_msg_info" t-att-data-id="widget.id">
+                <div>
+                    <span t-out="widget.text" />
+                </div>
+            </div>
+        </t>
+        <t t-else="">
+            <div id="o_chat_message" t-attf-class="o_chat_message {{widget.from_me ? 'o_chat_message_out' : 'o_chat_message_in'}} {{widget.error_msg ? 'o_message_error' : ''}} o_chat_message_{{widget.ttype}}"
+                t-att-data-id="widget.id">
+                <div class="o_message_title" t-attf-style="color: #{widget.title_color}; border-bottom-color: #{widget.title_color}"
+                    t-if="widget.hasTitle()">
+                    <t t-call="acrux_chat_message_title" />:
+                </div>
+                <div id="o_chat_msg_content" t-attf-class="o_chat_msg_content {{widget.message_css_class()}}" >
+                    <div class="o_message_metadata_preview o_hidden">
+                    </div>
+                    <div class="o_chat_message_content">
+                        <t t-call="acrux_chat_message_content" />
+                    </div>
+                    <span class="o_chat_space" />
+                </div>
+                <span t-if="widget.error_msg" class="o_message_error_text"
+                    t-att-title="widget.error_msg">
+                  <svg height="10" width="10" viewBox="0 0 16 16">
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M0 0h16v16H0z"></path>
+                      <path d="M8 16A8 8 0 118 0a8 8 0 010 16zM8 2a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5A1.5 1.5 0 008 2zm0 12a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#f03d25">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+                <div class="o_chat_msg_hour">
+                    <t t-out="widget.getHour()" />
+                </div>
+            </div>
+        </t>
+    </t>
+
+    <t t-name="acrux_chat_message_content">
+        <t t-if="widget.ttype == 'text'">
+            <span t-out="widget.text" />
+        </t>
+        <t t-elif="widget.ttype == 'product'">
+            <t t-set="product" t-value="widget.res_model_obj" />
+            <t t-call="acrux_chat_product" />
+        </t>
+        <t t-elif="widget.ttype == 'location'">
+            <t t-if="widget.location">
+                <div class="o_acrux_location_img" >
+                    <a t-attf-href="{{widget.location.map_url}}" target="_blank">
+                        <img src="/whatsapp_connector/static/src/img/google_map.jpg" />
+                    </a>
+                </div>
+                <div>
+                    <a t-attf-href="{{widget.location.map_url}}" target="_blank"
+                        t-attf-title="{{widget.location.display_name}}">
+                        <t t-out="widget.location.display_name" />
+                    </a>
+                    <div t-attf-title="{{widget.location.address}}" >
+                        <t t-out="widget.location.address" />
+                    </div>
+                </div>
+            </t>
+            <t t-else="">
+                Location not found.
+            </t>
+        </t>
+        <t t-elif="widget.ttype == 'audio'">
+            <div id="audio_player"></div>
+            <t t-if="widget.text" >
+                <span t-out="widget.text" />
+            </t>
+        </t>
+        <t t-else="">
+            <t i-if="widget.res_model_obj">
+                <div id="o_attach_zone">
+                </div>
+            </t>
+            <t t-if="widget.text" >
+                <span t-out="widget.text" />
+            </t>
+        </t>
+    </t>
+
+    <t t-name="acrux_audio_player">
+        <div class="acrux_audio_player">
+            <audio t-attf-src="#{widget.src}" controls="true"
+                controlsList="nodownload" preload="none" class="o_hidden"
+                t-if="widget.src" />
+            <div class="o_acrux_audio_player">
+                <div class="play">
+                    <a href="javascript:void(0);">▶</a>
+                </div>
+                <div class="progress">
+                    <div class="playback" />
+                </div>
+                <div class="download">
+                    <i role="img" class="fa fa-download fa-fw" />
+                </div>
+                <div class="time"></div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="acrux_chat_conversation">
+        <div t-att-data-id="widget.id" class="o_acrux_chat_item">
+            <div class="acrux_image_perfil">
+                <img t-att-src="widget.image_url" alt="perfil" />
+                <div t-attf-class="#{widget.getIconClass()}" t-if="widget.show_icon" />
+            </div>
+            <div class="acrux_chat_conversation_info">
+                <div style="display: flex;">
+                    <span class="o_conversation_name" t-attf-title="#{widget.name} #{widget.number_format}">
+                        <t t-out="widget.name" />
+                    </span>
+                    <span class="o_mail_sidebar_needaction o_number_new_msg badge badge-pill" >
+                        <t t-out="widget.count_new_msg" />
+                    </span>
+                    <t t-if="widget.assigned">
+                        <i class="fa fa-exclamation-circle text-info h3 m-0 o_acrux_assigned_conv" style="width:0.9em;" />
+                    </t>
+                </div>
+                <div class="o_acrux_agent" t-att-title="widget.agent_id[1]">
+                    <t t-if="widget.agent_id[0]">
+                        <t t-out="widget.agent_id[1]" />
+                    </t>
+                </div>
+            </div>
+            <div class="pr-2 col" t-if="!widget.isMine()">
+                <button class="btn btn-sm float-right acrux_close_conv" type="button"
+                    title="Only remove conversation from here.">
+                    <i class="fa fa-times text-danger h4"></i>
+                </button>
+            </div>
+        </div>
+    </t>
+    
+    <t t-name="acrux_chat_toolbox">
+        <div class="o_chat_toolbox">
+            <div class="o_chat_toolbox_user_preference">
+                <div class="o_chat_toolbox_message_signing p-2">
+                    <label for="signing_active" class="form-check-label">
+                        Sign Message
+                    </label>
+                </div>
+            </div>
+            <div class="o_chat_toolbox_main">
+                <div class="o_chat_write_done_btn">
+                    <button class="btn btn-sm btn-success o_chat_toolbox_write" tabindex="3" type="button">Attend</button>
+                    <button class="btn btn-sm btn-danger o_chat_toolbox_done" tabindex="3" type="button">Done</button>
+                </div>
+                <div class="o_chat_toolbox_container">
+                    <div class="o_chat_toolbox_comp">
+                        <div class="o_chat_toolbox_input">
+                            <textarea class="o_input o_chat_toolbox_text_field" placeholder="Write Something..." tabindex="2" style="height: 28px;" />
+                        </div>
+                    </div>
+                    <div class="o_composer_attachments_list"/>
+                </div>
+                <div class="o_chat_toolbox_button_box">
+                    <button id="o_chat_button_emoji" class="o_chat_button_emoji o_chat_option_button">
+                        <i id="o_chat_button_emoji" class="fa fa-smile-o"/>
+                    </button>
+                    <button class="o_chat_button_add_attachment o_chat_option_button" tabindex="3" type="button">
+                        <i class="fa fa-paperclip"/>
+                    </button>
+                    <button class="o_chat_toolbox_send" tabindex="4" type="button">
+                        <i class="fa fa-telegram"/>
+                    </button>
+                </div>
+            </div>
+            <div class="o_toolbox_file_uploader">
+            </div>
+        </div>
+    </t>
+    
+    <t t-name="acrux_chat_toolbox_component" owl="1">
+        <AcruxFileUploader
+            attachmentLocalIds="attachments"
+            newAttachmentExtraData="newAttachmentExtraData"
+            t-on-o-attachment-created="_onAttachmentCreated"
+            t-ref="fileUploader"
+        />
+        <t t-if="attachment.value">
+            <t t-foreach="attachment.value.attachmentImages" t-as="attachmentImage" t-key="attachmentImage.localId">
+                <AttachmentImage
+                    class="o_AttachmentList_attachment"
+                    attachmentImageLocalId="attachmentImage.localId"
+                    t-on-o-attachment-removed="_onAttachmentRemoved"
+                />
+            </t>
+            <t t-foreach="attachment.value.attachmentCards" t-as="attachmentCard" t-key="attachmentCard.localId">
+                <AttachmentCard
+                    class="o_AttachmentList_attachment"
+                    attachmentCardLocalId="attachmentCard.localId"
+                    t-on-o-attachment-removed="_onAttachmentRemoved"
+                />
+            </t>
+        </t>
+    </t>
+
+    <t t-name="acrux_chat_product_list">
+        <t t-foreach="product_list" t-as="product">
+            <t t-call="acrux_chat_product" />
+        </t>
+    </t>
+
+    <t t-name="acrux_chat_product">
+        <div class="o_product_record" t-att-title="product.display_name" t-att-data-id="product.id">
+            <div class="o_product_data">
+                <div class="o_product_image" >
+                    <img t-attf-src="/web/image?model=product.product&amp;field=image_128&amp;id=#{product.id}&amp;unique=#{product.unique_hash_image}" />
+                </div>
+                <div class="oe_product_details" t-if="product.show_product_text" >
+                    <t t-set="prod_name" t-value="product.display_name.replace('['+product.default_code+'] ', '')"/>
+                    <strong class="o_product_name" >
+                        <span><t t-out="prod_name" /></span>
+                    </strong>
+                    <ul>
+                        <li>
+                            <t t-if="product.lst_price or product.qty_available">
+                                <span t-if="product.lst_price" class="o_field_monetary o_field_number o_field_widget" name="lst_price">
+                                    <t t-out="product.lst_price" />
+                                </span>
+                                <t t-if="product.type == 'product'">
+                                    &amp;nbsp;&amp;nbsp;
+                                    <t t-if="product.qty_available > 0.0"><t t-set="fcolor" t-value="'color:#858585;'"/></t>
+                                    <t t-else=""><t t-set="fcolor" t-value="'color:red;'"/></t>
+                                    <span t-att-style="fcolor">
+                                        (<t t-out="product.qty_available"/>
+                                        <t t-if="product.uom_id" t-out="product.uom_id[1].substring(0, 4)"/>)
+                                    </span>
+                                </t>
+                            </t>
+                            <t t-else="">
+                                &amp;nbsp;
+                            </t>
+                        </li>
+                        <li class="small" style="color: #858585;">
+                            <span t-if="product.default_code">
+                                <t t-out="product.default_code"/>
+                            </span>
+                            <span t-else="">
+                                &amp;nbsp;
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product_options_btn">
+                <button class="btn btn-sm text-primary fa fa-share-square-o fa-flip-horizontal acrux-product-send-btn d-lg-none" type="button"/>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="acrux_chat_default_answer">
+        <div class="cell-default">
+            <span>
+                <button class="btn btn-sm btn-primary o_acrux_chat_default_answer_send" type="button">Send</button>
+            </span>
+            <span>
+                <t t-out="widget.name" />
+            </span>
+        </div>
+    </t>
+
+    <t t-name="acrux_chat_chat_date">
+        <div class="o_acrux_date">
+            <div>
+                <span>
+                    <t t-out="widget.getDate()" />
+                </span>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="acrux_chat_conv_list">
+        <t t-foreach="conv_list" t-as="conv">
+            <t t-call="acrux_chat_conv" />
+        </t>
+    </t>
+
+    <t t-name="acrux_chat_conv">
+        <div class="o_conv_record" t-att-title="conv.name" t-att-data-id="conv.id"
+            t-attf-style="box-shadow: inset 0 0 5px #{conv.border_color}">
+            <div class="o_conv_image" >
+                <img t-att-src="conv.image_url" />
+                <t t-if="conv.show_icon">
+                    <div t-attf-class="#{conv.getIconClass()}" />
+                </t>
+            </div>
+            <div class="o_conv_details" >
+                <strong class="o_conv_name" >
+                    <span><t t-out="conv.name" /></span>
+                </strong>
+                <ul>
+                    <li>
+                        <t t-out="conv.number_format" />
+                    </li>
+                    <li class="h5 m-0" >
+                        <small>
+                            <span>Agent:
+                                <t t-if="conv.agent_id and conv.agent_id[0]" t-out="conv.agent_id[1]" />
+                            </span>
+                        </small>
+                    </li>
+                    <li class="text-muted small">
+                        <t t-out="conv.connector_id[1]" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="acrux_chat_product_search">
+        <div class="o_acrux_group o_product_list_head navbar-expand-lg navbar-light">
+            <div class="o_acrux_chat_sidebar_title">
+                <div class="o_parent_product_search form-inline">
+                    <button class="navbar-toggler navbar-toggler-left hide_option d-lg-none" type="button">
+                        <span class="fa fa-chevron-circle-left"></span>
+                    </button>
+                    <div class="form-group">
+                        <input type="text" class="product_search" name="product_search" placeholder="Search Products" />
+                        <button class="btn btn-sm btn-primary fa fa-search o_button_product_search" tabindex="3" type="button" style="margin-right: 8px"/>
+                    </div>
+                </div>
+                <div class="o_conv_title d-lg-none" />
+            </div>
+            <div class="o_acrux_chat_product_items">
+            </div>
+        </div>
+    </t>
+    
+    <t t-name="acrux_chat_init_conversation">
+        <div class="o_group">
+            <div class="o_acrux_chat_sidebar_title">
+                <div class="o_acrux_chat_conv_search form-inline" style="padding-left: 5px;">
+                    <div class="form-group">
+                        <input type="text" class="conv_search" name="conv_search" placeholder="Search" />
+                        <button class="btn btn-sm btn-primary fa fa-search o_button_conv_search" tabindex="3" type="button" style="margin-right: 5px;"/>
+                        <button class="btn btn-sm btn-primary o_button_create_conversation" type="button">
+                            Create
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="o_acrux_chat_conv_items" style="height: 85%;" >
+            </div>
+        </div>
+    </t>
+    
+    <t t-name="acrux_chat_user_status">
+        <div class="o_acrux_chat_sidebar_title o_acrux_status navbar-expand-lg navbar-light">
+            <span>
+                Attending
+            </span>
+            <div class="btn-group btn-group-toggle btn-sm">
+                <label id="chat_status_active" class="btn btn-sm btn-primary">
+                    Active
+                </label>
+                <label id="chat_status_inactive" class="btn btn-sm btn-primary">
+                    Inactive
+                </label>
+            </div>
+            <button class="btn btn-sm btn-primary acrux_simple_create_new_conv" type="button">
+                <i class="fa fa-plus"></i>
+            </button>
+            <button class="navbar-toggler navbar-toggler-right show_thread d-block d-md-none" type="button">
+                <span class="fa fa-chevron-circle-right"></span>
+            </button>
+        </div>
+    </t>
+    
+    <t t-name="acrux_chat_emojis">
+        <div class="popover o_acrux_emoji_popover" role="tooltip">
+            <div class="popover-body" />
+        </div>
+    </t>
+
+    <t t-name="acrux_chat_popover">
+        <div class="popover o_acrux_chat_popover" data-trigger="focus click" role="tooltip">
+            <div class="popover-body" />
+        </div>
+    </t>
+    
+    <t t-name="acrux_empty_tab">
+        <div style="text-align: center;padding-top: 1em;">
+            <span style="color:#7C7BAD;font-size:16px;">
+                <t t-if="message"> <t t-out="message" /> </t>
+                <t t-elif="notYourConv">You are not attending this conversation.</t>
+                <t t-else="">You must select a conversation first.</t>
+            </span>
+        </div>
+    </t>
+    
+    <t t-name="acrux_chat_message_title">
+        <span />
+    </t>
+    
+    <t t-name="acrux_chat_message_metadata">
+        <div>
+            <div class="o_acrux_chat_message_metadata">
+                <div class="acrux_metadata_media">
+                    <img t-if="widget.data?.media?.url and widget.data?.media?.type === 'image'" 
+                        t-att-src="widget.data?.media?.url" alt="Url privew" />
+                    <img t-if="widget.data?.media?.url and widget.data?.media?.type === 'video'" 
+                        t-att-src="widget.data?.media?.url" alt="Url privew" />
+                    <div class="play-button" t-if="widget.data?.media?.url and widget.data?.media?.type === 'video'" />
+                </div>
+                <div class="acrux_metadata_content">
+                    <div class="acrux_metadata_title" t-att-title="widget.data.title">
+                        <span t-out="widget.data.title" />
+                    </div>
+                    <div class="acrux_metadata_body">
+                        <span t-att-title="widget.data.body" t-esc="widget.data.body" />
+                    </div>
+                    <div class="acrux_metadata_url">
+                        <span t-out="widget.data.url" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    
+</templates>

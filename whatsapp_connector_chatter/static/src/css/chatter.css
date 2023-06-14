@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.o_Chatter_fixedPanel .o_acrux_chat {
+    background-color: #f2f4f5;
+    border-bottom-color: #dee2e6;
+    border-bottom: 1px solid;
+    position: relative;
+    overflow: hidden;
+    top: unset;
+    left: unset;
+    bottom: unset;
+    right: unset;
+    height: unset;
+    max-height: 30em;
+}
+
+.o_Chatter_fixedPanel .o_acrux_chat.o-bordered {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-left-color: #dee2e6;
+    border-right-color: #dee2e6;
+
+}
+
+.o_Chatter_fixedPanel .o_acrux_chat .o_number_new_msg{
+    display: none;
+}
+
+.o_Chatter_fixedPanel .o_acrux_chat .o_acrux_chat_content {
+    height: 29em;
+    max-height: 29em;
+}
+
+.o_Chatter_fixedPanel .o_acrux_chat .o_acrux_chat_content div.acrux_load_more {
+    padding: 5px 9px;
+    display: block;
+    clear: both;
+    text-align: center;
+}
+
+.o_Chatter_fixedPanel .o_acrux_chat .o_acrux_chat_content button.acrux_load_more {
+    border-radius: 10px;
+}
+
+.o_Chatter_fixedPanel .o_chat_message:hover .o_chat_message_options,
+.o_Chatter_fixedPanel .o_chat_message .o_chat_message_options,
+.o_Chatter_fixedPanel .acrux_close_conv {
+    display: none;
+}

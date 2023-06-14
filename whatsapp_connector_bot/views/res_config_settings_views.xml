@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit Whatsapp Marketing</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="whatsapp_connector.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='acrux_templates']" position="after">
+                <h2>ChatBot</h2>
+                <div name="acrux_chatbot" class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane">
+                            <h6>ChatBot's</h6>
+                            <div class="text-muted">
+                                View all ChatBot's
+                            </div>
+                            <div class="mb16">
+                                <button name="%(whatsapp_connector_bot.whatsapp_connector_bot_action)d" icon="fa-arrow-right"
+                                        string="View ChatBot's" class="btn-link" type="action"/>
+                            </div>
+                            <h6>ChatBot Logs</h6>
+                            <div class="text-muted">
+                                Debugging and tracking to create your ChatBot.
+                            </div>
+                            <div class="mb16">
+                                <button name="%(whatsapp_connector_bot.whatsapp_connector_bot_log_action)d" icon="fa-arrow-right"
+                                        string="View ChatBot Logs" class="btn-link" type="action"/>
+                            </div>
+                            <h6>Load demo ChatBot's</h6>
+                            <div class="text-muted mb8">
+                                Advanced usage examples.
+                            </div>
+                            <div class="mb16">
+                                <button name="import_demo_chatbot" type="object" string="Create"
+                                        class="btn-primary" icon="fa-cog"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" style="padding-left: 46px;">
+                        <img alt="ChatRoom ChatBot" class="d-block mx-auto img img-fluid" style="box-shadow: darkgrey 1px 1px 6px; max-width: 300px; float: left;"
+                             src="/whatsapp_connector_bot/static/src/img/bot_config_1.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

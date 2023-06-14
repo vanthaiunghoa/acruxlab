@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Multi company rules -->
+        <record id="chat_connector_company_rule" model="ir.rule">
+            <field name="name">Chat Connector Company Rule</field>
+            <field name="model_id" ref="model_acrux_chat_connector"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="chat_conversation_company_rule" model="ir.rule">
+            <field name="name">Chat Conversation Company Rule</field>
+            <field name="model_id" ref="model_acrux_chat_conversation"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="chat_message_company_rule" model="ir.rule">
+            <field name="name">Chat Message Company Rule</field>
+            <field name="model_id" ref="model_acrux_chat_message"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <!-- Groups -->
+        <record id="category_chatroom" model="ir.module.category">
+            <field name="name">ChatRoom</field>
+            <field name="sequence">59</field>
+        </record>
+        <record id="category_chat_access_connector" model="ir.module.category">
+            <field name="name">Connector Access</field>
+            <field name="sequence">5</field>
+            <field name="parent_id" ref="category_chatroom"/>
+        </record>
+
+        <record id="category_chat_connector" model="ir.module.category">
+            <field name="name">Send Messages</field>
+            <field name="sequence">1</field>
+            <field name="parent_id" ref="category_chatroom"/>
+        </record>
+        
+        <record id="group_chat_basic" model="res.groups">
+            <field name="name">From Forms</field>
+            <field name="category_id" ref="whatsapp_connector.category_chat_connector"/>
+            <field name="comment">Send messages from Forms.</field>
+        </record>
+
+        <record id="group_chat_basic_extra" model="res.groups">
+            <field name="name">From ChatRoom</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="whatsapp_connector.category_chat_connector"/>
+            <field name="implied_ids" eval="[(4, ref('whatsapp_connector.group_chat_basic'))]"/>
+            <field name="comment">Send messages from ChatRoom view and Forms.</field>
+        </record>
+
+    </data>
+</odoo>

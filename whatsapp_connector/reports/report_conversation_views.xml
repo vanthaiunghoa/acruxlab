@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_conversation_init_report_search" model="ir.ui.view">
+        <field name="name">conversation.init.report.search</field>
+        <field name="model">conversation.init.report</field>
+        <field name="arch" type="xml">
+            <search string="Conversation">
+                <field name="agent_id"/>
+                <field name="date_message"/>
+                <field name="connector_id"/>
+                <field name="conversation_id"/>
+                <filter string="Current Month" name="current_month"
+                    domain="[('date_message', '&lt;', (context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')),
+                             ('date_message', '&gt;=', time.strftime('%%Y-%%m-01'))]"/>
+                <filter string="Last Month" name="last_month"
+                    domain="[('date_message', '&gt;=', (context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),
+                             ('date_message', '&lt;', time.strftime('%%Y-%%m-01'))]"/>
+                <filter string="Current Year" name="current_year"
+                    domain="[('date_message','&gt;=', time.strftime('%%Y-01-01'))]"/>
+                <filter string="Last Year" name="last_year"
+                    domain="[('date_message','&gt;=', (context_today()-relativedelta(years=1)).strftime('%%Y-01-01')),
+                             ('date_message','&lt;', time.strftime('%%Y-01-01'))]"/>
+                <group string="Group by">
+                    <filter name="group_agent" string="Agent" context="{'group_by':'agent_id'}"/>
+                    <filter name="group_connector" string="Connector" context="{'group_by':'connector_id'}" />
+                    <filter name="group_conversation" string="Conversation" context="{'group_by':'conversation_id'}" />
+                    <filter name="group_month" string="Month" context="{'group_by':'date_message:month'}"/>
+                    <filter name="group_week" string="Week" context="{'group_by':'date_message:week'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_conversation_init_report_pivot" model="ir.ui.view">
+        <field name="name">conversation.init.report.view.pivot</field>
+        <field name="model">conversation.init.report</field>
+        <field name="arch" type="xml">
+            <pivot string="Conversation Init Report" disable_linking="1">
+                <field name="agent_id" type="row" />
+                <field name="date_message" type="col" />
+                <field name="connector_id" />
+                <field name="conversation_id" />
+                <field name="amount" type='measure'/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_conversation_init_report_graph" model="ir.ui.view">
+        <field name="name">conversation.init.report.view.graph</field>
+        <field name="model">conversation.init.report</field>
+        <field name="arch" type="xml">
+            <graph string="Conversation Init Report" type="bar" disable_linking="1">
+                <field name="agent_id" type="row" />
+                <field name="date_message" type="col" />
+                <field name="amount" type='measure'/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_conversation_init_report_action" model="ir.actions.act_window">
+        <field name="name">Conversations Started</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">conversation.init.report</field>
+        <field name="view_mode">graph,pivot</field>
+        <field name="context">{'search_default_current_year':1}</field>
+    </record>
+
+</odoo>

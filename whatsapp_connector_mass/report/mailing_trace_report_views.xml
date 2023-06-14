@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mailing_trace_report_ws_view_pivot" model="ir.ui.view">
+        <field name="name">mailing.sms.trace.report.view.pivot</field>
+        <field name="model">mailing.trace.report</field>
+        <field name="priority">25</field>
+        <field name="type">pivot</field>
+        <field name="arch" type="xml">
+            <pivot string="Whatsapp Statistics" disable_linking="True" sample="1">
+                <field name="name" type="row"/>
+                <field name="sent" type="measure"/>
+                <field name="delivered" type="measure"/>
+                <field name="bounced" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="mailing_trace_report_ws_view_graph" model="ir.ui.view">
+        <field name="name">mailing.sms.trace.report.view.graph</field>
+        <field name="model">mailing.trace.report</field>
+        <field name="priority">25</field>
+        <field name="type">graph</field>
+        <field name="arch" type="xml">
+            <graph string="Whatsapp Statistics" sample="1" disable_linking="1">
+                <field name="name"/>
+                <field name="sent" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Actions and Menuitems -->
+    <record id="mailing_trace_report_action_ws" model="ir.actions.act_window">
+        <field name="name">Whatsapp Marketing Analysis</field>
+        <field name="res_model">mailing.trace.report</field>
+        <field name="view_mode">graph,pivot</field>
+        <field name="domain">[('mailing_type', '=', 'whatsapp')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Whatsapp Marketing Statistics allows you to check different mailing related information like number of sent message or bounced message.
+                You can sort out your analysis by different groups to get accurate grained analysis.
+            </p>
+        </field>
+    </record>
+
+    <record id="mailing_trace_report_action_ws_view_graph" model="ir.actions.act_window.view">
+        <field name="sequence">0</field>
+        <field name="view_mode">graph</field>
+        <field name="act_window_id" ref="mailing_trace_report_action_ws"/>
+        <field name="view_id" ref="mailing_trace_report_ws_view_graph"/>
+    </record>
+
+    <record id="mailing_trace_report_action_ws_view_pivot" model="ir.actions.act_window.view">
+        <field name="sequence">1</field>
+        <field name="view_mode">pivot</field>
+        <field name="act_window_id" ref="mailing_trace_report_action_ws"/>
+        <field name="view_id" ref="mailing_trace_report_ws_view_pivot"/>
+    </record>
+
+    <record id="whatsapp_mass_menu_reporting" model="ir.ui.menu">
+        <field name="action" ref="mailing_trace_report_action_ws"/>
+    </record>
+</odoo>

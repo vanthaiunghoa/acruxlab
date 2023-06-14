@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="mailing_list_view_form_simplified" model="ir.ui.view">
+        <field name="name">mailing.list.form.simplified</field>
+        <field name="model">mailing.list</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <form string="Contacts List">
+                <group>
+                    <group>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" string="Name" />
+                            <h1>
+                                <field name="name" placeholder="e.g. Consumer Newsletter"/>
+                            </h1>
+                        </div>
+                    </group>
+                </group>
+                <group>
+                    <field name="is_public"/>
+                </group>
+                <footer>
+                    <button string="Create" name="close_dialog" type="object" class="btn-primary"/>
+                    <button string="Discard" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="open_create_mass_mailing_list" model="ir.actions.act_window">
+        <field name="name">Create a Mailing List</field>
+        <field name="res_model">mailing.list</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="mailing_list_view_form_simplified"/>
+        <field name="target">new</field>
+    </record>
+
+    <record id="mailing_list_view_kanban" model="ir.ui.view">
+        <field name="name">mailing.list.kanban.whatsapp</field>
+        <field name="model">mailing.list</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <kanban js_class="mass_mailing_list_kanban" class="o_kanban_mobile"
+                on_create="whatsapp_connector_mass.open_create_mass_mailing_list" sample="1">
+                <field name="name"/>
+                <field name="contact_count"/>
+                <field name="active"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_mass_mailing_kanban_main">
+                                <div class="o_kanban_card_content">
+                                    <div class="o_kanban_primary_left">
+                                        <div class="o_primary">
+                                            <span><t t-esc="record.name.value"/></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_card_manage_pane">
+                                    <div class="o_kanban_card_manage_section o_dropdown_kanban dropdown">
+                                        <a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" href="#" data-display="static" aria-label="Dropdown menu" title="Dropdown menu">
+                                            <span class="fa fa-ellipsis-v"/>
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+                                            <a t-if="widget.editable" role="menuitem" type="edit" class="dropdown-item">Edit</a>
+                                            <a t-if="widget.deletable" role="menuitem" type="delete" class="dropdown-item">Delete</a>
+                                            <a role="menuitem" class="dropdown-item o_kanban_mailing_active" name="toggle_active" type="object">
+                                                <t t-if="record.active.raw_value">Archive</t>
+                                                <t t-if="!record.active.raw_value">Restore</t>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_mailing_list_kanban_boxes">
+                                <a name="action_view_contacts" type="object">
+                                    <div>
+                                        <span class="badge badge-pill">
+                                            <i class="fa fa-user" role="img" aria-label="Contacts" title="Contacts" />
+                                            <t t-esc="record.contact_count.value"/>
+                                        </span>
+                                    </div>
+                                </a>
+                                <button name="action_import_conversation"
+                                        type="object" icon="fa-user" class="btn btn-primary"
+                                        invisible="not context.get('whatsapp_mailing')"
+                                        style="margin-top: 0.5em">
+                                    <i class="fa fa-user" role="img" aria-label="Conversations" title="Conversations" />
+                                    Import Conversations
+                                </button>
+                                <button name="action_import_partner"
+                                        type="object" icon="fa-user" class="btn btn-primary"
+                                        invisible="not context.get('whatsapp_mailing')"
+                                        style="margin-top: 0.5em">
+                                    <i class="fa fa-user" role="img" aria-label="Contacts" title="Contacts" />
+                                    Import Partners
+                                </button>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="mailing_list_view_form">
+        <field name="name">mailing.list.list.whatsapp</field>
+        <field name="model">mailing.list</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <form string="Contacts List">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_contacts"
+                                type="object" icon="fa-user" class="oe_stat_button">
+                            <field name="contact_count" string="Recipients" widget="statinfo"/>
+                        </button>
+                        <button name="action_import_conversation"
+                                type="object" icon="fa-user" class="oe_stat_button"
+                                string="Import Conversations" 
+                                invisible="not context.get('whatsapp_mailing')" />
+                        <button name="action_import_partner"
+                                type="object" icon="fa-user" class="oe_stat_button"
+                                string="Import Partners" 
+                                invisible="not context.get('whatsapp_mailing')" />
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}"/>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Name" />
+                        <h1>
+                            <field name="name" placeholder="e.g. Consumer Newsletter"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="active" invisible="1"/>
+                        <field name="is_public"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="mailing_list_view_tree">
+        <field name="name">mailing.list.tree.whatsapp</field>
+        <field name="model">mailing.list</field>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <tree string="Contact Lists" sample="1">
+                <field name="name" string="Name" />
+                <field name="create_date"/>
+                <field name="is_public"/>
+                <field name="contact_count"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="whatsapp_mailing_list_action" model="ir.actions.act_window">
+        <field name="name">Contact Lists</field>
+        <field name="res_model">mailing.list</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'whatsapp_mailing': True}</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new contacts list
+          </p>
+        </field>
+    </record>
+    
+    <record model="ir.actions.act_window.view" id="whatsapp_mailing_list_action_kanban">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="mailing_list_view_kanban"/>
+        <field name="act_window_id" ref="whatsapp_mailing_list_action"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="whatsapp_mailing_list_action_tree">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="mailing_list_view_tree"/>
+        <field name="act_window_id" ref="whatsapp_mailing_list_action"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="whatsapp_mailing_list_action_form">
+        <field name="sequence" eval="3"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="mailing_list_view_form"/>
+        <field name="act_window_id" ref="whatsapp_mailing_list_action"/>
+    </record>
+
+    <!-- Marketing / Contacts Lists / Contacts Lists -->
+    <record id="whatsapp_mass_list_menu" model="ir.ui.menu">
+        <field name="action" ref="whatsapp_mailing_list_action"/>
+    </record>
+</odoo>

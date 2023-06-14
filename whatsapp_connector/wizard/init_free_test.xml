@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_init_free_test_wizard" model="ir.ui.view">
+        <field name="name">init.free.test.wizard</field>
+        <field name="model">init.free.test.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <div>
+                    <h3>Welcome!</h3>
+                    <ul>
+                        <li>We are going to create a free account in www.apichat.io.</li>
+                        <li>You can send 25 messages/day, for 3 days.</li>
+                        <li>No restriction to login or send/receive messages.</li>
+                        <li>Click on "Create Account" to continue.</li>
+                    </ul>
+                </div>
+                <footer>
+                    <button name="init_test" type="object" string="Create account" class="oe_highlight" />
+                    <field name="connector_id" invisible="1" />
+                </footer>
+           </form>
+        </field>
+    </record>
+
+</odoo>

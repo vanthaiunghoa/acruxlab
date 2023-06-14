@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit ChatRoom base</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="whatsapp_connector.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//h2[hasclass('acrux_templates_hide')]" position="attributes">
+                <attribute name="invisible">0</attribute>
+            </xpath>
+            <xpath expr="//div[hasclass('acrux_templates_hide')]" position="attributes">
+                <attribute name="invisible">0</attribute>
+            </xpath>
+            <xpath expr="//div[@name='acrux_templates_link']" position="inside">
+                <div style="width: 40%; display: inline-block;">
+                    <button name="open_resource_tree" icon="fa-arrow-right" class="btn-link" type="object"
+                            context="{'acrux_model': ['base.model_res_partner']}"
+                            string="Partner"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

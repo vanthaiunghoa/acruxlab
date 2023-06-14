@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_whatsapp_mass_configuration" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'whatsapp_connector', 'bin_size': False}</field>
+    </record>
+    
+    <record id="whatsapp_mass_menu_setting" model="ir.ui.menu">
+        <field name="action" ref="action_whatsapp_mass_configuration" />
+    </record>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit Whatsapp Marketing</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="whatsapp_connector.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='acrux_templates']" position="after">
+                <h2>Whatsapp Marketing and Batch/Group messaging</h2>
+                <div name="acrux_configuration" class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane">
+                            <h6>Batch/Group Messages</h6>
+                            <div>
+                                <i>You will be able to group and select records in list views and create Whatsapp batch messages with templates.</i>
+                            </div>
+                            <h6 class="mt16 mb0">Enable batch messages in:</h6>
+                            <div class="text-muted mb8">
+                                Let's check if you have the required modules to create each menu. Please click on each option.
+                            </div>
+                            <div style="width: 40%; display: inline-block;">
+                                <button name="action_create_whatsapp_sidebar" type="object"
+                                        string="Contacts"
+                                        context="{'check_module': 'base', 'check_model': 'res.partner'}"
+                                        class="btn-link" icon="fa-plus"/>
+                            </div>
+                            <div style="width: 40%; display: inline-block;">
+                                <button name="action_create_whatsapp_sidebar" type="object"
+                                        string="CRM Leads"
+                                        context="{'check_module': 'crm', 'check_model': 'crm.lead'}"
+                                        class="btn-link" icon="fa-plus"/>
+                            </div>
+                            <div style="width: 40%; display: inline-block;">
+                                <button name="action_create_whatsapp_sidebar" type="object"
+                                        string="Sales Orders"
+                                        context="{'check_module': 'sale', 'check_model': 'sale.order'}"
+                                        class="btn-link" icon="fa-plus"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" style="padding-left: 46px;">
+                        <img alt="ChatRoom" class="d-block mx-auto img img-fluid" style="box-shadow: darkgrey 1px 1px 6px; max-width: 300px; float: left;"
+                             src="/whatsapp_connector_mass/static/src/img/mass_action_menu.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

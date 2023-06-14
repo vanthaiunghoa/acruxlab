@@ -1,0 +1,88 @@
+
+.o_content div.o_list_view.chat_bot_tree table tr td div[name="product_image"] img[name="product_image"] {
+    max-width: 40px;
+}
+
+.chat_bot_tree span.bot_route,
+.chat_bot_tree span.bot_route_end,
+.chat_bot_tree span.bot_route_last {
+    padding-left: 50px;
+    position: relative;
+}
+
+.chat_bot_tree span.bot_route img,
+.chat_bot_tree span.bot_route_end img,
+.chat_bot_tree span.bot_route_last img {
+    margin-left: -10px;
+}
+
+.chat_bot_tree img.acrux_m2o_avatar {
+    border-radius: 25%;
+    width: 39px;
+    height: 39px;
+    object-fit: cover;
+    margin-right: 16px;
+    border: 1px solid #639796;
+    box-shadow: 1px 1px 5px 0px #bdbdbd;
+}
+
+.chat_bot_tree .bot_route:after,
+.chat_bot_tree .bot_route_end:after,
+.chat_bot_tree .bot_route_last:after {
+    content: '';
+    background-color: white;
+    border: 0px solid #bfbfbf;
+    border-left-width: 1px;
+    height: 60px;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    bottom: auto;
+    right: auto;
+}
+
+.chat_bot_tree .bot_route_end:before,
+.chat_bot_tree .bot_route_last:before {
+    content: '';
+    background-color: white;
+    border: 0px solid #bfbfbf;
+    border-top-width: 1px;
+    width: 20px;
+    height: 0;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    bottom: auto;
+    right: auto;
+}
+
+.chat_bot_tree .bot_route .bot_route:after {
+    border-left-width: 0;
+}
+
+.chat_bot_tree .bot_route_last:after {
+    top: -50px;
+}
+
+.chat_bot_tree .bot_route_match {
+    color: darkred;
+}
+
+.o_form_view .acrux_oe_avatar {
+    float: right;
+}
+.o_form_view .acrux_oe_avatar > img {
+    max-width: 180px;
+    max-height: 180px;
+    vertical-align: top;
+    border: 1px solid #a8a8a8;
+}
+
+.chat_bot_tree .table > tbody > tr:not(.o_list_table_grouped) > td.o_html_cell {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+.chat_bot_tree .table > tbody > tr:not(.o_list_table_grouped) > td.o_html_cell div.oe_form_field_html {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}

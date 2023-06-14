@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit ChatRoom</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="6"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="ChatRoom" string="ChatRoom" data-key="whatsapp_connector"
+                     groups="whatsapp_connector.group_chat_basic_extra">
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="text-center" style="font-size: 1.5rem;">
+                                <b>Welcome to ChatRoom</b>
+                            </div>
+                            <h6 class="mt16 text-center" style="font-weight: normal;">
+                                <i>The most complete series of Modules<br/>for Whatsapp/Messenger/Instagram support</i>
+                            </h6>
+                            <div class="mt32">
+                                <b>Free modules</b> (Add to cart and check the price!)
+                            </div>
+                            <h6 class="mt8" style="font-weight: normal;">
+                                <ul>
+                                    <li>
+                                        PACK: Send from many places with Templates
+                                        <a target="_blank" href="https://apps.odoo.com/apps/modules/15.0/whatsapp_connector_pack/">Download here</a>
+                                    </li>
+                                    <li>
+                                        FACEBOOK: Add Messenger/Instagram DM
+                                        <a target="_blank" href="https://apps.odoo.com/apps/modules/15.0/whatsapp_connector_facebook/">Download here</a>
+                                    </li>
+                                </ul>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" style="padding-left: 46px;">
+                            <img alt="ChatRoom" class="d-block mx-auto img img-fluid" style="box-shadow: darkgrey 1px 1px 6px; max-width: 300px; float: left;"
+                                 src="/whatsapp_connector/static/src/img/chat2.png"/>
+                        </div>
+                    </div>
+                    <h2>Configuration</h2>
+                    <div name="acrux_configuration" class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"></div>
+                            <div class="o_setting_right_pane">
+                                <h6>Connectors</h6>
+                                <div class="text-muted">
+                                    View and Edit your Connectors. Each Connector represents a Whatsapp number with which you can serve your customers.
+                                </div>
+                                <div class="mb16">
+                                    <button name="%(whatsapp_connector.whatsapp_connector_connector_action)d" icon="fa-arrow-right"
+                                            string="View Connectors" class="btn-link" type="action"/>
+                                </div>
+                                <h6>Default Answers</h6>
+                                <div class="text-muted">
+                                    View and Edit your Default Answers. Each message will be available for submission with a single click.
+                                </div>
+                                <div class="mb16">
+                                    <button name="%(whatsapp_connector.view_whatsapp_connector_default_answer_action)d" icon="fa-arrow-right"
+                                            string="View Default Answers" class="btn-link" type="action"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"></div>
+                            <div class="o_setting_right_pane">
+                                <h6>Product Images</h6>
+                                <div><i>Compress product images to save your customers' internet traffic.</i></div>
+                                <div class="mb16">
+                                    <div class="text-muted">
+                                        Use this button to compress all product images.<br/>It is only needed once when installing, after that it will be done automatically.
+                                    </div>
+                                    <button name="action_del_and_recreate_image_chat" type="object" string="Compress images" icon="fa-cog" class="btn-primary mt8"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="acrux_templates_hide" invisible="1">Message Templates</h2>
+                    <div name="acrux_templates" class="row mt16 o_settings_container acrux_templates_hide" invisible="1">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane" name="acrux_templates_link">
+                                <h6>Templates available in:</h6>
+                                <div class="mb8 text-muted"><i>Template name must begin with the word "<b>ChatRoom</b>".</i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Integrity Check</h2>
+                    <div name="acrux_integrity" class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-12 o_setting_box"
+                            name="acrux_chat_setting_container_integrity">
+                            <div class="o_setting_left_pane"></div>
+                            <div class="o_setting_right_pane">
+                                <h6>To receive messages you must meet 2 requirements:</h6>
+                                <ul style="padding-left: 16px;">
+                                    <li class="mt16">
+                                        <b>Your Odoo Instance Url</b>
+                                        <div class="text-muted">
+                                            The Odoo Url must be visible from the internet.<br/>If you use "http://localhost:8069" you will not be able to receive messages!
+                                        </div>
+                                        <field name="acrux_chat_base_url" invisible="1"/>
+                                        <div style="color: red;" attrs="{'invisible':[('acrux_chat_check_base_url','=', False)]}">
+                                            <i class="fa fa-exclamation-triangle" title="Error" style="margin-right: 6px;"/> <field name="acrux_chat_check_base_url"/>
+                                        </div>
+                                        <div class="text-success" attrs="{'invisible':[('acrux_chat_check_base_url','!=', False)]}">
+                                            <i class="fa fa-check" title="Ok" style="margin-right: 6px;"/> Url Ok!
+                                        </div>
+                                    </li>
+                                    <li class="mt16">
+                                        <b>It must have a single visible database.</b>
+                                        <div class="text-muted">
+                                            When logging into Odoo can I select a database and there is more than one?
+                                        </div>
+                                        <button name="action_webhook_test" type="object" string="Check" icon="fa-cog" class="btn-primary mt8"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

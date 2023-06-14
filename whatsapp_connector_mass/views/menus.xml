@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="whatsapp_mass_menu_root"
+        name="Whatsapp Batch"
+        sequence="70"
+        web_icon="whatsapp_connector_mass,static/description/icon.png"
+        groups="mass_mailing.group_mass_mailing_user"/>
+
+        <menuitem id="whatsapp_mass_menu_ws"
+            name="Batch Messaging"
+            parent="whatsapp_mass_menu_root"
+            sequence="10"
+            groups="mass_mailing.group_mass_mailing_user"/>
+
+        <menuitem id="whatsapp_mass_menu_contacts"
+            name="Contacts Lists"
+            parent="whatsapp_mass_menu_root"
+            sequence="20"
+            groups="mass_mailing.group_mass_mailing_user"/>
+            
+            <menuitem id="whatsapp_mass_list_menu"
+                name="Contacts Lists"
+                parent="whatsapp_mass_menu_contacts"
+                sequence="10"
+                groups="mass_mailing.group_mass_mailing_user"/>
+
+            <menuitem id="whatsapp_mass_contact_menu"
+                name="Contacts"
+                parent="whatsapp_mass_menu_contacts"
+                sequence="20"
+                groups="mass_mailing.group_mass_mailing_user"/>
+
+        <!--<menuitem id="whatsapp_mass_campaigns"
+            name="Campaigns" 
+            parent="whatsapp_mass_menu_root" 
+            sequence="30"
+            groups="mass_mailing.group_mass_mailing_campaign"/>-->
+
+        <menuitem id="whatsapp_mass_menu_reporting"
+            name="Reporting"
+            parent="whatsapp_mass_menu_root"
+            sequence="40"
+            groups="mass_mailing.group_mass_mailing_user"/>
+
+        <menuitem id="whatsapp_mass_menu_configuration"
+            name="Configuration"
+            parent="whatsapp_mass_menu_root"
+            sequence="50"
+            groups="base.group_system" />
+
+            <menuitem id="whatsapp_mass_menu_setting"
+                name="Configuration"
+                parent="whatsapp_mass_menu_configuration"
+                sequence="10"
+                groups="base.group_system" />
+
+<!--
+            <menuitem id="whatsapp_mass_compaing_stages"
+                name="Campaign Stages"
+                parent="whatsapp_mass_menu_configuration" 
+                sequence="20"
+                action="utm.action_view_utm_stage"
+                groups="mass_mailing.group_mass_mailing_campaign" />
+        
+            <menuitem id="whatsapp_mass_compaing_tag_menu"
+                parent="whatsapp_mass_menu_configuration"
+                action="utm.action_view_utm_tag"
+                sequence="30"
+                groups="mass_mailing.group_mass_mailing_campaign" />
+-->
+
+</odoo>

@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* whatsapp_connector_facebook
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-18 15:35+0000\n"
+"PO-Revision-Date: 2022-02-18 15:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: whatsapp_connector_facebook
+#: code:addons/whatsapp_connector_facebook/models/Connector.py:0
+#, python-format
+msgid "\"Connect to\" is not set, check out your config."
+msgstr "\"Conectar a\" no está establecido, revise su configuración."
+
+#. module: whatsapp_connector_facebook
+#. openerp-web
+#: code:addons/whatsapp_connector_facebook/static/src/js/acrux_chat_message.js:0
+#, python-format
+msgid "A story mention you."
+msgstr "Te mencionaron en una historia."
+
+#. module: whatsapp_connector_facebook
+#. openerp-web
+#: code:addons/whatsapp_connector_facebook/static/src/js/acrux_chat_message.js:0
+#, python-format
+msgid "Alert"
+msgstr "Alerta"
+
+#. module: whatsapp_connector_facebook
+#: code:addons/whatsapp_connector_facebook/models/Connector.py:0
+#, python-format
+msgid "An unexpected error occurred"
+msgstr "Un error inesperado pasó"
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model,name:whatsapp_connector_facebook.model_acrux_chat_conversation
+msgid "Chat Conversation"
+msgstr "Conversación Chat"
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model,name:whatsapp_connector_facebook.model_acrux_chat_message
+msgid "Chat Message"
+msgstr "Mensaje Chat"
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model,name:whatsapp_connector_facebook.model_acrux_chat_template_waba
+msgid "Chat Template Waba"
+msgstr ""
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model.fields,field_description:whatsapp_connector_facebook.field_acrux_chat_connector__connector_type
+msgid "Connect to"
+msgstr "Conectar a"
+
+#. module: whatsapp_connector_facebook
+#: code:addons/whatsapp_connector_facebook/models/Connector.py:0
+#, python-format
+msgid "Connected."
+msgstr "Conectado."
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model,name:whatsapp_connector_facebook.model_acrux_chat_connector
+msgid "Connector Definition"
+msgstr "Definición de Conector"
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model.fields,field_description:whatsapp_connector_facebook.field_acrux_chat_message__custom_url
+msgid "Custom URL"
+msgstr "Url Manual"
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model.fields.selection,name:whatsapp_connector_facebook.selection__acrux_chat_connector__connector_type__facebook
+msgid "Facebook"
+msgstr ""
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model.fields.selection,name:whatsapp_connector_facebook.selection__acrux_chat_connector__connector_type__instagram
+msgid "Instagram"
+msgstr ""
+
+#. module: whatsapp_connector_facebook
+#: code:addons/whatsapp_connector_facebook/models/Message.py:0
+#: code:addons/whatsapp_connector_facebook/models/Message.py:0
+#, python-format
+msgid "Message type is not supported."
+msgstr "Tipo de Mensaje no soportado."
+
+#. module: whatsapp_connector_facebook
+#. openerp-web
+#: code:addons/whatsapp_connector_facebook/static/src/js/acrux_chat_message.js:0
+#, python-format
+msgid "Ok"
+msgstr ""
+
+#. module: whatsapp_connector_facebook
+#. openerp-web
+#: code:addons/whatsapp_connector_facebook/static/src/js/acrux_chat_message.js:0
+#: code:addons/whatsapp_connector_facebook/static/src/js/acrux_chat_message.js:0
+#, python-format
+msgid "Story not found"
+msgstr "Historia no encontrada"
+
+#. module: whatsapp_connector_facebook
+#: code:addons/whatsapp_connector_facebook/models/Message.py:0
+#, python-format
+msgid "Text in this message is not supported."
+msgstr "Texto en este mensaje no es soportado."
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model.fields,help:whatsapp_connector_facebook.field_acrux_chat_connector__connector_type
+msgid "Third-party connector type."
+msgstr "Tipo de conector de terceros."
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model.fields,field_description:whatsapp_connector_facebook.field_acrux_chat_message__ttype
+msgid "Type"
+msgstr "Tipo"
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model.fields.selection,name:whatsapp_connector_facebook.selection__acrux_chat_message__ttype__url
+msgid "URL"
+msgstr ""
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model.fields,field_description:whatsapp_connector_facebook.field_acrux_chat_message__url_due
+msgid "Url is Due?"
+msgstr "Url caducada?"
+
+#. module: whatsapp_connector_facebook
+#: model:ir.model.fields.selection,name:whatsapp_connector_facebook.selection__acrux_chat_connector__connector_type__waba_extern
+msgid "Waba Extern"
+msgstr "Waba Externo"

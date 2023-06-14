@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+   <t t-name="whatsapp.connector.WhatsappTopbarButton" owl="1">
+        <t>
+            <button class="btn btn-link o_ChatterTopbar_button o_ChatterTopbar_whatsapp" type="button"
+                t-on-click="_onClickWhatsappTalk"
+                t-att-class="{
+                    'o-active': !chatter.composerView and props.isWhatsappTalkVisible,
+                    'o-bordered': chatter.hasExternalBorder,
+                }"
+                t-att-disabled="chatter.isDisabled">
+                <i class="fa fa-comments" />
+                ChatRoom
+            </button>
+        </t>
+    </t>
+    
+    <t t-name="chatter.WhatsappConversation">
+        <div class="o_acrux_chat">
+            <div class="o_acrux_chat_sidebar o_sidebar_left col-2">
+                <div class="o_acrux_group">
+                    <div class="o_acrux_chat_items o_current_chats">
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_acrux_chat_content col-10">
+                <div class="o_chat_thread">
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="whatsapp.connector.load_more_btn">
+        <div class="acrux_load_more">
+            <button class="btn btn-primary acrux_load_more">Load more</button>
+        </div>
+    </t>
+
+    <t t-name="whatsapp.connector.ChatterContainer" t-inherit="mail.ChatterContainer" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[@class='o_ChatterContainer']/t/Chatter" position="attributes">
+            <attribute name="originalState">props.originalState</attribute>
+            <attribute name="isChatroomInstalled">true</attribute>
+            <attribute name="isInAcruxChatRoom">!!props.originalState.context.is_acrux_chat_room</attribute>
+        </xpath>
+    </t>
+
+    <t t-name="whatsapp.connector.Chatter" t-inherit="mail.Chatter" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[@class='o_Chatter']/t/div[@class='o_Chatter_fixedPanel']/ChatterTopbar" position="attributes">
+            <attribute name="isWhatsappTalkVisible">state.isWhatsappTalkVisible</attribute>
+            <attribute name="isChatroomInstalled">props.isChatroomInstalled</attribute>
+            <attribute name="isInAcruxChatRoom">props.isInAcruxChatRoom</attribute>
+        </xpath>
+        <xpath expr="//div[@class='o_Chatter']/t/div[@class='o_Chatter_fixedPanel']" position="inside">
+            <t t-if="!props.isInAcruxChatRoom and props.isChatroomInstalled" >
+                <WhatsappConversation
+                    t-att-class="{ 'o-bordered': chatter.hasExternalBorder }"
+                    Component="widgetComponents.WhatsappChatter"
+                    widgetArgs="[]"
+                    modelName="chatter.thread.model"
+                    recId="chatter.thread.id"
+                    fieldName="'partner_id'"
+                    chatterLocalId="chatter.localId"
+                    originalState="props.originalState"
+                    isWhatsappTalkVisible="state.isWhatsappTalkVisible"
+                    t-ref="whatsappConversationRef" />
+            </t>
+        </xpath>
+    </t>
+
+    <t t-name="whatsapp.connector.ChatterTopbar" t-inherit="mail.ChatterTopbar" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[@class='o_ChatterTopbar']/t/div[@class='o_ChatterTopbar_actions']/div[@class='o-autogrow']" position="before">
+            <t t-if="!props.isInAcruxChatRoom and props.isChatroomInstalled" >
+                <WhatsappTopbarButton
+                    chatterLocalId="chatter.localId"
+                    isWhatsappTalkVisible="props.isWhatsappTalkVisible"
+                    t-ref="whatsappTopbarButtonRef" />
+            </t>
+        </xpath>
+    </t>
+
+</templates>

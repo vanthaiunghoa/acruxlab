@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+.o_acrux_chat .o_acrux_audio_player,
+    .o_action .o_acrux_audio_player {
+    background-color: hsla(0, 0%, 0%, .75);
+    background-image: linear-gradient(hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, .025) 50%, transparent 50%,
+        hsla(0, 0%, 0%, .1));
+    border: 1px solid #111;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 1px hsla(0, 0%, 100%, .15), inset 0 -1px 1px
+        hsla(0, 0%, 0%, .25), 0 2px 2px hsla(0, 0%, 0%, .25);
+    display: flex;
+    font-size: 0;
+    padding: 5px;
+    text-align: left;
+    width: 280px;
+    max-width: 100%;
+    align-items: center;
+}
+
+.o_acrux_chat .o_acrux_audio_player div,
+    .o_action .o_acrux_audio_player div {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.o_acrux_chat .o_acrux_audio_player .play,
+    .o_action .o_acrux_audio_player .play {
+    font-size: 20px;
+    margin-right: 5px;
+    position: relative;
+    text-shadow: 0 1px 1px hsla(0, 0%, 0%, .5);
+    vertical-align: middle;
+    width: 1em;
+    max-height: 20px;
+    line-height: 0.8;
+}
+
+.o_acrux_chat .o_acrux_audio_player .progress,
+    .o_action .o_acrux_audio_player .progress {
+    background: hsla(0, 0%, 0%, .25);
+    border: 1px solid #111;
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px 1px hsla(0, 0%, 0%, .1), inset 0 2px 3px
+        hsla(0, 0%, 0%, .25), 0 1px 1px hsla(0, 0%, 100%, .1);
+    height: 10px;
+    margin: 0;
+    margin-right: 5px;
+    vertical-align: middle;
+    flex: 1 1 auto
+}
+
+.o_acrux_chat .o_acrux_audio_player .loading,
+    .o_action .o_acrux_audio_player .loading {
+    background-color: hsla(0, 0%, 100%, .05);
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px 1px hsla(0, 0%, 0%, .1), inset 0 1px 1px
+        hsla(0, 0%, 100%, .1), inset 0 -1px 1px hsla(0, 0%, 0%, .1);
+    height: 10px;
+    width: 0%;
+}
+
+.o_acrux_chat .o_acrux_audio_player .playback,
+    .o_action .o_acrux_audio_player .playback {
+    background-color: #f60;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 1px hsla(0, 0%, 100%, .25), inset 0 -1px 1px
+        hsla(0, 0%, 0%, .25);
+    height: 10px;
+    position: relative;
+    width: 0%;
+    vertical-align: top;
+}
+
+.o_acrux_chat .o_acrux_audio_player .time,
+    .o_action .o_acrux_audio_player .time {
+    position: relative;
+    text-shadow: 0 1px 1px hsla(0, 0%, 0%, .5);
+    vertical-align: middle;
+}
+
+.o_acrux_chat .o_acrux_audio_player .download,
+    .o_action .o_acrux_audio_player .download {
+    font-size: 16px;
+    padding-right: 3px;
+    cursor: pointer;
+}

@@ -1,0 +1,75 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* whatsapp_connector_template_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-13 00:00+0000\n"
+"PO-Revision-Date: 2021-04-13 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: whatsapp_connector_template_base
+#: model:mail.template,body_html:whatsapp_connector_template_base.chatroom_email_template_partner_2
+msgid ""
+"<p>Hello <t t-out=\"object.name\"/><br/>\n"
+"Our opening hours are from 09:00 AM to 17:00 PM.</p>"
+msgstr ""
+"<p>Hola <t t-out=\"object.name\"/><br/>\n"
+"Nuestro horario de atención es de 09:00 AM a 17:00 PM.</p>"
+
+#. module: whatsapp_connector_template_base
+#: model:mail.template,body_html:whatsapp_connector_template_base.chatroom_email_template_partner_1
+msgid ""
+"<p>Hello <t t-out=\"object.name\"/><br/>Can you please send me your address and "
+"email.</p>"
+msgstr ""
+"<p>Hola <t t-out=\"object.name\"/><br/>Me puede enviar por favor su dirección y "
+"email.</p>"
+
+#. module: whatsapp_connector_template_base
+#: model:mail.template,body_html:whatsapp_connector_template_base.chatroom_email_template_partner_3
+msgid ""
+"<p>Hello *<t t-out=\"object.name\"/>*<br/>You are in debt for "
+"<t t-out=\"format_amount(object.get_total_due(), "
+"object.property_product_pricelist.currency_id)\"/></p>"
+msgstr ""
+"<p>Hola *<t t-out=\"object.name\"/>*<br/>Usted mantiene una deuda por "
+"<t t-out=\"format_amount(object.get_total_due(), "
+"object.property_product_pricelist.currency_id)\"/></p>"
+
+#. module: whatsapp_connector_template_base
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_template_base.acrux_chat_message_wizard_form_template
+msgid "Attach a file"
+msgstr "Adjuntar"
+
+#. module: whatsapp_connector_template_base
+#: model:ir.model,name:whatsapp_connector_template_base.model_acrux_chat_message_wizard
+msgid "ChatRoom Message"
+msgstr "Mensaje ChatRoom"
+
+#. module: whatsapp_connector_template_base
+#: model:ir.model.fields,field_description:whatsapp_connector_template_base.field_acrux_chat_message_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: whatsapp_connector_template_base
+#: model:ir.model.fields,field_description:whatsapp_connector_template_base.field_acrux_chat_message_wizard__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: whatsapp_connector_template_base
+#: model:ir.model.fields,field_description:whatsapp_connector_template_base.field_acrux_chat_message_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: whatsapp_connector_template_base
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_template_base.res_config_settings_view_form
+msgid "Partner"
+msgstr "Contacto"

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_acrux_chat_conversation_inline_tree">
+        <field name="name">acrux.chat.conversation.inline.tree</field>
+        <field name="model">acrux.chat.conversation</field>
+        <field name="inherit_id" ref="whatsapp_connector.view_whatsapp_connector_conversation_inline_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="crm_lead_id" readonly="1"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- form admin -->
+    <record model="ir.ui.view" id="view_acrux_chat_conversation_form_admin">
+        <field name="name">acrux.chat.conversation.form</field>
+        <field name="model">acrux.chat.conversation</field>
+        <field name="inherit_id" ref="whatsapp_connector.view_whatsapp_connector_conversation_form_admin" />
+        <field name="arch" type="xml">
+            <field name="agent_id" position="after">
+                <field name="crm_lead_id"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- form default - wizards -->
+    <record model="ir.ui.view" id="view_acrux_chat_conversation_form">
+        <field name="name">acrux.chat.conversation.form</field>
+        <field name="model">acrux.chat.conversation</field>
+        <field name="inherit_id" ref="whatsapp_connector.view_whatsapp_connector_conversation_form" />
+        <field name="arch" type="xml">
+            <field name="crm_lead_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="whatsapp_connector_maintenance" model="ir.cron">
+        <field name="name">ChatRoom: Attach Maintenance</field>
+        <field name="model_id" ref="whatsapp_connector.model_acrux_chat_connector"/>
+        <field name="type">ir.actions.server</field>
+        <field name="active" eval="True"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="state">code</field>
+        <field name="code">model.execute_maintenance(21)</field>
+        <field name="interval_number">7</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(datetime.now() + timedelta(hours=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="priority">50</field>
+    </record>
+
+    <record id="whatsapp_connector_verify" model="ir.cron">
+        <field name="name">ChatRoom: Verify Conversation</field>
+        <field name="model_id" ref="whatsapp_connector.model_acrux_chat_conversation"/>
+        <field name="type">ir.actions.server</field>
+        <field name="active" eval="True"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="state">code</field>
+        <field name="code">model.conversation_verify()</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="priority">50</field>
+    </record>
+
+</data>
+</odoo>

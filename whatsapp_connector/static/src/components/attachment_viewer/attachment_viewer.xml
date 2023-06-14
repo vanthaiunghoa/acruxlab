@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="whatsapp.connector.dialogFix" t-inherit="mail.AttachmentViewer" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[@class='o_AttachmentViewer']" position="attributes">
+            <attribute name="t-attf-acrux-tag">{{ attachmentViewer?.attachment?.isAcrux ? 'hack' : '' }}</attribute>
+        </xpath>
+    </t>
+    
+</templates>

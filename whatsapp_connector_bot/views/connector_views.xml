@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="view_whatsapp_connector_connector_form" model="ir.ui.view">
+        <field name="name">acrux.chat.connector.form Bot</field>
+        <field name="model">acrux.chat.connector</field>
+        <field name="inherit_id" ref="whatsapp_connector.view_whatsapp_connector_connector_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='connector_page']" position="before">
+                <page string="ChatBot">
+                    <group colspan="2">
+                        <group>
+                            <field name="thread_minutes"/>
+                           <field name="bot_log"/>
+                        </group>
+                    </group>
+                    <group string="Help - Clean actions" colspan="2">
+                        <div>
+                            <p>This configuration is required to clean the database and set maximum values.</p>
+                            <p>Go to Cron 'ChatRoom: Clean ChatBot' and configure:</p>
+                            <ul>
+                                <li><b>max_mute_hours</b>: Set the maximum time in hours that a ChatBot can remain 'Mute'.<br/>
+                                    Example: If the maximum value of 'Mute' among all your Bot is 1 hour, then set this value to 1 hour</li>
+                                <li><b>max_thread_hours</b>: If you use child Bots (Nested threads), set the maximum time in hours to clean.</li>
+                            </ul>
+                        </div>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

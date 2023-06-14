@@ -1,0 +1,2734 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* whatsapp_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-10 20:15+0000\n"
+"PO-Revision-Date: 2023-02-10 20:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/tools.py:0
+#, python-format
+msgid " Invalid number."
+msgstr " Número inválido."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat.js:0
+#, python-format
+msgid ""
+" has now the permission to send you native notifications on this device."
+msgstr " tiene el permiso para enviarte notificaciones a su dispositivo."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat.js:0
+#, python-format
+msgid ""
+" will not have the permission to send native notifications on this device."
+msgstr " no te enviará notificaciones a su dispositivo."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "\"Connect to\" is not set, check out your config."
+msgstr "\"Conectar a\" no está establecido, revise su configuración."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "&nbsp;"
+msgstr ""
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "&nbsp;&nbsp;"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"1. ApiChat.io is unofficial and independent of WhatsApp Inc.<br/>\n"
+"2. Your account can be banned by anti-spam system WhatsApp after several clicking the \"block\" button.<br/>\n"
+"3. Message files will be stored until they are received correctly (status = 200) or for 7 days and then deleted.<br/>\n"
+"4. You agree not to use the ApiChat.io service for spam and bulk messaging.<br/>\n"
+"5. By authorizing the phone number (messenger account) in the ApiChat.io service, you agree that ApiChat.io will have full access to the authorized account in the messenger.<br/>\n"
+"6. ApiChat.io has the right to block your access to the service in case of violation of the \"Public Agreement\" or \"Message Content Requirements\"."
+msgstr ""
+"1. ApiChat.io no es oficial e independiente de WhatsApp Inc.<br/>\n"
+"2. Su cuenta puede ser prohibida por el sistema anti-spam de WhatsApp después de varios reportes de spam.<br/>\n"
+"3. Los archivos de mensajes se almacenarán hasta recibir la correcta recepción (status = 200) ó durante 7 días y luego se eliminarán.<br/>\n"
+"4. Acepta no utilizar el servicio ApiChat.io para spam y mensajería masiva.<br/>\n"
+"5. Al autorizar el número de teléfono (cuenta de messenger) en el servicio ApiChat.io, usted acepta que ApiChat.io tendrá acceso completo a la cuenta autorizada.<br/>\n"
+"6. ApiChat.io tiene derecho a bloquear su acceso al servicio en caso de violación del \"Acuerdo público \" o \"Contenido del mensaje \"."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"1. Chat-Api is unofficial and independent of WhatsApp Inc.<br/>\n"
+"2. Your account can be banned by anti-spam system WhatsApp after several clicking the \"block\" button.<br/>\n"
+"3. Message files will be stored for 30 days and then deleted.<br/>\n"
+"4. You agree not to use the Chat-Api service for spam and bulk messaging.<br/>\n"
+"5. By authorizing the phone number (messenger account) in the Chat-Api service, you agree that Chat-Api will have full access to the authorized account in the messenger.<br/>\n"
+"6. Chat-Api has the right to block your access to the service in case of violation of the \"Public Agreement\" or \"Message Content Requirements\"."
+msgstr ""
+"1. Chat-Api no es oficial e independiente de WhatsApp Inc.<br/>\n"
+"2. Su cuenta puede ser prohibida por el sistema anti-spam de WhatsApp después de varios reportes de spam.<br/>\n"
+"3. Los archivos de mensajes se almacenarán durante 30 días y luego se eliminarán.<br/>\n"
+"4. Acepta no utilizar el servicio Chat-Api para spam y mensajería masiva.<br/>\n"
+"5. Al autorizar el número de teléfono (cuenta de messenger) en el servicio Chat-Api, usted acepta que Chat-Api tendrá acceso completo a la cuenta autorizada.<br/>\n"
+"6. Chat-Api tiene derecho a bloquear su acceso al servicio en caso de violación del \"Acuerdo público \" o \"Contenido del mensaje \"."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "<b style=\"color: black\">Old Chat</b>"
+msgstr "<b style=\"color: black\">Chat antiguos</b>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "<b>Free modules</b> (Add to cart and check the price!)"
+msgstr "<b>Módulos gratis</b> (Agrega al carro y comprueba el precio!)"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "<b>It must have a single visible database.</b>"
+msgstr "<b>Debe tener una sola base de datos visible.</b>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "<b>Welcome to ChatRoom</b>"
+msgstr "<b>Bienvenidos a ChatRoom</b>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "<b>Your Odoo Instance Url</b>"
+msgstr "<b>Url de su instancia Odoo</b>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"<br/>\n"
+"Authorising your number you agree on our terms of service. We advise you to read our tips on using ApiChat.io."
+msgstr ""
+"<br/>\n"
+"Al autorizar su número, acepta nuestras condiciones del servicio. Recomendamos que lea nuestros consejos sobre el uso de ApiChat.io."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"<br/>\n"
+"Authorising your number you agree on our terms of service. We advise you to read our tips on using Chat-Api."
+msgstr ""
+"<br/>\n"
+"Al autorizar su número, acepta nuestras condiciones del servicio. Recomendamos que lea nuestros consejos sobre el uso de Chat-Api."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"<br/>\n"
+"The value of 'Available queries' will be automatically updated.<br/>\n"
+"<b style=\"color: darkred;\">Tip:</b> Go to <b>ChatRoom &gt; Conversation</b> and select '<b>Invalid numbers</b>' Filter."
+msgstr ""
+"<br/>\n"
+"Automáticamente se actualizará el valor de 'Consultas disponibles'.<br/>\n"
+"<b style=\"color: darkred;\">Tip:</b> Ingresar a <b>ChatRoom &gt; Conversación</b> y seleccione el Filtro '<b>Números inválidos</b>'."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_notification.js:0
+#, python-format
+msgid "<br> Message: "
+msgstr "<br> Mensaje: "
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "<i class=\"fa fa-check\" title=\"Ok\" style=\"margin-right: 6px;\"/> Url Ok!"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-exclamation-triangle\" title=\"Error\" style=\"margin-"
+"right: 6px;\"/>"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid ""
+"<i>Compress product images to save your customers' internet traffic.</i>"
+msgstr ""
+"<i>Comprimir imágenes de productos para ahorrar consumo de internet de sus "
+"clientes.</i>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "<i>Template name must begin with the word \"<b>ChatRoom</b>\".</i>"
+msgstr ""
+"<i>Nombre de Plantilla debe comenzar con la palabra \"<b>ChatRoom</b>\".</i>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid ""
+"<i>The most complete series of Modules<br/>for Whatsapp/Messenger/Instagram "
+"support</i>"
+msgstr ""
+"<i>La más completa serie de Módulos<br/>para atender "
+"Whatsapp/Messenger/Instagram</i>"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/wizard/InitFreeTest.py:0
+#, python-format
+msgid ""
+"<p>We have created your account.<br/>On the \"Connector\" tab click on "
+"\"Check Status or Get QR\".</p>"
+msgstr ""
+"<p>Hemos creado tu cuenta.<br/>En la pestaña \"Conector\", haga clic en "
+"\"Consultar estatus o leer QR\".</p>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.whatsapp_connector_res_users_form_view
+msgid ""
+"<span class=\"o_stat_text o_not_hover text-danger\" attrs=\"{'invisible': [('acrux_chat_active', '=', True)]}\">Inactive in Chat</span>\n"
+"                    <span class=\"o_stat_text o_not_hover text-success\" attrs=\"{'invisible': [('acrux_chat_active', '=', False)]}\">Active in Chat</span>"
+msgstr ""
+"<span class=\"o_stat_text o_not_hover text-danger\" attrs=\"{'invisible': [('acrux_chat_active', '=', True)]}\">Chat Inactivo</span>\n"
+"                    <span class=\"o_stat_text o_not_hover text-success\" attrs=\"{'invisible': [('acrux_chat_active', '=', False)]}\">Chat Activo</span>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"<span> Available queries</span> <span attrs=\"{'invisible':[('valid_date', "
+"'=', False)]}\"> until </span>"
+msgstr ""
+"<span> Consultas disponibles</span> <span "
+"attrs=\"{'invisible':[('valid_date', '=', False)]}\"> hasta </span>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "<strong>ApiChat.io Terms of Service</strong><br/><br/>"
+msgstr "<strong>Condiciones del servicio de ApiChat.io</strong><br/><br/>"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "<strong>Chat-Api Terms of Service</strong><br/><br/>"
+msgstr "<strong>Condiciones del servicio de Chat-Api</strong><br/><br/>"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__endpoint
+msgid "API Endpoint"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__endpoint
+msgid "API Url. Please don't change."
+msgstr "API Url. Por favor no cambie."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__source
+msgid "Account (Instagram-FaceBook-Whatsapp)"
+msgstr "Cuenta (Instagram-FaceBook-Whatsapp)"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__uuid
+msgid "Account ID"
+msgstr "ID Cuenta"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_config_settings__acrux_chat_check_base_url
+msgid "Acrux Chat Check Base Url"
+msgstr ""
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "Action %s is not implemented."
+msgstr "Acción %s no está implementada."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_users__chatroom_signing_active
+msgid "Activate Signature"
+msgstr "Activar Firma"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_base_message__active
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__active
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__active
+#, python-format
+msgid "Active"
+msgstr "Activo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_users__acrux_chat_active
+msgid "Active in Chat"
+msgstr "Chat Activo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__agent_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__user_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__user_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_conversation_init_report__agent_id
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_pivot
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "Agent"
+msgstr "Agente"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_agent_answer_time_report
+msgid "Agent Answer Time Report"
+msgstr "Reporte Tiempo de respuesta del agente"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Agent:"
+msgstr "Agente:"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_connector__desk_notify__all
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_default_answer_search
+msgid "All"
+msgstr "Todos"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/ResConfigSettings.py:0
+#, python-format
+msgid "All good!"
+msgstr "Todo bien!"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_scanqr_wizard
+msgid "All good?"
+msgstr "Todo bien?"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__allow_signing
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__allow_signing
+msgid "Allow Signing"
+msgstr "Permite firma"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_conversation_init_report__amount
+msgid "Amount"
+msgstr "Cantidad"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_scanqr_wizard
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "An error? On your device close all sessions and try again."
+msgstr ""
+"Un error? En su dispositivo cierre todas las sesiones y vuelva a intentar."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__date_answer
+msgid "Answer Date"
+msgstr "Fecha de Respuesta"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__next_message_id
+msgid "Answer Message"
+msgstr "Mensaje Respuesta"
+
+#. module: whatsapp_connector
+#: model:ir.actions.act_window,name:whatsapp_connector.view_agent_answer_time_report_action
+msgid "Answer Time"
+msgstr "Tiempo de Respuesta"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__answer_time
+msgid "Answer Time (sec)"
+msgstr "Tiempo de Respuesta (seg)"
+
+#. module: whatsapp_connector
+#: model:ir.ui.menu,name:whatsapp_connector.view_agent_answer_time_report_menu
+msgid "Answer Time Analysis"
+msgstr "Análisis del Tiempo de Respuesta"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_graph
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_pivot
+msgid "Answer Time Report"
+msgstr "Reporte tiempo de Respuesta"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_connector__connector_type__apichat_io
+msgid "ApiChat.io"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__app_id
+msgid "AppId"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__model_id
+msgid "Apply to"
+msgstr "Aplica a"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_search
+msgid "Approved"
+msgstr "Aprobada"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__tmp_agent_id
+msgid "Assign to"
+msgstr "Asignar a"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Assignment"
+msgstr "Asignar"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__attachment_ids
+msgid "Attach a file"
+msgstr "Adjuntar"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_ir_attachment
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__file_attach
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__attachment_id
+msgid "Attachment"
+msgstr "Adjunto"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Message.py:0
+#, python-format
+msgid "Attachment exceeds the maximum size allowed (%s)."
+msgstr "Adjunto exceden el tamaño máximo permitido (%s)."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Attend"
+msgstr "Atender"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Attending"
+msgstr "Asistiendo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_base_message__ttype__audio
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_default_answer__ttype__audio
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__ttype__audio
+msgid "Audio"
+msgstr ""
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_audio_player.js:0
+#, python-format
+msgid "Audio not found"
+msgstr "Audio no encontrado"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__numbers_available
+msgid "Available"
+msgstr "Disponible"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "Available only for Whatsapp connector through apichat.io."
+msgstr "Disponible solo para conector Whatsapp mediante apichat.io."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__valid_balance
+msgid "Available queries"
+msgstr "Consultas disponibles"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__image_128
+msgid "Avatar"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__image_url
+msgid "Avatar Url"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_tree
+msgid "Average"
+msgstr "Promedio"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_base_message
+msgid "Base Message"
+msgstr "Mensaje Base"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_config_settings__acrux_chat_base_url
+msgid "Base Url"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__number
+msgid "Base number"
+msgstr "Número Base"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__border_color
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__border_color
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__title_color
+msgid "Border Color"
+msgstr "Color del Borde"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__border_color
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_conversation__border_color
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_message__title_color
+msgid "Border color to differentiate conversation connector"
+msgstr "Color del borde para diferenciar los conectores"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"By purchasing or using this module you accept the terms of service under the"
+" OPL-1 License published in the Odoo application store."
+msgstr ""
+"Al comprar o usar este módulo, acepta las condiciones del servicio bajo la "
+"Licencia OPL-1 publicada en la tienda de aplicaciones de Odoo."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.acrux_chat_message_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__category
+msgid "Category"
+msgstr "Categoría"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__connector_id
+msgid "Channel"
+msgstr "Canal"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_conversation
+msgid "Chat Conversation"
+msgstr "Conversación Chat"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_default_answer
+msgid "Chat Default Answer"
+msgstr "Respuestas Predefinidas"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_message
+msgid "Chat Message"
+msgstr "Mensaje Chat"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_template_waba
+msgid "Chat Template Waba"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_template_waba_param
+msgid "Chat Template Waba Param"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_connector__connector_type__chatapi
+msgid "ChatApi"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:crm.team,name:whatsapp_connector.chatroom_team
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__conversation_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_partner__contact_ids
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_users__contact_ids
+#: model:ir.module.category,name:whatsapp_connector.category_chatroom
+#: model:ir.ui.menu,name:whatsapp_connector.acrux_live_chat_conversation_menu
+#: model:ir.ui.menu,name:whatsapp_connector.whatsapp_connector_settings_menu
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_module_filter
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.whatsapp_connector_res_users_form_view
+msgid "ChatRoom"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.ui.menu,name:whatsapp_connector.menu_chatroom_report_root
+msgid "ChatRoom Analysis"
+msgstr "ChatRoom Análisis"
+
+#. module: whatsapp_connector
+#: model:ir.actions.client,name:whatsapp_connector.acrux_live_chat_action
+msgid "ChatRoom Live"
+msgstr "ChatRoom en Vivo"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_message_wizard
+msgid "ChatRoom Message"
+msgstr "Mensaje ChatRoom"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_module_filter
+msgid "ChatRoom SEND"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_users__is_chatroom_group
+msgid "ChatRoom User"
+msgstr "Usuario ChatRoom"
+
+#. module: whatsapp_connector
+#: model:ir.actions.server,name:whatsapp_connector.whatsapp_connector_maintenance_ir_actions_server
+#: model:ir.cron,cron_name:whatsapp_connector.whatsapp_connector_maintenance
+#: model:ir.cron,name:whatsapp_connector.whatsapp_connector_maintenance
+msgid "ChatRoom: Attach Maintenance"
+msgstr "ChatRoom: Mantención de Adjuntos"
+
+#. module: whatsapp_connector
+#: model:ir.actions.server,name:whatsapp_connector.whatsapp_connector_verify_ir_actions_server
+#: model:ir.cron,cron_name:whatsapp_connector.whatsapp_connector_verify
+#: model:ir.cron,name:whatsapp_connector.whatsapp_connector_verify
+msgid "ChatRoom: Verify Conversation"
+msgstr "ChatRoom: Verificar Conversación"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_tree
+msgid "Check"
+msgstr "Comprobar"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Check Status or Get QR"
+msgstr "Consultar estatus o leer QR"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__auto_valid_number
+msgid "Check if it exists in WhatsApp and repair."
+msgstr "Verifica que existe en WhatsApp y repara."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_init_free_test_wizard
+msgid "Click on \"Create Account\" to continue."
+msgstr "Haga clic en \"Crear cuenta\" para continuar."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__res_partner_id
+msgid "Client"
+msgstr "Cliente"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__prev_message_id
+msgid "Client Message"
+msgstr "Mensaje del Cliente"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_pop_message_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_scanqr_wizard
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_simple_new_conversation_wizard
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_default_answer__ttype__code
+msgid "Code"
+msgstr "Código"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "Color must be unique per connector."
+msgstr "Color tiene que ser único."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__company_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__company_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__company_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__company_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_conversation_init_report__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Compress images"
+msgstr "Comprimir imágenes"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_product_product__image_chat
+msgid "Compressed Image"
+msgstr "Imagen Comprimida"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuraciones"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__conn_type
+msgid "Conn Type"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Connect"
+msgstr "Conectar"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Connect or Check Status"
+msgstr "Conectar o Consultar Estatus"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__connector_type
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__connector_type
+msgid "Connect to"
+msgstr "Conectar a"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__ca_status
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Connected"
+msgstr "Conectado"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "Connected to"
+msgstr "Conectado a"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Connection Instructions"
+msgstr "Instrucciones para conectar"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector_scanqr_wizard__connector_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__connector_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__connector_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__connector_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__connector_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__connector_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_conversation_init_report__connector_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_init_free_test_wizard__connector_id
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_search
+msgid "Connector"
+msgstr "Conector"
+
+#. module: whatsapp_connector
+#: model:ir.module.category,name:whatsapp_connector.category_chat_access_connector
+msgid "Connector Access"
+msgstr "Acceso Conector"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_connector
+msgid "Connector Definition"
+msgstr "Definición de Conector"
+
+#. module: whatsapp_connector
+#: model:ir.actions.act_window,name:whatsapp_connector.whatsapp_connector_connector_action
+#: model:ir.ui.menu,name:whatsapp_connector.whatsapp_connector_connector_menu
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "Connectors"
+msgstr "Conectores"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_res_partner
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__contact_id
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__ttype__contact
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_form
+msgid "Content"
+msgstr "Contenido"
+
+#. module: whatsapp_connector
+#: model:ir.actions.act_window,name:whatsapp_connector.view_whatsapp_connector_conversation_action
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities__conversation_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__conversation_ids
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__contact_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_conversation_init_report__conversation_id
+#: model:ir.ui.menu,name:whatsapp_connector.whatsapp_connector_conversation_menu
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+msgid "Conversation"
+msgstr "Conversación"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_conversation_activities
+msgid "Conversation Activities"
+msgstr "Actividades de Conversación"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_conversation_init_report
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_graph
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_pivot
+msgid "Conversation Init Report"
+msgstr "Reporte Conversaciones Iniciadas."
+
+#. module: whatsapp_connector
+#: model:ir.actions.act_window,name:whatsapp_connector.view_conversation_init_report_action
+#: model:ir.ui.menu,name:whatsapp_connector.view_conversation_init_report_menu
+msgid "Conversations Started"
+msgstr "Conversaciones Iniciadas"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid ""
+"Could not connect to your account.\n"
+"Please check API Endpoint Url.\n"
+"%s"
+msgstr ""
+"No se pudo conectar su cuenta\n"
+"Por favor, revise el API Endpoint Url.\n"
+"%s"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_init_conversation.js:0
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_simple_new_conversation_wizard__operation__create
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_simple_new_conversation_wizard
+#, python-format
+msgid "Create"
+msgstr "Crear"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_init_free_test_wizard
+msgid "Create account"
+msgstr "Crear cuenta"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_form
+msgid "Create/Update Mail Template"
+msgstr "Crear/Actua. Plantilla Mail"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__created_on
+msgid "Created On"
+msgstr "Creado el"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector_scanqr_wizard__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_pop_message__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_work_queue__create_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_init_free_test_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector_scanqr_wizard__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_pop_message__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_work_queue__create_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_init_free_test_wizard__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_conversation__status__current
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+msgid "Current"
+msgstr "Actual"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+msgid "Current Month"
+msgstr "Este Mes"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+msgid "Current Year"
+msgstr "Este Año"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Conversation.py:0
+#, python-format
+msgid "Customer is already being served for %s"
+msgstr "Cliente ya está siendo atendido por %s"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__data
+msgid "Data"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__date_message
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__date_message
+#: model:ir.model.fields,field_description:whatsapp_connector.field_conversation_init_report__date_message
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "Date"
+msgstr "Fecha"
+
+#. module: whatsapp_connector
+#: model:ir.actions.act_window,name:whatsapp_connector.view_whatsapp_connector_default_answer_action
+#: model:ir.ui.menu,name:whatsapp_connector.view_whatsapp_connector_default_answer_menu
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_default_answer_search
+msgid "Default Answers"
+msgstr "Predeterminadas"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__tz
+msgid "Default value if not defined in the user."
+msgstr "Valor por defecto si no está definido en el usuario."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"Default value of 500 means 500x500 Pixels. Over 600 is at risk of exceeding "
+"64 Kb. 600 is good value."
+msgstr ""
+"El valor predeterminado de 500 significa 500x500 píxeles. Más de 600 están "
+"en riesgo de exceder 64 Kb. 600 es un buen valor."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_chatroom_form
+msgid "Delegate"
+msgstr "Delegar"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_ir_attachment__delete_old
+msgid "Delete if old"
+msgstr "Borrar si antiguo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_pop_message__info
+msgid "Detail"
+msgstr "Detalle"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Disconnected"
+msgstr "Desconectado"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector_scanqr_wizard__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_pop_message__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_work_queue__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_conversation_init_report__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_init_free_test_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_conversation__status__done
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+#, python-format
+msgid "Done"
+msgstr "Terminar"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "Download here"
+msgstr "Descargar aquí"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__element_name
+msgid "Element Name"
+msgstr "Nombre del Elemento"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_mail_template
+msgid "Email Templates"
+msgstr "Plantillas de correo electrónico"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__event__to_done
+msgid "End Conversation"
+msgstr "Fin Conversación"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "End and Release"
+msgstr "Terminar y Liberar"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__time_to_done
+msgid "End idle conversation (Days)"
+msgstr "Terminar conversación inactiva (Días)"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/wizard/MessageWizard.py:0
+#: code:addons/whatsapp_connector/wizard/MessageWizard.py:0
+#: code:addons/whatsapp_connector/wizard/MessageWizard.py:0
+#, python-format
+msgid "Enter required values"
+msgstr "Ingrese valores requeridos"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__error_msg
+msgid "Error Message"
+msgstr "Mensaje de error"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat.js:0
+#, python-format
+msgid "Error in conversation with "
+msgstr "Error en la conversación con "
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid ""
+"Error! Could not connect to server. Please in the connector settings, set "
+"the parameter \"Verify\" to false by unchecking it and try again."
+msgstr ""
+"Error! No se pudo conectar al selvidor. Por favor, en la configuración del "
+"conector, configure el parámetro \"Verificar\" a falso y vuelva a intentar."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_notification.js:0
+#, python-format
+msgid "Error: "
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__event
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "Event"
+msgstr "Evento"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_conversation__valid_number
+msgid "Exists in WhatsApp"
+msgstr "Existe en WhatsApp"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__time_to_respond
+msgid ""
+"Expiry time in hours to respond message without additional fee.\n"
+"Null or 0 indicate no limit."
+msgstr ""
+"Tiempo de caducidad en horas para responder el mensaje sin cargo adicional.\n"
+"Null o 0 indican que no hay límite."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__external_id
+msgid "External ID"
+msgstr "ID Externo"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "FACEBOOK: Add Messenger/Instagram DM"
+msgstr "FACEBOOK: Agregar Messenger/Instagram DM"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_base_message__ttype__file
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_default_answer__ttype__file
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__ttype__file
+msgid "File"
+msgstr "Archivo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__file_attach_name
+msgid "File Name"
+msgstr "Nombre Adjunto"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/DefaultAnswer.py:0
+#, python-format
+msgid "File is required."
+msgstr "Archivo es requerido."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_message.js:0
+#, python-format
+msgid "File not found"
+msgstr "Archivo no encontrado"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__last_received_first
+msgid "First Unanswered"
+msgstr "Primero sin respuesta"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_conversation__last_received_first
+msgid "First unanswered message."
+msgstr "Primer mensaje sin respuesta."
+
+#. module: whatsapp_connector
+#: model:res.groups,name:whatsapp_connector.group_chat_basic_extra
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_res_partner_filter
+msgid "From ChatRoom"
+msgstr "Desde ChatRoom"
+
+#. module: whatsapp_connector
+#: model:res.groups,name:whatsapp_connector.group_chat_basic
+msgid "From Forms"
+msgstr "Desde Formularios"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "From Partner"
+msgstr "Desde Partner"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "From me"
+msgstr "Salida"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_form
+msgid "General Information"
+msgstr "Información General"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_conversation_activities__ttype__generic
+msgid "Generic"
+msgstr "Genérico"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Get Chat List"
+msgstr "Obtener Lista de Chats"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Get Templates WABA"
+msgstr "Consultar Plantillas WABA"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/wizard/InitFreeTest.py:0
+#, python-format
+msgid "Good !"
+msgstr "Bien !"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_default_answer_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_search
+msgid "Group by"
+msgstr "Agrupar por"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_connector__connector_type__gupshup
+msgid "GupShup"
+msgstr ""
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Conversation.py:0
+#, python-format
+msgid "Have to set agent to set conversation to \"current\""
+msgstr ""
+"Tiene que configurar el agente para establecer la conversación en \"actual\""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Hire the service in"
+msgstr "Contrate el servicio en"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector_scanqr_wizard__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_pop_message__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_work_queue__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_conversation_init_report__id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_init_free_test_wizard__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_base_message__res_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__res_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__res_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__template_id
+msgid "Id"
+msgstr ""
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#: model:ir.model.constraint,message:whatsapp_connector.constraint_acrux_chat_connector_uuid_uniq
+#, python-format
+msgid "Identifier must be unique."
+msgstr "Identificador debe que ser único."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__reassign_current_conversation
+msgid ""
+"If the Agent who is attending a conversation is inactive, when a new message"
+" arrives the conversation will go to New so that another Agent can attend "
+"it."
+msgstr ""
+"Si el Agente que atiende una conversación está inactivo, al momento de "
+"llegar un nuevo mensaje la conversación pasará a Nueva para que otro Agente "
+"la pueda atender."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"If you check this option and 'Available queries' have been exhausted,<br/>\n"
+"then you will be prevented from creating a contact manually."
+msgstr ""
+"Si marca esta opción y 'Consultas disponibles' se han agotado,<br/>\n"
+"entonces se impedirá crear un contacto manualmente."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"If you make intensive use of the validation service, then it is recommended that you have a dedicated connector.<br/>\n"
+"All queries will be performed by the connector you specify here."
+msgstr ""
+"Si usted hace uso intensivo del servicio de validación, entonces es recomendado que tenga un conector exclusivo.<br/>\n"
+"Todas las consultas las realizaremos mediante el conector que indique aquí."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_base_message__ttype__image
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_default_answer__ttype__image
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__ttype__image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "In Users form select the appropriate permission to allow an extra fee."
+msgstr ""
+"En el formulario de Usuarios, seleccione el permiso apropiado para permitir "
+"una tarifa adicional."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Inactive"
+msgstr "Inactivo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_base_message__ttype__info
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_default_answer__ttype__info
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__ttype__info
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_form
+msgid "Info"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__info_message_id
+msgid "Info Message"
+msgstr "Mensaje Info"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Information"
+msgstr "Información"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#: model:ir.model,name:whatsapp_connector.model_init_free_test_wizard
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+#, python-format
+msgid "Init Free Test"
+msgstr "Iniciar Prueba Gratis"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__source
+msgid "Instagram, FaceBook or Whatsapp phone number."
+msgstr "Instagram, FaceBook o Número de Whatsapp."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "Integrity Check"
+msgstr "Comprobar Integridad"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "Invalid number"
+msgstr "Número inválido"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+msgid "Invalid numbers (apichat.io)"
+msgstr "Números inválidos (apichat.io)"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__invisible_template
+msgid "Invisible Template"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__invisible_top
+msgid "Invisible Top"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__is_attached_type
+msgid "Is Attached"
+msgstr "Es Adjunto"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__is_signed
+msgid "Is Signed"
+msgstr "Firmado"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_ir_attachment__delete_old
+msgid "It can be removed if it is old."
+msgstr "Se puede borrar si antiguo."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"It is forbidden to publish, distribute, sublicense, or sell copies of the "
+"Module or modified copies of the Module, which do not use the AcruxLab "
+"service or plans."
+msgstr ""
+"Está prohibido publicar, distribuir, sublicenciar o vender copias del Módulo"
+" o copias modificadas del Módulo, que no utilicen el servicio o planes de "
+"AcruxLab."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__language_code
+msgid "Language Code"
+msgstr "Código del idioma"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__language_policy
+msgid "Language Policy"
+msgstr "Política de idiomas"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "Last 6 Months"
+msgstr "Últimos 6 Meses"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector_scanqr_wizard____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_pop_message____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_work_queue____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_conversation_init_report____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector.field_init_free_test_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "Last Month"
+msgstr "Mes anterior"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__last_received
+msgid "Last Received"
+msgstr "Último Recibido"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector_scanqr_wizard__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_pop_message__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_work_queue__write_uid
+#: model:ir.model.fields,field_description:whatsapp_connector.field_init_free_test_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector_scanqr_wizard__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_pop_message__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_work_queue__write_date
+#: model:ir.model.fields,field_description:whatsapp_connector.field_init_free_test_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+msgid "Last Year"
+msgstr "Año Pasado"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__last_activity
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+msgid "Last activity"
+msgstr "Última actividad"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_conversation__last_sent
+msgid "Last message sent to the partner."
+msgstr "Último mensaje enviado al cliente."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__last_sent
+msgid "Last sent"
+msgstr "Último enviado"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_base_message__ttype__location
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_default_answer__ttype__location
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__ttype__location
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Location not found."
+msgstr "Ubicación no encontrada."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Logout from WhatsApp Web"
+msgstr "Cerrar sesión en Whatsapp Web"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__master
+msgid "Master"
+msgstr "Principal"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat.js:0
+#, python-format
+msgid "Match with Existing Partner"
+msgstr "Asociar con contacto existente."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/wizard/CustomMessage.py:0
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_base_message__text
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__message
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__text
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__text
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__text
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_pop_message__name
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_pop_message_form
+#, python-format
+msgid "Message"
+msgstr "Mensaje"
+
+#. module: whatsapp_connector
+#: model:ir.actions.act_window,name:whatsapp_connector.act_event_graph
+#: model:ir.actions.act_window,name:whatsapp_connector.act_event_pivot
+#: model:ir.ui.menu,name:whatsapp_connector.menu_chatroom_report_event_pivot
+msgid "Message Analysis"
+msgstr "Análisis de Mensajes"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__from_me
+msgid "Message From Me"
+msgstr "Mensaje de mi parte"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__msgid
+msgid "Message Id"
+msgstr "Id Mensaje"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "Message Templates"
+msgstr "Plantillas de Mensaje"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/wizard/MessageWizard.py:0
+#, python-format
+msgid "Message Type and Template Type mismatch."
+msgstr "Tipo de mensaje y tipo de plantilla incompatibles."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/DefaultAnswer.py:0
+#, python-format
+msgid "Message is required."
+msgstr "Mensaje es requerido."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Message.py:0
+#, python-format
+msgid "Message is to large (4.000 caracters)."
+msgstr "Mensaje demasiado largo (4.000 caracters)."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/wizard/MessageWizard.py:0
+#, python-format
+msgid "Message types cannot be merged."
+msgstr "Tipos de mensaje no pueden ser combinados."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_notification.js:0
+#, python-format
+msgid "Message with error in <br>"
+msgstr "Mensaje con error en <br>"
+
+#. module: whatsapp_connector
+#: model:ir.actions.act_window,name:whatsapp_connector.view_whatsapp_connector_message_action
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__chat_message_ids
+#: model:ir.ui.menu,name:whatsapp_connector.whatsapp_connector_message_menu
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_form
+msgid "Messages Information"
+msgstr "Información de Mensajes"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__meta
+msgid "Meta"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_form
+msgid "Metadata"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__metadata_type
+msgid "Metadata Type"
+msgstr "Tipo Metadata"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__metadata_json
+msgid "Metadata text"
+msgstr "Texto Metadata"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/wizard/MessageWizard.py:0
+#, python-format
+msgid ""
+"Mobile: %s\n"
+"Phone: %s"
+msgstr ""
+"Móvil: %s\n"
+"Teléfono: %s"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_base_message__res_model
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__res_model
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__res_model
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_search
+msgid "Model"
+msgstr "Modelo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__modified_on
+msgid "Modified On"
+msgstr "Modificado el"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Module Terms of Service"
+msgstr "Condiciones del Servicio para el Módulo"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+msgid "Month"
+msgstr "Mes"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__mute_notify
+msgid "Mute Notify"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__mute_opt_in
+msgid "Mute Opt In"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__name
+#: model:ir.model.fields,field_description:whatsapp_connector.field_agent_answer_time_report__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#: model:ir.model.constraint,message:whatsapp_connector.constraint_acrux_chat_connector_name_uniq
+#, python-format
+msgid "Name must be unique."
+msgstr "Nombre tiene que ser único"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__namespace
+msgid "Namespace"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_conversation__status__new
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+msgid "New"
+msgstr "Nuevo"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_simple_new_conversation_wizard
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__event__to_new
+msgid "New Conversation"
+msgstr "Nueva Conversación"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_notification.js:0
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_notification.js:0
+#, python-format
+msgid "New Message from "
+msgstr "Nuevo mensaje de "
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat.js:0
+#, python-format
+msgid "New messages from "
+msgstr "Nuevo mensaje de "
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__new_number
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.acrux_chat_message_wizard_form
+msgid "New number"
+msgstr "Nuevo número"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_conversation__valid_number__no
+msgid "No"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_init_free_test_wizard
+msgid "No restriction to login or send/receive messages."
+msgstr "Sin restricción para iniciar sesión o enviar/recibir mensajes."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_connector__desk_notify__none
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_simple_new_conversation_wizard__operation__none
+msgid "None"
+msgstr "Ninguna"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_connector__connector_type__not_set
+msgid "Not set"
+msgstr "No Establecido"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__desk_notify
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__desk_notify
+msgid "Notify"
+msgstr "Notificación"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__number_format
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__number
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_form_admin
+msgid "Number"
+msgstr "Número"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/wizard/MessageWizard.py:0
+#, python-format
+msgid "Number already exists (%s)."
+msgstr "Número ya existe (%s)."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Conversation.py:0
+#: model:ir.model.constraint,message:whatsapp_connector.constraint_acrux_chat_conversation_number_connector_uniq
+#, python-format
+msgid "Number in connector has to be unique."
+msgstr "Número por Conector debe ser único."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Conversation.py:0
+#, python-format
+msgid "Number not exist in WhatsApp (%s)"
+msgstr "Número no existe en WhatsApp (%s)"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__time_to_done
+msgid ""
+"Number of days after which a conversation without movement ends "
+"automatically. Prevents your software works slow."
+msgstr ""
+"Número de días despues de los cuales una conversación sin movimiento se "
+"termina de forma automática. Previene que su software trabaje lento."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_form_admin
+msgid "Numbers only, with country code"
+msgstr "Solo números, con código de país"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__odoo_url
+msgid "Odoo Url (WebHook)"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_connector__desk_notify__mines
+msgid "Only Mines"
+msgstr "Sólo mías"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Only remove conversation from here."
+msgstr "Solo remueve la conversación de aquí."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_simple_new_conversation_wizard__operation__open
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_simple_new_conversation_wizard
+msgid "Open"
+msgstr "Abrir"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__operation
+msgid "Operation"
+msgstr "Operación"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__is_waba_opt_in
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__conv_opt_in
+msgid "Opt-in"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__sent_opt_in
+msgid "Opt-in already requested"
+msgstr ""
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_notification.js:0
+#, python-format
+msgid "Opt-in update"
+msgstr "Opt-in actualización"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "PACK: Send from many places with Templates"
+msgstr "PACK: Envía desde muchos lugares con Plantillas"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param__key
+msgid "Param"
+msgstr "Parámetro"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__template_params
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__param_ids
+msgid "Params"
+msgstr "Parámetros"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat.js:0
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__partner_id
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+#, python-format
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat.js:0
+#, python-format
+msgid "Permission denied"
+msgstr "Permiso denegado"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat.js:0
+#, python-format
+msgid "Permission granted"
+msgstr "Permiso concedido"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid ""
+"Please set 'Odoo Url (WebHook)'.\n"
+"You are working on 'localhost', you will not be able to receive messages!"
+msgstr ""
+"Establecer 'Odoo Url (WebHook)'.\n"
+"Usted navega en 'localhost', no podrá recibir mensajes!"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_pop_message
+msgid "Pop Message"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__sequence
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_scanqr_wizard
+msgid "Problem?"
+msgstr "Problema?"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_product_product
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__ttype__product
+msgid "Product"
+msgstr "Producto"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "Product Images"
+msgstr "Imágenes Productos"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_message.js:0
+#, python-format
+msgid "Product not found"
+msgstr "Producto no encontrado"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__ca_qr_code
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector_scanqr_wizard__ca_qr_code
+msgid "QR Code"
+msgstr "Código QR"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_scanqr_wizard
+msgid "QR code is valid for 20 seconds."
+msgstr "Código QR es válido por 20 segundos.."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__valid_limit
+msgid "Query limit"
+msgstr "Límite consultas"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__read_date
+msgid "Read Date"
+msgstr "Fecha Leído"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__ready_to_create_template
+msgid "Ready"
+msgstr "Listo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__reason
+msgid "Reason"
+msgstr "Razón"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_chatroom_form
+msgid "Refresh Info"
+msgstr "Actualizar Info"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_scanqr_wizard
+msgid "Refresh QR code"
+msgstr "Actualizar QR"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_chatroom_form
+msgid "Refresh conversation data from api."
+msgstr "Refresca la data de la conversación desde el api."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_form
+msgid "Registry"
+msgstr "Registro"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_search
+msgid "Rejected"
+msgstr "Rechazada"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__res_id
+msgid "Related Document ID"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__model
+msgid "Related Document Model"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__reassign_current_conversation
+msgid "Release conversation if Agent's inactive"
+msgstr "Liberar conversación si Agente inactivo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__time_to_reasign
+msgid "Release unanswered conversation (Minutes)"
+msgstr "Liberar conversación sin respuesta (Minutos)"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param__value
+msgid "Replacement"
+msgstr "Sustitución"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.acrux_chat_message_wizard_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_chatroom_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_form_admin
+msgid "Request Opt-in"
+msgstr "Solicitar Opt-in"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_form
+msgid "Resource"
+msgstr "Recurso"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities__rec_id
+msgid "Resource id"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__valid_restriction
+msgid "Restriction"
+msgstr "Restricción"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_connector_scanqr_wizard
+msgid "Scan QR"
+msgstr "Escanear QR"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "Scan QR code"
+msgstr "Escanear código QR"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_form_view.js:0
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_user_status.js:0
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_simple_new_conversation_wizard__search_str
+#, python-format
+msgid "Search"
+msgstr "Buscar"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Search Products"
+msgstr "Buscar Productos"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Select a conversation to begin to chat"
+msgstr "Seleccione una conversación para empezar a hablar"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.acrux_chat_message_wizard_form
+msgid "Select conversation"
+msgstr "Seleccionar conversación"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.acrux_chat_message_wizard_form
+#, python-format
+msgid "Send"
+msgstr "Enviar"
+
+#. module: whatsapp_connector
+#: model:ir.actions.act_window,name:whatsapp_connector.acrux_chat_message_wizard_action
+msgid "Send ChatRoom Message"
+msgstr "Enviar Mensaje ChatRoom"
+
+#. module: whatsapp_connector
+#: model:ir.module.category,name:whatsapp_connector.category_chat_connector
+msgid "Send Messages"
+msgstr "Enviar Mensajes"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_chatroom_form
+msgid "Send Template"
+msgstr "Enviar Plantilla"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_chatroom_form
+msgid "Send a mail template."
+msgstr "Enviar una plantilla de mail"
+
+#. module: whatsapp_connector
+#: model:res.groups,comment:whatsapp_connector.group_chat_basic_extra
+msgid "Send messages from ChatRoom view and Forms."
+msgstr "Enviar mensajes desde ChatRoom y Formularios."
+
+#. module: whatsapp_connector
+#: model:res.groups,comment:whatsapp_connector.group_chat_basic
+msgid "Send messages from Forms."
+msgstr "Enviar mensajes desde Formularios."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__verify
+msgid "Set False if SSLError: bad handshake - certificate verify failed."
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"Set in System Parameters de value for 'acrux_image_resize' image width in pixels to prevent extra fee (Weight up to 64 Kb).<br/>\n"
+"Possible values: <b>original</b> or number less than <b>1024</b>.<br/>\n"
+"Default value of 500 means 500x500 Pixels. Over 600 is at risk of exceeding 64 Kb. 600 is good value."
+msgstr ""
+"Establezca en los Parámetros del sistema el valor de 'acrux_image_resize' para el ancho de las imágenes en píxeles para evitar cargos adicionales (Peso hasta 64 Kb).<br/>\n"
+"Valores posibles: <b>original</b> o número menor que <b>1024</b>.<br/>\n"
+"El valor predeterminado de 500 significa 500x500 píxeles. Más de 600 tienen riesgo de superar los 64 Kb. 600 es un buen valor."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"Set in System Parameters de value for 'acrux_image_resize' image width in pixels to prevent sending images over 64 Kb.<br/>\n"
+"Possible values: <b>original</b> or number less than <b>1024</b>."
+msgstr ""
+"Establezca en los Parámetros del sistema el valor para el ancho de la imagen 'acrux_image_resize' en píxeles para evitar el envío de imágenes de más de 64 Kb.<br/>\n"
+"Valores posibles: <b>original</b> o número menor que <b>1024</b>.<br/>\n"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_chatroom_form
+msgid "Set you taken conversation to new."
+msgstr "Establecer la conversación que tomó como nueva."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__show_in_chatroom
+msgid "Show"
+msgstr "Mostar"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__show_icon
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__show_icon
+msgid "Show Icon?"
+msgstr "Mostrar Ícono?"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__show_product_text
+msgid "Show Product Text"
+msgstr "Mostrar Texto del Producto"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_default_answer__show_in_chatroom
+msgid "Show in Chatroom main view"
+msgstr "Mostrar en vista principal de ChatRoom"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_toolbox.js:0
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Sign Message"
+msgstr "Firmar Mensaje"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_users__chatroom_signing
+msgid "Signature"
+msgstr "Firma"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Size for all connector! Set size in Config Parameters."
+msgstr ""
+"Tamaño para todos los conectores! Establecer tamaño en los parámetros de "
+"configuración."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/controllers/main.py:0
+#, python-format
+msgid "Something horrible happened"
+msgstr "Sucedió algo inesperado"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Message.py:0
+#, python-format
+msgid ""
+"Sorry, you can't send messages.\n"
+"%s is not connected."
+msgstr ""
+"Lo siento, no puede enviar mensajes.\n"
+"%s no está conectado."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_res_partner__conv_standard_numbers
+#: model:ir.model.fields,help:whatsapp_connector.field_res_users__conv_standard_numbers
+msgid "Standard number comma separated to search from conversation"
+msgstr "Números estándar separados por coma para buscar desde la conversación"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_partner__conv_standard_numbers
+#: model:ir.model.fields,field_description:whatsapp_connector.field_res_users__conv_standard_numbers
+msgid "Standard numbers"
+msgstr "Números estándar"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__event__to_curr
+msgid "Start Conversation"
+msgstr "Inicio Conversación"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__ca_status_txt
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__status
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__status
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_conversation_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_form
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_search
+msgid "Status"
+msgstr "Estatus"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"Status: <b>Connected</b><span class=\"spinner-grow spinner-grow-"
+"sm\"/><br/><br/>"
+msgstr ""
+"Estatus: <b>Conectado</b><span class=\"spinner-grow spinner-grow-"
+"sm\"/><br/><br/>"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__team_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__team_id
+msgid "Team"
+msgstr "Equipo de Ventas"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__template_waba_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message_wizard__template_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__mail_template_id
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba_param__template_id
+msgid "Template"
+msgstr "Plantilla"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__template_type
+msgid "Template Type"
+msgstr "Tipo de Plantilla"
+
+#. module: whatsapp_connector
+#: model:ir.actions.act_window,name:whatsapp_connector.view_whatsapp_template_waba_action
+#: model:ir.ui.menu,name:whatsapp_connector.view_whatsapp_template_waba_menu
+msgid "Template WaBa"
+msgstr "Plantilla WaBa"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_search
+msgid "Template id"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "Templates available in:"
+msgstr "Plantillas disponibles en:"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_base_message__ttype__text
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_default_answer__ttype__text
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__ttype__text
+msgid "Text"
+msgstr "Texto"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid ""
+"The Odoo Url must be visible from the internet.<br/>If you use "
+"\"http://localhost:8069\" you will not be able to receive messages!"
+msgstr ""
+"La Url de Odoo debe ser visible desde internet.<br/>Si usted usa "
+"\"http://localhost:8069\" no podrá recibir mensajes!"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Message.py:0
+#, python-format
+msgid "The client must have started a conversation."
+msgstr "El cliente debe haber iniciado la conversación."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"The connector charges an additional fee when sending a message after 24 "
+"hours or if it exceeds the size limit."
+msgstr ""
+"El conector cobra una tarifa adicional al enviar un mensaje después de las "
+"24 horas o si supera el límite de tamaño."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Conversation.py:0
+#, python-format
+msgid "The number could not be verified (%s)"
+msgstr "No se pudo verificar el número (%s)"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Message.py:0
+#, python-format
+msgid "The time to respond exceeded (%s hours). The limit is %s hours."
+msgstr "Se superó el tiempo de respuesta (% s horas). El límite es %s horas."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__connector_type
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_conversation__connector_type
+msgid "Third-party connector type."
+msgstr "Tipo de conector de terceros."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "This Month"
+msgstr "Este Mes"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"This action is necessary only once.<br/>\n"
+"All conversations that have incoming messages will be set to \"Valid\"."
+msgstr ""
+"Estas acción es necesaria solo una vez.<br/>\n"
+"Se establecerá a \"Válida\" todas las conversaciones que tengan mensajes de entrada."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Conversation.py:0
+#, python-format
+msgid "This conversation is no longer attended to by you."
+msgstr "Esta conversación ya no es atendida por usted."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__time_to_reasign
+msgid ""
+"Time in which the conversation is released to be taken by another user."
+msgstr ""
+"Tiempo en que la conversación se libera para ser tomado por otro usuario."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__time_to_respond
+msgid "Time to Respond (Hours)"
+msgstr "Tiempo para Responder (Horas)"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "Timeout error. Try again..."
+msgstr "Error en tiempo de espera. Intente de nuevo.."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__tz
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_conversation__last_received
+msgid "To prevent send message with extra fee."
+msgstr "Para evitar enviar un mensaje con tarifa adicional."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "To receive messages you must meet 2 requirements:"
+msgstr "Para recibir mensajes debe cumplir 2 requerimientos:"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Conversation.py:0
+#, python-format
+msgid "To: %s (%s) | From: %s"
+msgstr "A: %s (%s) | Desde: %s"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__token
+msgid "Token"
+msgstr ""
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/controllers/main.py:0
+#, python-format
+msgid "Too big, max. %s (%s)"
+msgstr "Demasiado grande, max. %s (%s)"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/wizard/MessageWizard.py:0
+#, python-format
+msgid "Too many message to handle them."
+msgstr "Demasiados mensajes para manejarlos."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__try_count
+msgid "Try counter"
+msgstr "Contador de intentos"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_base_message__ttype
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation_activities__ttype
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_default_answer__ttype
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__ttype
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_template_waba_search
+msgid "Type"
+msgstr "Tipo"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__event__unanswered
+msgid "Unanswered Message"
+msgstr "Mensajes sin responder"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_message.js:0
+#, python-format
+msgid "Unnamed"
+msgstr "Sin Nombre"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__valid_date
+msgid "Until"
+msgstr "Hasta"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Url privew"
+msgstr "Prevista URL"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__odoo_url
+msgid "Url to receive messages. Don't use http://localhost"
+msgstr "Url para recibir mensajes. No utilice http://localhost"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid ""
+"Use this button to compress all product images.<br/>It is only needed once "
+"when installing, after that it will be done automatically."
+msgstr ""
+"Utilice este botón para comprimir todas las imágenes de los "
+"productos.<br/>Solo es necesario una única vez al instalar, después se hará "
+"de forma automática."
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_conversation__valid_number
+msgid "Valid"
+msgstr "Válido"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__auto_valid_number
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Validate Numbers"
+msgstr "Validar Números"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "Validate old chat"
+msgstr "Validar chat antiguos"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__validate_conn_id
+msgid "Validate with"
+msgstr "Validar con"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__verify
+msgid "Verify SSL"
+msgstr "Verificar SSL"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_template_waba__vertical
+msgid "Vertical"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_base_message__ttype__video
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_default_answer__ttype__video
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__ttype__video
+msgid "Video"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "View Connectors"
+msgstr "Ver Conectores"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid "View Default Answers"
+msgstr "Ver Respuestas Predeterminadas"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid ""
+"View and Edit your Connectors. Each Connector represents a Whatsapp number "
+"with which you can serve your customers."
+msgstr ""
+"Ver y Editar sus Conectores. Cada Conector representa un número de Whatsapp "
+"con el cual puede atender a sus clientes."
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid ""
+"View and Edit your Default Answers. Each message will be available for "
+"submission with a single click."
+msgstr ""
+"Ver y Editar sus Respuestas Predeterminadas. Cada mensaje estará disponible "
+"para enviar con solo un clic."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_mail_template__waba_template_id
+msgid "Waba Template"
+msgstr "Plantilla Waba"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Waiting"
+msgstr "Esperando"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_init_free_test_wizard
+msgid "We are going to create a free account in www.apichat.io."
+msgstr "Vamos a crear una cuenta gratis en www.apichat.io."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_connector__webhook_url
+msgid "Webhook Url"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_agent_answer_time_report_search
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_conversation_init_report_search
+msgid "Week"
+msgstr "Semana"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_init_free_test_wizard
+msgid "Welcome!"
+msgstr "Bienvenido!"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "WhatsApp (+nnn nnnn nnnn)"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.res_config_settings_view_form
+msgid ""
+"When logging into Odoo can I select a database and there is more than one?"
+msgstr ""
+"Cuando ingresa a Odoo se puede seleccionar base de datos y hay más de una?"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_connector__desk_notify
+#: model:ir.model.fields,help:whatsapp_connector.field_acrux_chat_conversation__desk_notify
+msgid "When to send notification outside chatroom?"
+msgstr "Cuándo enviar notificaciones fuera de chatroom?"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "With Attachment"
+msgstr "Con Adjunto"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "With Event"
+msgstr "Con Evento"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_message_search
+msgid "Without Attachment"
+msgstr "Sin Adjunto"
+
+#. module: whatsapp_connector
+#: model:ir.model,name:whatsapp_connector.model_acrux_chat_work_queue
+msgid "Work Queue"
+msgstr ""
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Write Something..."
+msgstr "Escribe algo..."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_conversation__valid_number__yes
+msgid "Yes"
+msgstr "Sí"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "You are not attending this conversation."
+msgstr "Usted no está atendiendo esta conversación."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/ResConfigSettings.py:0
+#, python-format
+msgid ""
+"You are working on \"localhost\", you will not be able to receive messages!"
+msgstr "Usted trabaja en \"localhost\", ¡no podrá recibir mensajes!"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid ""
+"You can associate with this <b>apichat.io</b> Plan a monthly query package to check if a number exists on Whatsapp.<br/>\n"
+"Hire the service in"
+msgstr ""
+"Puede asociar con este Plan <b>apichat.io</b> un paquete de consultas mensuales para comprobar si un número existe en Whatsapp.<br/>\n"
+"Contrate el servicio en"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_init_free_test_wizard
+msgid "You can send 25 messages/day, for 3 days."
+msgstr "Podrá enviar 25 mensajes/día, durante 3 días."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Conversation.py:0
+#, python-format
+msgid "You can't write in this conversation, please refresh the screen."
+msgstr ""
+"No puede escribir en esta conversación, por favor refresque la pantalla."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "You have disabled this service."
+msgstr "Usted a desactivado este servicio."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/ResConfigSettings.py:0
+#, python-format
+msgid "You have more than 1 database in %s"
+msgstr "Usted tiene más de 1 base de datos en %s"
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Message.py:0
+#, python-format
+msgid "You must request opt-in before send a template message."
+msgstr "Debe solicitar opt-in antes de envíar un mensaje de plantilla"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "You must scan QR code from device with Whatsapp."
+msgstr "Debe escanear el código QR desde el dispositivo con Whatsapp."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "You must select a conversation first."
+msgstr "Usted debe seleccionar una conversación primero."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_default_answer.js:0
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_product_search.js:0
+#, python-format
+msgid "You must select a conversation."
+msgstr "Debe seleccionar una conversación."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Message.py:0
+#, python-format
+msgid "You must send a WABA Template to initiate a conversation."
+msgstr "Debe enviar una Plantilla WABA para iniciar conversación."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "You reached the limit of your Validation Plan."
+msgstr "Ha alcanzado el límite de su Plan de Validación."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Connector.py:0
+#, python-format
+msgid "Your Validation Plan has expired or not exist."
+msgstr "Su Plan de Validación ha caducado o no existe."
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_product_search.js:0
+#, python-format
+msgid "Yoy are not writing in this conversation."
+msgstr "Usted no está atendiendo esta conversación."
+
+#. module: whatsapp_connector
+#: code:addons/whatsapp_connector/models/Message.py:0
+#, python-format
+msgid "[Error getting %s ]"
+msgstr "[Error obteniendo %s ]"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "acruxlab.com"
+msgstr ""
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "acruxlab.com/whatsapp-checker"
+msgstr ""
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_notification.js:0
+#, python-format
+msgid "activate"
+msgstr "activo"
+
+#. module: whatsapp_connector
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector.view_whatsapp_connector_connector_form
+msgid "and we give you the ID and Token for production environment."
+msgstr "y obtenga su ID y Token para ambiente de producción."
+
+#. module: whatsapp_connector
+#: model:ir.model.fields.selection,name:whatsapp_connector.selection__acrux_chat_message__metadata_type__apichat_preview_post
+msgid "apichat_preview_post"
+msgstr ""
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/js/acrux_chat_notification.js:0
+#, python-format
+msgid "deactivate"
+msgstr "inactivo"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "enable notifications"
+msgstr "activar las notificaciones"
+
+#. module: whatsapp_connector
+#: model:ir.model.fields,field_description:whatsapp_connector.field_acrux_chat_message__name
+msgid "name"
+msgstr "nombre"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "needs your permission to"
+msgstr "necesita tu permiso para"
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "perfil"
+msgstr ""
+
+#. module: whatsapp_connector
+#. openerp-web
+#: code:addons/whatsapp_connector/static/src/components/attachment_viewer/attachment_viewer.xml:0
+#, python-format
+msgid "{{ attachmentViewer?.attachment?.isAcrux ? 'hack' : '' }}"
+msgstr ""

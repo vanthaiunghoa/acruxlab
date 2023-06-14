@@ -1,0 +1,55 @@
+"Mute (Minutes)","Apply From","Apply To","Bot Key","Menu Option","Name","Parent Bot/Name","Action"
+,13,15,,,"Closed for lunch 😁",,"ret={'send_text': 'I\'m having lunch 😁\n\n🤖 TEST: Field \'*Mute*\' is zero! I will not answer anything else.'}"
+"1",,,,,"Hello + Create Partner",,"ret=[]
+partner = mess_id.contact_id.res_partner_id  # current partner for this chat
+if not partner:
+  partners = search_partner()  # search partner by phone [list]
+  if partners:
+    ret.append({'link_partner': partners[0]})  # link partner to this chat
+  else:
+    ret.append({'create_partner': True})  # create and link to this chat
+
+text = 'Hi *%s*' % partner.name if partner else 'Hello'
+text += ', how can I help you?'
+text += '\nSend # to see options.\n'
+text += '\n🤖 TEST: You can create a Products menu at the end of the Bots list,'
+text += ' this way if the answer does not match the options then you will show the products.'
+ret.append({'send_text': text})"
+"0",,,"#3","#","Menu 🤖",,"text = '🤖 MENU:\n\n1 > Enter your Email.\n2 > See the name of your Agent.\n'
+text += '3 > Wait to be served by an Agent.\n# > Show menu.'
+ret={'send_text': text}"
+"0",,,,"1","Ask Email and save in Odoo","Menu 🤖","ret=[]
+mail = mess_id.contact_id.res_partner_id.email
+if mail:
+  text = 'We have registered this email: %s' % mail
+  ret.append({'exit': True})
+else:
+  text = 'We do not have your email registered, enter one below.'
+  text += '\n\n🤖 TEST: Enter incorrect email or a correct one in a sentence or several.'
+ret.append({'send_text': text})
+"
+"0",,,,,"Save Email or ask again","Ask Email and save in Odoo","ret = []
+emails = email_re.findall(mess_id.text or '')
+if emails:
+  ret.append({'exit': True})
+  ret.append({'write': {'res_model': 'res.partner', 'res_id': mess_id.contact_id.res_partner_id.id, 'data': {'email': emails[0]}}})
+  ret.append({'send_text': 'Thank you, email saved (%s)' % emails[0]})
+else:
+  ret.append({'send_text': 'Invalid email!!\nTry again, last chance...'})"
+"0",,,,,"Try again... last chance","Save Email or ask again","ret = []
+emails = email_re.findall(mess_id.text or '')
+if emails:
+  ret.append({'write': {'res_model': 'res.partner', 'res_id': mess_id.contact_id.res_partner_id.id, 'data': {'email': emails[0]}}})
+  ret.append({'send_text': 'Email saved, the 1st if you sent several (%s)\nSend # if you want to return to the Menu.' % emails[0]})
+else:
+  ret.append({'send_text': 'Invalid email!!\nSend # if you want to return to Menu.\n\n🤖 TEST: We return to the beginning of the Bot...'})"
+"0",,,,"2","Agent name","Menu 🤖","agent_id = mess_id.contact_id.agent_id or mess_id.contact_id.res_partner_id.user_id
+if agent_id:
+  ret={'send_text': 'Your agent is *%s*\nSend # if you want to return to the Menu.' % agent_id.name}
+else:
+  ret={'send_text': 'You do not have an assigned Agent.\nSend # if you want to return to the Menu.'}"
+"0",,,,"3","Exit","Menu 🤖","ret={'send_text': 'Goodbye !\nSend # if you want to return to the Menu.'}"
+"0",,,,"#","Go to","Menu 🤖","# Define a value in the ""Bot Key"" field to jump to that Bot!
+ret={'goto_and_send': '#3'}"
+"0",,,,,"Not Found","Menu 🤖","# I'm waiting on the menu
+ret=[{'goto_and_wait': '#3'},  {'send_text': 'Please send 1, 2, 3 ó #'}]"

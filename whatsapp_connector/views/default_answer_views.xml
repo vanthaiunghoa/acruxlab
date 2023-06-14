@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_whatsapp_connector_default_answer_tree">
+        <field name="name">acrux.chat.default.answer.tree</field>
+        <field name="model">acrux.chat.default.answer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="active" widget="boolean_toggle"/>
+                <field name="show_in_chatroom" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="ttype"/>
+                <field name="is_attached_type" invisible="1" />
+                <field name="text" force_save="1" attrs="{'readonly': [('is_attached_type', '=', True)]}"/>
+                <field name="file_attach_name" force_save="1" readonly="1"/>
+                <field name="file_attach" filename="file_attach_name" force_save="1" invisible="1"/>
+                <field name="res_model" force_save="1" invisible="1"/>
+                <field name="res_id" force_save="1" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_whatsapp_connector_default_answer_form">
+        <field name="name">acrux.chat.default.answer.form</field>
+        <field name="model">acrux.chat.default.answer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="sequence" invisible="1"/>
+                        <field name="active" widget="boolean_toggle"/>
+                        <field name="show_in_chatroom" widget="boolean_toggle"/>
+                        <field name="name"/>
+                        <field name="ttype"/>
+                        <field name="is_attached_type" invisible="1" />
+                        <field name="text" force_save="1" attrs="{'readonly': [('is_attached_type', '=', True)]}"/>
+                        <field name="file_attach_name" force_save="1" readonly="1"/>
+                        <field name="file_attach" filename="file_attach_name" force_save="1"
+                               attrs="{'readonly': [('ttype', 'in', ['text', 'location', 'info'])]}"/>
+                        <field name="res_model" force_save="1" invisible="1"/>
+                        <field name="res_id" force_save="1" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_whatsapp_connector_default_answer_search" model="ir.ui.view">
+        <field name="name">acrux.chat.default.answer.search</field>
+        <field name="model">acrux.chat.default.answer</field>
+        <field name="arch" type="xml">
+            <search string="Default Answers">
+                <field name="name"/>
+                <filter string="All" name="all" domain="['|', ('active', '=', False), ('active', '=', True)]" />
+                <group string="Group by" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="view_whatsapp_connector_default_answer_action">
+        <field name="name">Default Answers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">acrux.chat.default.answer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_all': 1}</field>
+    </record>
+</odoo>
